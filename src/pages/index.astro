@@ -1,17 +1,54 @@
 ---
+import type { ImageMetadata } from "astro";
+import naslovnica from "../assets/og/naslovnica.svg";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { SITE_NAME, SITE_TAGLINE } from "../config";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import SchemaJsonLd from "../components/SchemaJsonLd.astro";
+import { SITE_TAGLINE } from "../config";
+
+const title = "Mali ORL — uho, nos i grlo kod djece";
+const description = "Uho, nos i grlo kod djece. Mali ORL priprema teme i naručivanje pregleda.";
+const crumbs = [{ name: "Početna", href: "/" }];
+const ogImage = naslovnica as ImageMetadata;
+
+const illustrations = [
+  { src: "/illustrations/uho.svg", alt: "Linijski crtež uha", caption: "Uho" },
+  { src: "/illustrations/nos.svg", alt: "Linijski crtež nosa", caption: "Nos" },
+  { src: "/illustrations/grlo.svg", alt: "Linijski crtež grla", caption: "Grlo" },
+];
 ---
 
-<BaseLayout title={SITE_NAME} description={SITE_TAGLINE}>
+<BaseLayout title={title} description={description} ogImage={ogImage} ogAlt={title}>
+  <SchemaJsonLd slot="head" title={title} description={description} crumbs={crumbs} />
   <section class="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-24">
-    <div class="max-w-2xl rounded-3xl bg-sky px-6 py-12 md:px-12 md:py-16">
+    <Breadcrumbs items={crumbs} />
+    <div class="mt-8 max-w-2xl rounded-3xl bg-sky px-6 py-12 md:px-12 md:py-16">
       <h1 class="text-5xl tracking-tight md:text-6xl">Mali ORL</h1>
       <p class="mt-5 text-xl leading-snug text-navy md:text-2xl">{SITE_TAGLINE}</p>
       <div class="mt-8 h-px w-16 bg-gold" aria-hidden="true"></div>
       <p class="mt-8 max-w-md text-lg leading-relaxed text-navy">
         Ovdje će biti pet tema i naručivanje pregleda.
       </p>
+      <ul class="mt-10 grid grid-cols-3 gap-4">
+        {
+          illustrations.map((item) => (
+            <li>
+              <figure>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  width="160"
+                  height="180"
+                  loading="eager"
+                  decoding="async"
+                  class="h-auto w-full"
+                />
+                <figcaption class="mt-3 text-center text-base font-medium text-navy">{item.caption}</figcaption>
+              </figure>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 </BaseLayout>

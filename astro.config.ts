@@ -8,7 +8,15 @@ export default defineConfig({
   site: SITE_URL,
   output: 'static',
   trailingSlash: 'always',
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => !page.includes('/404'),
+    }),
+  ],
+  image: {
+    dangerouslyProcessSVG: true,
+  },
   vite: {
     plugins: [tailwindcss()],
   },

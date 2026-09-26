@@ -1,0 +1,15 @@
+---
+import { buildSchemaGraph, type Crumb } from "../lib/schema";
+
+interface Props {
+  title: string;
+  description: string;
+  crumbs: Crumb[];
+  includeAuthor?: boolean;
+}
+
+const { title, description, crumbs, includeAuthor = false } = Astro.props;
+const json = buildSchemaGraph({ title, description, crumbs, includeAuthor });
+---
+
+<script type="application/ld+json" is:inline set:html={json}></script>
