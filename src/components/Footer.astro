@@ -1,0 +1,27 @@
+---
+import { BOOKING_SITE, SISTER_SITE } from "../config";
+---
+
+<footer class="border-t border-gold bg-sky">
+  <div class="mx-auto flex max-w-5xl flex-col gap-8 px-5 py-12 md:px-8">
+    <p class="max-w-prose text-base leading-relaxed text-navy">
+      Informacije na ovoj stranici ne zamjenjuju pregled liječnika.
+    </p>
+    <nav aria-label="Pravne stranice">
+      <ul class="flex flex-col gap-2 sm:flex-row sm:gap-6">
+        <li><a class="site-link" href="/impressum/">Impresum</a></li>
+        <li><a class="site-link" href="/pravila-privatnosti/">Pravila privatnosti</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Druge stranice">
+      <ul class="flex flex-col gap-2 sm:flex-row sm:gap-6">
+        <li>
+          <a class="site-link" href={BOOKING_SITE} rel="noreferrer">osobni web</a>
+        </li>
+        <li>
+          <a class="site-link" href={SISTER_SITE} rel="noreferrer">centar za sinuse</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>

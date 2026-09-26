@@ -1,0 +1,56 @@
+---
+const pillars = [
+  { href: "/treci-krajnik/", label: "Treći krajnik" },
+  { href: "/adenoidektomija/", label: "Adenoidektomija" },
+  { href: "/tonzilektomija/", label: "Tonzilektomija" },
+  { href: "/upala-uha-kod-djece/", label: "Upala uha" },
+  { href: "/ventilacijske-cjevcice/", label: "Ventilacijske cjevčice" },
+];
+---
+
+<header class="border-b border-gold bg-cream">
+  <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-5 md:px-8">
+    <a class="wordmark" href="/">Mali ORL</a>
+    <a class="cta hidden items-center justify-center md:inline-flex" href="/narucivanje/">Naručite pregled</a>
+    <details class="site-menu relative md:hidden">
+      <summary
+        class="rounded-2xl border border-gold bg-cream px-4 py-2 text-base font-medium text-navy"
+      >
+        <span class="label-open">Izbornik</span>
+        <span class="label-close">Zatvori</span>
+      </summary>
+      <nav
+        class="absolute right-0 z-30 mt-3 w-[min(18rem,calc(100vw-2.5rem))] rounded-3xl border border-gold bg-cream p-5 shadow-[0_16px_40px_rgba(31,42,68,0.08)]"
+        aria-label="Mobilna navigacija"
+      >
+        <ul class="flex flex-col gap-3">
+          {
+            pillars.map((item) => (
+              <li>
+                <a class="site-link" href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+          <li class="pt-2">
+            <a class="cta inline-flex w-full items-center justify-center" href="/narucivanje/">Naručite pregled</a>
+          </li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+  <nav class="mx-auto hidden max-w-5xl px-8 pb-5 md:block" aria-label="Glavna navigacija">
+    <ul class="flex flex-wrap gap-x-6 gap-y-2">
+      {
+        pillars.map((item) => (
+          <li>
+            <a class="site-link" href={item.href}>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

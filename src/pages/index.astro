@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_NAME, SITE_TAGLINE } from "../config";
+---
+
+<BaseLayout title={SITE_NAME} description={SITE_TAGLINE}>
+  <section class="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-24">
+    <div class="max-w-2xl rounded-3xl bg-sky px-6 py-12 md:px-12 md:py-16">
+      <h1 class="text-5xl tracking-tight md:text-6xl">Mali ORL</h1>
+      <p class="mt-5 text-xl leading-snug text-navy md:text-2xl">{SITE_TAGLINE}</p>
+      <div class="mt-8 h-px w-16 bg-gold" aria-hidden="true"></div>
+      <p class="mt-8 max-w-md text-lg leading-relaxed text-navy">
+        Ovdje će biti pet tema i naručivanje pregleda.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
