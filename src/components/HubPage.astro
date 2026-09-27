@@ -23,9 +23,13 @@ interface Props {
   chip: string;
   page: string;
   cards: Card[];
+  quietTitle?: string;
+  quietLead?: string;
+  quietCards?: Card[];
+  markLead?: boolean;
 }
 
-const { title, description, h1, lead, tone, chip, page, cards } = Astro.props;
+const { title, description, h1, lead, tone, chip, page, cards, quietTitle, quietLead, quietCards = [], markLead = false } = Astro.props;
 const dot = tone === "coral" ? "dot-coral" : tone === "mint" ? "dot-mint" : "dot-lilac";
 const grid =
   tone === "coral" ? "tone-coral" : tone === "mint" ? "tone-mint" : "tone-lilac";
@@ -43,13 +47,16 @@ const grid =
         </nav>
         <p class="chip"><i class={dot}></i> {chip}</p>
         <h1>{h1}</h1>
-        <p class="lead hub-lead">{lead}</p>
+        <p class="lead hub-lead">
+          {lead}
+          {markLead && <Fragment set:html={"<!-- PROVJERITI -->"} />}
+        </p>
       </div>
       <Wave viewBox="0 0 1440 70" d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v30H0z" />
     </section>
     <section class="block">
       <div class="wrap">
-        <div class:list={["cards", grid]}>
+        <div class:list={["cards", cards.length === 3 ? "tri" : "", grid]}>
           {
             cards.map((card) => (
               <a class="card" href={card.href}>
@@ -60,6 +67,22 @@ const grid =
             ))
           }
         </div>
+        {
+          quietCards.length > 0 && (
+            <div class="quiet-block">
+              <h2>{quietTitle}</h2>
+              {quietLead && <p class="lead">{quietLead}</p>}
+              <ul class="quiet-list">
+                {quietCards.map((card) => (
+                  <li>
+                    <a href={card.href}>{card.title}</a>
+                    <span> — {card.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
       </div>
     </section>
     <CtaBand page={page} razlog="opce" label={cta.termin} />

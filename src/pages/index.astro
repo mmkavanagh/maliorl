@@ -2,39 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
 import DoctorCard from "../components/DoctorCard.astro";
-import EndoskopijaTeaser from "../components/EndoskopijaTeaser.astro";
-import ExamSteps from "../components/ExamSteps.astro";
 import Faq from "../components/Faq.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+import PripremaOporavak from "../components/PripremaOporavak.astro";
+import PutLijecenja from "../components/PutLijecenja.astro";
 import StickyCta from "../components/StickyCta.astro";
-import Summary from "../components/Summary.astro";
 import SymptomGrid from "../components/SymptomGrid.astro";
-import TreciKrajnik from "../components/TreciKrajnik.astro";
+import ZahvatIstaknuto from "../components/ZahvatIstaknuto.astro";
+import { cta } from "../copy/cta";
 
-const title = "Dječji ORL Zagreb – uho, grlo i nos kod djece | Mali ORL";
-const description = "Hrče li dijete, diše na usta ili ima česte upale uha? Vodič za roditelje i pregled kod Prim. Marjanovića Kavanagha u Zagrebu.";
+const title = "Dječji ORL pregledi i operacije u Zagrebu | Mali ORL";
+const description =
+  "Od hrkanja i slabijeg sluha do odluke o zahvatu. Razumljive informacije za roditelje i individualna procjena djeteta u Zagrebu.";
 ---
 
 <BaseLayout title={title} description={description} page="home">
   <Header page="home" razlog="opce" />
   <main>
     <Hero />
-    <Summary />
+    <ZahvatIstaknuto />
     <SymptomGrid />
-    <TreciKrajnik />
-    <section class="block" id="pregled">
-      <div class="wrap">
-        <h2>Kako izgleda ORL pregled djeteta</h2>
-        <p class="lead">Pregled je prilagođen dobi djeteta. Bezbolan je, a roditelj je cijelo vrijeme uz dijete.</p>
-        <ExamSteps />
-        <EndoskopijaTeaser />
-      </div>
-    </section>
+    <PutLijecenja />
+    <PripremaOporavak />
     <DoctorCard />
     <Faq />
-    <CtaBand />
+    <CtaBand page="home" razlog="opce" label={cta.pregledDijete} />
   </main>
   <Footer page="home" />
   <StickyCta page="home" razlog="opce" />
