@@ -1,29 +1,22 @@
 ---
-import PlainLayout from "../layouts/PlainLayout.astro";
-import BookingCta from "../components/BookingCta.astro";
-import { cta } from "../copy/cta";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const page = "impresum";
 ---
 
-<PlainLayout
-  title="Impresum | Mali ORL"
-  description="Impresum stranice Mali ORL. Tekstovi su informativni i ne zamjenjuju pregled. Termin se dogovara samo na stranici liječnika. Adresa i OIB nisu upisani."
-  h1="Impresum"
-  lead="Ove stranice su informativne i ne zamjenjuju pregled."
-  page={page}
->
-  <p>Naziv na stranici je Mali ORL. Tekstove je za objavu označio Prim. Marcel Marjanović Kavanagh, univ.mag.med.</p>
-  <p>
-    Pravni nositelj, adresa, OIB i sud nisu upisani dok ih liječnik ne potvrdi.<!-- PROVJERITI -->
-  </p>
-  <p>Na ovoj stranici nema obrasca, telefona ni adrese e-pošte.</p>
-  <p>
-    Termin se dogovara samo na stranici liječnika.
-    <BookingCta page={page} position="inline" razlog="opce" label={cta.termin} />
-  </p>
-  <p>
-    Analitika treće strane nije učitana, pa nema natpisa o analitičkom kolačiću.<!-- PROVJERITI -->
-  </p>
-  <p>Više o zapisima: <a href="/politika-privatnosti/">Politika privatnosti</a>.</p>
-</PlainLayout>
+<BaseLayout title="Impresum | Mali ORL" description="Impresum: pravni nositelj, adresa, OIB i sud." page={page}>
+  <Header page={page} razlog="opce" />
+  <main>
+    <section class="block">
+      <div class="wrap">
+        <p>Pravni nositelj<!-- PROVJERITI --></p>
+        <p>Adresa<!-- PROVJERITI --></p>
+        <p>OIB<!-- PROVJERITI --></p>
+        <p>Sud<!-- PROVJERITI --></p>
+      </div>
+    </section>
+  </main>
+  <Footer page={page} />
+</BaseLayout>
