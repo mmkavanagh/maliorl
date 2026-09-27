@@ -3,7 +3,13 @@ import { getCollection } from "astro:content";
 import HubPage from "../../components/HubPage.astro";
 import { NAZIVI } from "../../lib/published";
 
-const order = ["adenoidektomija", "ventilacijske-cjevcice"];
+const order = [
+  "adenoidektomija",
+  "vadenje-krajnika",
+  "ventilacijske-cjevcice",
+  "frenulotomija",
+  "polipi-i-nosne-skoljke",
+];
 const all = await getCollection("zahvati");
 const cards = order.flatMap((id) => {
   const entry = all.find((item) => item.id === id && item.data.obavljaSe);
@@ -15,9 +21,9 @@ const cards = order.flatMap((id) => {
 
 <HubPage
   title="Zahvati u dječjoj ORL | Mali ORL"
-  description="Zahvati o kojima pišemo: operacija trećeg krajnika i ventilacijske cjevčice. Kada se razmatraju, što očekivati na dan zahvata i kako izgleda oporavak."
+  description="Zahvati: endoskopski treći krajnik, krajnici, cjevčice, podjezična resica te polipi i nosne školjke. Na stranici piše kada zahvat ima smisla."
   h1="Zahvati u dječjoj ORL"
-  lead="Ovdje su operacija trećeg krajnika i ventilacijske cjevčice. Na svakoj stranici piše kada zahvat ima smisla, što radi anesteziolog i što pitati na konzultaciji."
+  lead="Pet zahvata: endoskopsko vađenje trećeg krajnika, krajnici, cjevčice u uhu, podjezična resica te polipi i nosne školjke. Na svakoj stranici piše kada zahvat ima smisla i što pitati na konzultaciji."
   tone="lilac"
   chip="Zahvati"
   page="zahvati"

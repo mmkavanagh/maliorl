@@ -17,6 +17,7 @@ povezano:
   - /stanja/treci-krajnik/
   - /stanja/krajnici-kod-djece/
   - /zahvati/adenoidektomija/
+  - /zahvati/vadenje-krajnika/
 faq:
   - pitanje: "Je li hrkanje isto što i apneja?"
     odgovor: "Nije. Hrkanje je šum. Apneja znači da dijete u snu stane s disanjem, hvata zrak ili se guši."
@@ -66,7 +67,7 @@ Kod blažih oblika ponekad se razmatra sprej za nos ili lijek iz skupine antileu
 
 ## Kada se razmatra zahvat
 
-Adenotonzilektomija (treći krajnik i krajnici) prva je linija kod zdrave djece s povećanim krajnicima.<!-- PROVJERITI --> [Operacija trećeg krajnika](/zahvati/adenoidektomija/) opisuje dio koji se odnosi na adenoid. Ne zamjenjuje odluku o tome treba li zahvat i na krajnicima.
+Adenotonzilektomija (treći krajnik i krajnici) prva je linija kod zdrave djece s povećanim krajnicima.<!-- PROVJERITI --> [Operacija trećeg krajnika](/zahvati/adenoidektomija/) opisuje dio koji se odnosi na adenoid. [Vađenje krajnika](/zahvati/vadenje-krajnika/) opisuje krajnike u grlu. Ne zamjenjuje odluku o tome treba li zahvat i na krajnicima.
 
 ## Što ako se ne liječi
 

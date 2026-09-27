@@ -13,6 +13,7 @@ ukratko:
 povezano:
   - /stanja/angina-i-tonzilitis/
   - /stanja/pfapa-sindrom/
+  - /zahvati/vadenje-krajnika/
 faq:
   - pitanje: "Je li svaka grlobolja angina?"
     odgovor: "Nije. Angina je upala krajnika. Prehlada i virusna grlobolja nisu isto."
@@ -32,7 +33,7 @@ Grlobolja uz prehladu česta je i prolazi. Angina koja se vraća, s temperaturom
 
 ## Mogući uzroci
 
-Stranice koje to razlažu: [angina i tonzilitis](/stanja/angina-i-tonzilitis/) i [PFAPA sindrom](/stanja/pfapa-sindrom/). Kriterij za vađenje krajnika zbog upala: 7 ili više dokumentiranih angina u jednoj godini, 5 ili više godišnje kroz dvije godine, ili 3 ili više godišnje kroz tri godine.<!-- PROVJERITI --> Drugi razlog je apneja.<!-- PROVJERITI -->
+Stranice koje to razlažu: [angina i tonzilitis](/stanja/angina-i-tonzilitis/) i [PFAPA sindrom](/stanja/pfapa-sindrom/). Kriterij za [vađenje krajnika](/zahvati/vadenje-krajnika/) zbog upala: 7 ili više dokumentiranih angina u jednoj godini, 5 ili više godišnje kroz dvije godine, ili 3 ili više godišnje kroz tri godine.<!-- PROVJERITI --> Drugi razlog je apneja.<!-- PROVJERITI -->
 
 ## Na što još obratiti pažnju
 

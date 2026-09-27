@@ -13,6 +13,7 @@ ukratko:
 povezano:
   - /simptomi/ceste-angine/
   - /stanja/angina-i-tonzilitis/
+  - /zahvati/vadenje-krajnika/
 faq:
   - pitanje: "Jesu li svake ponavljajuće temperature PFAPA?"
     odgovor: "Nisu. Zato se ne lijepe dijagnoze na kalendar kod kuće."
@@ -63,7 +64,7 @@ Liječenje epizode vodi pedijatar. Ovdje nema imena lijeka ni doze.
 
 ## Kada se razmatra zahvat
 
-Tonzilektomija se razmatra kod odabrane djece, ne kod svakog djeteta s vrućicom.<!-- PROVJERITI -->
+[Tonzilektomija](/zahvati/vadenje-krajnika/) se razmatra kod odabrane djece, ne kod svakog djeteta s vrućicom.<!-- PROVJERITI -->
 
 ## Što ako se ne liječi
 

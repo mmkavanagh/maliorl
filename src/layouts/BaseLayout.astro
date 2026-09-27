@@ -8,9 +8,10 @@ interface Props {
   description: string;
   page: string;
   jsonLd?: unknown[];
+  noindex?: boolean;
 }
 
-const { title, description, page, jsonLd = [] } = Astro.props;
+const { title, description, page, jsonLd = [], noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, SITE).href;
 const blocks = [globalJsonLd(), ...jsonLd];
 ---
@@ -21,6 +22,7 @@ const blocks = [globalJsonLd(), ...jsonLd];
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

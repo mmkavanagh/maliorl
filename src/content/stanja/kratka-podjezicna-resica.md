@@ -12,6 +12,7 @@ ukratko:
   - "Zahvat se razmatra samo ako resica zaista smeta."
 povezano:
   - /simptomi/kasni-govor/
+  - /zahvati/frenulotomija/
 faq:
   - pitanje: "Treba li svaku resicu prerezati?"
     odgovor: "Ne. Reže se kad smeta dojenju ili govoru, ne zato što je vidljiva."
@@ -62,7 +63,7 @@ Ako resica ne smeta hranjenju ni govoru, ne dira se. Vježbe, ako ih netko predl
 
 ## Kada se razmatra zahvat
 
-Frenulotomija, prerez resice, razmatra se kad resica zaista ograničava dojenje ili govor. Način zahvata objašnjava se na konzultaciji.
+[Frenulotomija](/zahvati/frenulotomija/), prerez resice, razmatra se kad resica zaista ograničava dojenje ili govor. Način zahvata objašnjava se na konzultaciji.
 
 ## Što ako se ne liječi
 

@@ -14,6 +14,7 @@ povezano:
   - /simptomi/disanje-na-usta/
   - /simptomi/dugotrajna-hunjavica/
   - /simptomi/dijete-hrce/
+  - /zahvati/polipi-i-nosne-skoljke/
 faq:
   - pitanje: "Kako razlikovati alergiju od prehlade?"
     odgovor: "Alergija se vraća, nos svrbi, dijete kiše, a temperature često nema. Pregled i dalje treba kad nos ostane zatvoren."
@@ -64,7 +65,7 @@ Izbjegavanje onoga što nos pali, sprej i antihistaminik prema uputi, te alergol
 
 ## Kada se razmatra zahvat
 
-Operacija nosa nije liječenje alergije u ovom tekstu. Ako je uz alergiju povećan treći krajnik i smetnje disanja traju, to je zasebna odluka na [stranici o trećem krajniku](/stanja/treci-krajnik/).
+Operacija nosa nije liječenje alergije u ovom tekstu. Ako se na pregledu vide polipi ili povećane nosne školjke, o tom zahvatu piše stranica [polipi i nosne školjke](/zahvati/polipi-i-nosne-skoljke/). Ako je uz alergiju povećan treći krajnik i smetnje disanja traju, to je zasebna odluka na [stranici o trećem krajniku](/stanja/treci-krajnik/).
 
 ## Što ako se ne liječi
 

@@ -14,6 +14,7 @@ povezano:
   - /simptomi/ceste-angine/
   - /stanja/krajnici-kod-djece/
   - /stanja/pfapa-sindrom/
+  - /zahvati/vadenje-krajnika/
 faq:
   - pitanje: "Je li bijeli nalaz na krajniku uvijek streptokok?"
     odgovor: "Nije. Izgled ne zamjenjuje procjenu liječnika. Bris, ako treba, radi se na pregledu."
@@ -64,7 +65,7 @@ Antibiotik samo po indikaciji, nakon pregleda. Lijek protiv boli prema uputi lij
 
 ## Kada se razmatra zahvat
 
-Kriterij za vađenje krajnika zbog upala: 7 ili više dokumentiranih angina u jednoj godini, 5 ili više godišnje kroz dvije godine, ili 3 ili više godišnje kroz tri godine.<!-- PROVJERITI --> Drugi razlog je apneja.<!-- PROVJERITI --> Kad su krajnici povećani, a čestih upala nema, razmatra se djelomično uklanjanje (tonzilotomija). Oporavak je tada blaži.<!-- PROVJERITI --> Odluka se donosi na pregledu.
+Kriterij za [vađenje krajnika](/zahvati/vadenje-krajnika/) zbog upala: 7 ili više dokumentiranih angina u jednoj godini, 5 ili više godišnje kroz dvije godine, ili 3 ili više godišnje kroz tri godine.<!-- PROVJERITI --> Drugi razlog je apneja.<!-- PROVJERITI --> Kad su krajnici povećani, a čestih upala nema, razmatra se [djelomično uklanjanje (tonzilotomija)](/zahvati/vadenje-krajnika/). Oporavak je tada blaži.<!-- PROVJERITI --> Odluka se donosi na pregledu.
 
 ## Što ako se ne liječi
 

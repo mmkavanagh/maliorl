@@ -9,6 +9,7 @@ import Summary from "../components/Summary.astro";
 import Wave from "../components/Wave.astro";
 import { doctorUrl, sinusUrl } from "../config";
 import { cta } from "../copy/cta";
+import { pregledFaq } from "../copy/pregled-faq";
 import { endoscopyJsonLd } from "../lib/schema";
 
 const page = "pregled-i-endoskopija";
@@ -27,28 +28,7 @@ const ukratko = [
   "Roditelj je uz dijete.",
 ];
 
-const faq = [
-  {
-    pitanje: "Boli li endoskopija?",
-    odgovor: "Neugodno može biti nekoliko sekundi, ali ne boli.",
-  },
-  {
-    pitanje: "Može li se napraviti bez sprej-anestetika?",
-    odgovor: "Endoskop se uvodi kroz nosnicu nakon sprej-anestetika i sredstva za odčepljenje nosa.",
-  },
-  {
-    pitanje: "Koliko traje cijeli pregled?",
-    odgovor: "Endoskopija traje nekoliko minuta. Cijeli pregled uključuje i uši, sluh, grlo i pisani plan za roditelje.",
-  },
-  {
-    pitanje: "Treba li uputnica?",
-    odgovor: "Ne. Za privatni pregled uputnica nije potrebna. Ponesite nalaze i popis lijekova koje dijete koristi.",
-  },
-  {
-    pitanje: "Mogu li dobiti snimku?",
-    odgovor: "Snimka se odmah pokaže roditelju.",
-  },
-];
+const faq = pregledFaq;
 ---
 
 <BaseLayout title={title} description={description} page={page} jsonLd={[endoscopyJsonLd(faq)]}>
@@ -76,7 +56,7 @@ const faq = [
       <div class="wrap prose">
         <h2>Zašto preporučujemo endoskopiju</h2>
         <p>
-          Izravno se vidi treći krajnik, koliko zatvara nos i ušće Eustahijeve cijevi, stanje sluznice, polipi i strano tijelo. Rendgen epifarinksa daje samo sjenu, uz zračenje, i ne pokazuje odnos prema ušima.
+          Izravno se vidi treći krajnik, koliko zatvara nos i ušće Eustahijeve cijevi, stanje sluznice, <a href="/zahvati/polipi-i-nosne-skoljke/">polipi</a> i strano tijelo. Rendgen epifarinksa daje samo sjenu, uz zračenje, i ne pokazuje odnos prema ušima.
         </p>
         <p>O sinusima i alergiji više piše srodna stranica <a class="site-link" href={sinusi}>Centar za sinuse</a>.</p>
 

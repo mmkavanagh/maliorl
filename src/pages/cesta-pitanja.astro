@@ -1,0 +1,110 @@
+---
+import { getCollection } from "astro:content";
+import PlainLayout from "../layouts/PlainLayout.astro";
+import { pregledFaq } from "../copy/pregled-faq";
+import { NAZIVI } from "../lib/published";
+import { faqHubJsonLd } from "../lib/schema";
+
+const title = "Česta pitanja roditelja | Mali ORL";
+const description =
+  "Česta pitanja roditelja skupljaju odgovore već napisane uz simptome, stanja, zahvate i pregled. Novi medicinski odgovori na ovoj stranici nisu dodani.";
+const h1 = "Česta pitanja roditelja";
+
+type Item = { pitanje: string; odgovor: string };
+type Group = { href: string; naziv: string; faq: Item[] };
+
+const symptomOrder = [
+  "dijete-hrce",
+  "disanje-na-usta",
+  "stanke-u-disanju",
+  "umor-i-los-san",
+  "bol-u-uhu",
+  "iscjedak-iz-uha",
+  "slabiji-sluh",
+  "kasni-govor",
+  "ceste-angine",
+  "govor-kroz-nos",
+  "krvarenje-iz-nosa",
+  "iscjedak-iz-jedne-nosnice",
+  "strano-tijelo",
+  "kvrgice-na-vratu",
+  "dugotrajna-hunjavica",
+  "promuklost",
+  "sumno-disanje-dojence",
+  "klempave-usi",
+];
+const conditionOrder = [
+  "treci-krajnik",
+  "krajnici-kod-djece",
+  "apneja-u-snu",
+  "upala-srednjeg-uha",
+  "ponavljajuce-upale-uha",
+  "tekucina-iza-bubnjica",
+  "eustahijeva-cijev",
+  "upala-zvukovoda",
+  "usni-cep",
+  "angina-i-tonzilitis",
+  "pfapa-sindrom",
+  "alergijski-rinitis",
+  "sinusitis-kod-djece",
+  "kratka-podjezicna-resica",
+  "cvorici-na-glasnicama",
+  "laringomalacija",
+  "preaurikularna-fistula",
+];
+const procedureOrder = [
+  "adenoidektomija",
+  "vadenje-krajnika",
+  "ventilacijske-cjevcice",
+  "frenulotomija",
+  "polipi-i-nosne-skoljke",
+];
+
+function grouped(
+  prefix: string,
+  entries: { id: string; data: { h1: string; faq: Item[] } }[],
+  order: string[],
+): Group[] {
+  return order.flatMap((id) => {
+    const entry = entries.find((item) => item.id === id);
+    if (!entry || entry.data.faq.length === 0) return [];
+    const href = `/${prefix}/${id}/`;
+    return [{ href, naziv: NAZIVI[href] ?? entry.data.h1, faq: entry.data.faq }];
+  });
+}
+
+const groups: Group[] = [
+  { href: "/pregled-i-endoskopija/", naziv: NAZIVI["/pregled-i-endoskopija/"], faq: pregledFaq },
+  ...grouped("simptomi", await getCollection("simptomi"), symptomOrder),
+  ...grouped("stanja", await getCollection("stanja"), conditionOrder),
+  ...grouped("zahvati", await getCollection("zahvati"), procedureOrder),
+];
+const flat = groups.flatMap((group) => group.faq);
+---
+
+<PlainLayout
+  title={title}
+  description={description}
+  h1={h1}
+  lead="Ovdje su pitanja koja su već odgovorena na stranicama. Novi medicinski odgovor nije dodan. Svaki naslov vodi na stranicu s koje pitanje dolazi."
+  page="cesta-pitanja"
+  jsonLd={faqHubJsonLd({ h1, faq: flat })}
+>
+  {
+    groups.map((group) => (
+      <div class="faq-group">
+        <h2>
+          <a href={group.href}>{group.naziv}</a>
+        </h2>
+        <div class="faq-list">
+          {group.faq.map((item) => (
+            <details>
+              <summary>{item.pitanje}</summary>
+              <p>{item.odgovor}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</PlainLayout>

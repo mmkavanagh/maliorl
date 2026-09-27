@@ -166,6 +166,27 @@ export function articleJsonLd(opts: {
   };
 }
 
+export function faqHubJsonLd(opts: {
+  h1: string;
+  faq: { pitanje: string; odgovor: string }[];
+}) {
+  const page = hubJsonLd({ slug: "cesta-pitanja", h1: opts.h1 });
+  const graph = page["@graph"] as Record<string, unknown>[];
+  graph.splice(1, 0, {
+    "@type": "FAQPage",
+    "@id": `${SITE}/cesta-pitanja/#faq`,
+    mainEntity: opts.faq.map((item) => ({
+      "@type": "Question",
+      name: item.pitanje,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.odgovor,
+      },
+    })),
+  });
+  return page;
+}
+
 export function hubJsonLd(opts: { slug: string; h1: string }) {
   const url = `${SITE}/${opts.slug}/`;
   return {

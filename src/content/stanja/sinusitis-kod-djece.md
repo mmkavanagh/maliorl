@@ -14,6 +14,7 @@ povezano:
   - /simptomi/dugotrajna-hunjavica/
   - /simptomi/disanje-na-usta/
   - /stanja/alergijski-rinitis/
+  - /zahvati/polipi-i-nosne-skoljke/
 faq:
   - pitanje: "Kad hunjavica postane sumnja na sinusitis?"
     odgovor: "Kad traje duže od 10 dana, ili se pogorša nakon što je krenula bolje. To nije dijagnoza, nego razlog za pregled."
@@ -64,7 +65,7 @@ Ispiranje, sprej i antibiotik samo po indikaciji. Ništa od toga nije kućna she
 
 ## Kada se razmatra zahvat
 
-Zahvat na sinusima nije tema ove stranice i nije prvi korak kod djeteta s hunjavicom. Ako je uzrok i treći krajnik, o njemu piše zasebna stranica.
+Zahvat na sinusima nije tema ove stranice i nije prvi korak kod djeteta s hunjavicom. Ako se nađu polipi ili povećane nosne školjke, o njima piše stranica [polipi i nosne školjke](/zahvati/polipi-i-nosne-skoljke/). Ako je uzrok i treći krajnik, o njemu piše zasebna stranica.
 
 ## Što ako se ne liječi
 

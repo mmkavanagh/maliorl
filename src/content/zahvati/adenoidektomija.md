@@ -10,12 +10,14 @@ ukratko:
   - "Zahvat se razmatra kad smetnje ostanu unatoč spreju za nos."
   - "Razlog mogu biti i apneja, tekućina u uhu ili česte upale uha."
   - "Dijagnoza trećeg krajnika je endoskopijom, bez rendgena."
+  - "Treći krajnik vadi se endoskopski."
   - "Upute za dan zahvata daje anesteziolog."
 povezano:
   - /stanja/treci-krajnik/
   - /stanja/apneja-u-snu/
   - /stanja/tekucina-iza-bubnjica/
   - /stanja/ponavljajuce-upale-uha/
+  - /zahvati/vadenje-krajnika/
 faq:
   - pitanje: "Je li operacija prvi korak?"
     odgovor: "Nije. Prvo se pokušava sprej za nos koji propiše liječnik. Zahvat dolazi u obzir ako smetnje ostanu."
@@ -31,13 +33,11 @@ pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
 sinusi: true
 ---
 
-<!-- PROVJERITI --><!-- obavlja li liječnik ovaj zahvat -->
-
 ## Kada je zahvat opravdan
 
-Adenoidektomija se razmatra ako smetnje disanja na nos traju, ako je uz [tekućinu iza bubnjića](/stanja/tekucina-iza-bubnjica/) slabiji sluh, ili ako se [upale uha](/stanja/ponavljajuce-upale-uha/) ponavljaju.<!-- PROVJERITI --> Više o samom stanju: [treći krajnik](/stanja/treci-krajnik/).
+Treći krajnik vadi se endoskopski. Adenoidektomija se razmatra ako smetnje disanja na nos traju, ako je uz [tekućinu iza bubnjića](/stanja/tekucina-iza-bubnjica/) slabiji sluh, ili ako se [upale uha](/stanja/ponavljajuce-upale-uha/) ponavljaju.<!-- PROVJERITI --> Više o samom stanju: [treći krajnik](/stanja/treci-krajnik/).
 
-Kod [apneje u snu](/stanja/apneja-u-snu/), kad su povećani i krajnici, prva linija u zdrave djece je adenotonzilektomija, zahvat na trećem krajniku i krajnicima.<!-- PROVJERITI --> Ova stranica opisuje operaciju trećeg krajnika. Ne tvrdi da je ona sama uvijek dovoljna kod apneje.
+Kod [apneje u snu](/stanja/apneja-u-snu/), kad su povećani i krajnici, prva linija u zdrave djece je adenotonzilektomija, zahvat na trećem krajniku i krajnicima.<!-- PROVJERITI --> Ova stranica opisuje operaciju trećeg krajnika. [Vađenje krajnika](/zahvati/vadenje-krajnika/) opisuje krajnike u grlu. Ne tvrdi da je ona sama uvijek dovoljna kod apneje.
 
 ## Kada nije potreban
 
@@ -49,7 +49,7 @@ Prije zahvata razgovarate s anesteziologom. On daje upute za pripremu. Dijagnoza
 
 ## Dan zahvata
 
-Dan zahvata vode anesteziolog i kirurški tim. Točan tijek dana, od dolaska do otpusta, potvrđuje se na konzultaciji.<!-- PROVJERITI -->
+Dan zahvata vode anesteziolog i kirurški tim. Točan tijek dana, od dolaska do otpusta, potvrđuje se na konzultaciji.<!-- PROVJERITI --> Koraci vađenja, instrumenti i što se radi unutar nosa ovdje nisu opisani.<!-- PROVJERITI -->
 
 ## Oporavak
 

@@ -1,6 +1,6 @@
 # Mali ORL
 
-Static site for maliorl.com, a Croatian guide for parents about children's ear, nose and throat care. Published pages are the homepage, the endoscopy page, the symptom check, the symptom, condition and procedure hubs, and the articles in `src/content`. A new article is a Markdown file in `src/content/simptomi`, `src/content/stanja`, or `src/content/zahvati`. Do not link a page that is not in `src/lib/published.ts`. Booking happens on drmarjanovickavanagh.com. This site has no form, phone number, or email address.
+Static site for maliorl.com, a Croatian guide for parents about children's ear, nose and throat care. Published pages are the homepage, the endoscopy page, the symptom check, the hubs, the articles in `src/content`, the FAQ page, the doctor page, the privacy page, the imprint, and the 404 page. A new article is a Markdown file in `src/content/simptomi`, `src/content/stanja`, or `src/content/zahvati`. Do not link a page that is not in `src/lib/published.ts`. Booking happens on drmarjanovickavanagh.com. This site has no form, phone number, or email address.
 
 ## Local development
 
@@ -16,7 +16,7 @@ npm run build
 
 ## Hostinger
 
-Upload the contents of `dist/` to `public_html`. `public/.htaccess` is copied into `dist/` and sets HTTPS, no `www`, a trailing slash, gzip/brotli, a long cache for static files, and `ErrorDocument 404 /404.html`. The 404 page itself is not part of this phase.
+Upload the contents of `dist/` to `public_html`. `public/.htaccess` is copied into `dist/` and sets HTTPS, no `www`, a trailing slash, gzip/brotli, a long cache for static files, and `ErrorDocument 404 /404.html`.
 
 The contact form on drmarjanovickavanagh.com should read `razlog` from the query string and prefill the reason for the visit. That change is not in this repository.
 

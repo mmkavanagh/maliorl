@@ -1,0 +1,57 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import StickyCta from "../components/StickyCta.astro";
+import Wave from "../components/Wave.astro";
+import { cta } from "../copy/cta";
+import { hubJsonLd } from "../lib/schema";
+
+interface Props {
+  title: string;
+  description: string;
+  h1: string;
+  lead: string;
+  page: string;
+  tone?: "sky" | "coral" | "mint" | "lilac";
+  noindex?: boolean;
+  jsonLd?: unknown;
+}
+
+const { title, description, h1, lead, page, tone = "sky", noindex = false, jsonLd } = Astro.props;
+const dot = tone === "coral" ? "dot-coral" : tone === "mint" ? "dot-mint" : tone === "lilac" ? "dot-lilac" : "dot-sky";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  page={page}
+  noindex={noindex}
+  jsonLd={[jsonLd ?? hubJsonLd({ slug: page, h1 })]}
+>
+  <Header page={page} razlog="opce" />
+  <main>
+    <section class:list={["hero", tone, "article"]}>
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Put">
+          <a href="/">Početna</a>
+          <span aria-hidden="true">/</span>
+          <span>{h1}</span>
+        </nav>
+        <p class="chip"><i class={dot}></i> Mali ORL</p>
+        <h1>{h1}</h1>
+        <p class="lead hub-lead">{lead}</p>
+      </div>
+      <Wave viewBox="0 0 1440 70" d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v30H0z" />
+    </section>
+    <section class="block">
+      <div class="wrap prose">
+        <slot />
+      </div>
+    </section>
+    <CtaBand page={page} razlog="opce" label={cta.termin} />
+  </main>
+  <Footer page={page} />
+  <StickyCta page={page} razlog="opce" />
+</BaseLayout>

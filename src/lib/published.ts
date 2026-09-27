@@ -39,9 +39,16 @@ export const OBJAVLJENO = new Set([
   "/stanja/preaurikularna-fistula/",
   "/zahvati/",
   "/zahvati/adenoidektomija/",
+  "/zahvati/vadenje-krajnika/",
   "/zahvati/ventilacijske-cjevcice/",
+  "/zahvati/frenulotomija/",
+  "/zahvati/polipi-i-nosne-skoljke/",
   "/pregled-i-endoskopija/",
   "/provjera-simptoma/",
+  "/cesta-pitanja/",
+  "/o-lijecniku/",
+  "/politika-privatnosti/",
+  "/impresum/",
 ]);
 
 export const NAZIVI: Record<string, string> = {
@@ -84,7 +91,14 @@ export const NAZIVI: Record<string, string> = {
   "/stanja/preaurikularna-fistula/": "Rupica ispred uha",
   "/zahvati/": "Zahvati",
   "/zahvati/adenoidektomija/": "Operacija trećeg krajnika",
+  "/zahvati/vadenje-krajnika/": "Vađenje krajnika",
   "/zahvati/ventilacijske-cjevcice/": "Ventilacijske cjevčice",
+  "/zahvati/frenulotomija/": "Frenulotomija",
+  "/zahvati/polipi-i-nosne-skoljke/": "Polipi i školjke",
   "/pregled-i-endoskopija/": "Pregled i endoskopija",
   "/provjera-simptoma/": "Provjera simptoma",
+  "/cesta-pitanja/": "Česta pitanja",
+  "/o-lijecniku/": "O liječniku",
+  "/politika-privatnosti/": "Privatnost",
+  "/impresum/": "Impresum",
 };

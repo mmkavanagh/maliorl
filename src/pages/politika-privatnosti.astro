@@ -1,0 +1,28 @@
+---
+import PlainLayout from "../layouts/PlainLayout.astro";
+import BookingCta from "../components/BookingCta.astro";
+import { cta } from "../copy/cta";
+
+const page = "politika-privatnosti";
+---
+
+<PlainLayout
+  title="Politika privatnosti | Mali ORL"
+  description="Politika privatnosti: nema analitike treće strane, obrasca, telefona ni e-pošte. Termin je samo na stranici liječnika. Tekst ne zamjenjuje pregled."
+  h1="Politika privatnosti"
+  lead="Ove stranice su informativne i ne zamjenjuju pregled."
+  page={page}
+>
+  <p>Na maliorl.com nema obrasca, telefona ni adrese e-pošte. Poruku ne šaljete ovdje.</p>
+  <p>
+    Termin se dogovara samo na stranici liječnika.
+    <BookingCta page={page} position="inline" razlog="opce" label={cta.termin} />
+  </p>
+  <p>
+    Analitika treće strane nije učitana. Zato nema natpisa o analitičkom kolačiću. Hoće li sam hosting ostaviti tehnički zapis, ovdje nije potvrđeno.<!-- PROVJERITI -->
+  </p>
+  <p>
+    Pravni nositelj, adresa, OIB i sud nisu upisani dok ih liječnik ne potvrdi.<!-- PROVJERITI -->
+  </p>
+  <p>Više o stranici: <a href="/impresum/">Impresum</a>.</p>
+</PlainLayout>

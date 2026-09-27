@@ -1,0 +1,27 @@
+---
+import PlainLayout from "../layouts/PlainLayout.astro";
+
+const links = [
+  { href: "/", naziv: "Početna" },
+  { href: "/simptomi/", naziv: "Simptomi" },
+  { href: "/stanja/", naziv: "Stanja" },
+  { href: "/zahvati/", naziv: "Zahvati" },
+  { href: "/pregled-i-endoskopija/", naziv: "Pregled i endoskopija" },
+];
+---
+
+<PlainLayout
+  title="Stranica nije pronađena | Mali ORL"
+  description="Stranica nije pronađena. Vratite se na početnu, na simptome, stanja ili zahvate, ili otvorite stranicu pregleda i endoskopije nosa kod djece."
+  h1="Stranica nije pronađena"
+  lead="Ova adresa ne vodi na stranicu. Odaberite jedno od ovih mjesta."
+  page="404"
+  tone="coral"
+  noindex={true}
+>
+  <div class="miss-links">
+    {links.map((link) => (
+      <a class="pill" href={link.href}>{link.naziv}</a>
+    ))}
+  </div>
+</PlainLayout>

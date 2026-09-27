@@ -15,6 +15,7 @@ povezano:
   - /simptomi/stanke-u-disanju/
   - /stanja/apneja-u-snu/
   - /stanja/angina-i-tonzilitis/
+  - /zahvati/vadenje-krajnika/
 faq:
   - pitanje: "Jesu li veliki krajnici uvijek za vaditi?"
     odgovor: "Nisu. Veličina smeta kad zatvara disanje ili gutanje. Upale se broje zasebno."
@@ -65,7 +66,7 @@ Jedna upala nije razlog za zahvat. Liječi je liječnik koji vidi dijete. Ovdje 
 
 ## Kada se razmatra zahvat
 
-Kad su krajnici povećani, a čestih upala nema, razmatra se djelomično uklanjanje (tonzilotomija). Oporavak je tada blaži.<!-- PROVJERITI --> Odluka se donosi na pregledu. Kriterij za vađenje krajnika zbog upala: 7 ili više dokumentiranih angina u jednoj godini, 5 ili više godišnje kroz dvije godine, ili 3 ili više godišnje kroz tri godine.<!-- PROVJERITI --> Drugi razlog je apneja.<!-- PROVJERITI --> Kod [apneje](/stanja/apneja-u-snu/), u zdrave djece s povećanim krajnicima, prva linija je zahvat na trećem krajniku i krajnicima.<!-- PROVJERITI -->
+Kad su krajnici povećani, a čestih upala nema, razmatra se [djelomično uklanjanje (tonzilotomija)](/zahvati/vadenje-krajnika/). Oporavak je tada blaži.<!-- PROVJERITI --> Odluka se donosi na pregledu. Kriterij za [vađenje krajnika](/zahvati/vadenje-krajnika/) zbog upala: 7 ili više dokumentiranih angina u jednoj godini, 5 ili više godišnje kroz dvije godine, ili 3 ili više godišnje kroz tri godine.<!-- PROVJERITI --> Drugi razlog je apneja.<!-- PROVJERITI --> Kod [apneje](/stanja/apneja-u-snu/), u zdrave djece s povećanim krajnicima, prva linija je zahvat na trećem krajniku i krajnicima.<!-- PROVJERITI -->
 
 ## Što ako se ne liječi
 

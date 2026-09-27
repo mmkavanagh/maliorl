@@ -48,7 +48,7 @@ const zahvati = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/zahvati" }),
   schema: z.object({
     ...zajednicko("odluka"),
-    obavljaSe: z.literal(true),
+    obavljaSe: z.boolean(),
   }),
 });
 
