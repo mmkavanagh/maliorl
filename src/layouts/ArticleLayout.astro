@@ -1,0 +1,164 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import BookingCta from "../components/BookingCta.astro";
+import CtaBand from "../components/CtaBand.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import KvizTraka from "../components/KvizTraka.astro";
+import StickyCta from "../components/StickyCta.astro";
+import Summary from "../components/Summary.astro";
+import Wave from "../components/Wave.astro";
+import { doctorUrl, sinusUrl } from "../config";
+import { cta } from "../copy/cta";
+import { NAZIVI } from "../lib/published";
+import { articleJsonLd } from "../lib/schema";
+
+interface Props {
+  entry: CollectionEntry<"simptomi"> | CollectionEntry<"stanja"> | CollectionEntry<"zahvati">;
+  kind: "simptom" | "stanje" | "zahvat";
+}
+
+const { entry, kind } = Astro.props;
+const data = entry.data;
+const page = entry.id;
+const tone = kind === "simptom" ? "coral" : kind === "stanje" ? "mint" : "lilac";
+const chip = kind === "simptom" ? "Simptom" : kind === "stanje" ? "Stanje" : "Zahvat";
+const dot = kind === "simptom" ? "dot-coral" : kind === "stanje" ? "dot-mint" : "dot-lilac";
+const lijecnik = doctorUrl(page);
+const sinusi = sinusUrl();
+const datum = new Intl.DateTimeFormat("hr-HR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+}).format(data.azurirano);
+const lastReviewed = data.azurirano.toISOString().slice(0, 10);
+
+const hrefs = new Set<string>(data.povezano);
+hrefs.add("/pregled-i-endoskopija/");
+if (kind === "simptom") hrefs.add("/provjera-simptoma/");
+const poveznice = [...hrefs].flatMap((href) => {
+  const naziv = NAZIVI[href];
+  return naziv ? [{ href, naziv }] : [];
+});
+
+const jsonLd = articleJsonLd({
+  kind,
+  slug: page,
+  h1: data.h1,
+  lastReviewed,
+  faq: data.faq,
+});
+---
+
+<BaseLayout title={data.title} description={data.description} page={page} jsonLd={[jsonLd]}>
+  <Header page={page} razlog={data.razlog} />
+  <main data-faza={data.faza} data-razlog={data.razlog}>
+    <section class:list={["hero", tone, "article"]}>
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Put">
+          <a href="/">Početna</a>
+          <span aria-hidden="true">/</span>
+          <span>{data.h1}</span>
+        </nav>
+        <p class="chip"><i class={dot}></i> {chip}</p>
+        <p class="reviewed">
+          Stručno pregledano: {datum} · <a href={lijecnik}>{data.pregledao}</a>
+        </p>
+        <h1>{data.h1}</h1>
+      </div>
+      <Summary items={data.ukratko} class="article-summary" />
+      <Wave viewBox="0 0 1440 70" d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v30H0z" />
+    </section>
+
+    <section class="block article-body">
+      <div class="wrap prose">
+        <slot />
+        {
+          data.sinusi && (
+            <p>
+              O sinusima i alergiji više piše srodna stranica <a class="site-link" href={sinusi}>Centar za sinuse</a>.
+            </p>
+          )
+        }
+        {kind === "simptom" && <KvizTraka />}
+        {
+          data.faq.length > 0 && (
+            <>
+              <h2>Česta pitanja</h2>
+              <div class="faq-list">
+                {data.faq.map((item) => (
+                  <details>
+                    <summary>{item.pitanje}</summary>
+                    <p>
+                      {item.odgovor}
+                      {item.oznaka && <Fragment set:html={"<!-- PROVJERITI -->"} />}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </>
+          )
+        }
+      </div>
+    </section>
+
+    <section class="block" style="padding-top:0">
+      <div class="wrap">
+        {
+          poveznice.length > 0 && (
+            <>
+              <h2>Povezano</h2>
+              <div class="links">
+                {poveznice.map((link) => (
+                  <a class="pill" href={link.href}>
+                    {link.naziv}
+                  </a>
+                ))}
+              </div>
+            </>
+          )
+        }
+        <div class="doctor-note">
+          <h2>O liječniku</h2>
+          <p>
+            <a class="site-link" href={lijecnik}>{data.pregledao}</a>, specijalist otorinolaringologije, subspecijalist plastične i rekonstruktivne kirurgije glave i vrata.
+          </p>
+          <a class="btn soft" href={lijecnik}>{cta.lijecnik}</a>
+        </div>
+      </div>
+    </section>
+
+    {
+      kind === "zahvat" ? (
+        <section class="cta">
+          <Wave viewBox="0 0 1440 60" d="M0 30c120-26 240-26 360 0s240 26 360 0 240-26 360 0 240 26 360 0v30H0z" />
+          <span class="confetti" style="width:22px;height:22px;background:#FFC94A;left:8%;top:40%" />
+          <span class="confetti" style="width:14px;height:14px;background:#FF7A6B;left:18%;top:72%" />
+          <span class="confetti" style="width:18px;height:18px;background:#3FBF94;right:12%;top:36%" />
+          <span class="confetti" style="width:12px;height:12px;background:#fff;right:22%;top:74%" />
+          <h2>Konzultacija za zahvat</h2>
+          <p>Na konzultaciji se objašnjava je li zahvat potreban, što očekivati i koji su rizici.</p>
+          <div class="article-actions">
+            <BookingCta page={page} position="kraj" razlog={data.razlog} label={cta.zahvat} />
+            <BookingCta page={page} position="inline" razlog="drugo-misljenje" label={cta.drugoMisljenje} soft />
+          </div>
+        </section>
+      ) : kind === "stanje" ? (
+        <CtaBand
+          page={page}
+          razlog={data.razlog}
+          label={cta.endoskopija}
+          arrow={false}
+          heading="Pregled s endoskopijom"
+          text="Na pregledu se gleda nos endoskopom, bez rendgena, i procjenjuje se sluh kad je to potrebno."
+        />
+      ) : (
+        <CtaBand page={page} razlog={data.razlog} label={cta.termin} heading="Dogovorite termin" text="Ako simptom traje, pregled nosa i sluha pomaže razlučiti sljedeći korak." />
+      )
+    }
+  </main>
+  <Footer page={page} />
+  <StickyCta page={page} razlog={data.razlog} />
+</BaseLayout>

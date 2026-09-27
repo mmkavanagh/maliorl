@@ -37,11 +37,6 @@ const faq = [
     odgovor: "Endoskop se uvodi kroz nosnicu nakon sprej-anestetika i sredstva za odčepljenje nosa.",
   },
   {
-    pitanje: "Treba li dijete biti natašte?",
-    odgovor: "U opisu pripreme natašte nije navedeno. Ponesite prijašnje nalaze, audiogram i popis lijekova.",
-    provjera: true,
-  },
-  {
     pitanje: "Koliko traje cijeli pregled?",
     odgovor: "Endoskopija traje nekoliko minuta. Cijeli pregled uključuje i uši, sluh, grlo i pisani plan za roditelje.",
   },
@@ -125,14 +120,14 @@ const faq = [
           <li>liječenje lijekovima i kontrola</li>
           <li>prijedlog zahvata, uz objašnjenje koristi i rizika</li>
         </ol>
-        <p><a class="site-link" href="/zahvati/">Više o zahvatima</a></p>
+        <p><a class="site-link" href="/zahvati/adenoidektomija/">Operacija trećeg krajnika</a></p>
 
         <h2>Česta pitanja</h2>
         <div class="faq-list">
           {
             faq.map((item) => (
               <details>
-                <summary set:html={`${item.pitanje}${item.provjera ? "<!-- PROVJERITI -->" : ""}`} />
+                <summary>{item.pitanje}</summary>
                 <p>{item.odgovor}</p>
               </details>
             ))
