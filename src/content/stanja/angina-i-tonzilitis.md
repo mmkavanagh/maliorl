@@ -25,6 +25,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -34,7 +35,7 @@ Angina, tonzilitis, je upala krajnika. Dijete boli grlo, često ima temperaturu,
 
 ## Koliko je često i u kojoj dobi
 
-Brojka o učestalosti ovdje nije navedena.
+U studijama novorođenčadi dijagnoza se kreće otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez.
 
 ## Simptomi
 
@@ -45,13 +46,9 @@ Bol u grlu, temperatura, otežano gutanje. Ako se uz to javljaju afte i čvorovi
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>ne može progutati slinu ili ne otvara usta</li>
+    <li>uz anginu teško diše</li>
+    <li>vrat natekne brzo uz temperaturu</li>
   </ul>
 </aside>
 
@@ -61,7 +58,7 @@ Dijagnoza je pregledom grla i, kad liječnik odluči, brisom. Ovaj tekst ne kaž
 
 ## Liječenje bez operacije
 
-Antibiotik samo po indikaciji, nakon pregleda. Lijek protiv boli prema uputi liječnika. Sheme i doze ovdje nema.
+Antibiotik dolazi u obzir samo kad liječnik koji vidi dijete procijeni da treba. Bol se olakšava onim što je propisano za to dijete.
 
 ## Kada se razmatra zahvat
 

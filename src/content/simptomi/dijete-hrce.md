@@ -25,6 +25,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: true
 ---
 
@@ -54,18 +55,15 @@ Obratite pažnju diše li dijete na usta i danju, je li san nemiran, znoji li se
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
+    <li>u snu ima stanku, hvata zrak ili mu usnice poplave</li>
+    <li>diše tako teško da uvlači prsni koš</li>
+    <li>teško ga je probuditi</li>
   </ul>
 </aside>
 
 ## Što možete učiniti kod kuće
 
-Zapišite koliko noći u tjednu dijete hrče i jeste li čuli stanku, hvatanje zraka ili gušenje. To je dovoljno za razgovor na pregledu. Ovdje nema savjeta o lijeku koji biste sami započeli.
+Zapišite koliko noći u tjednu dijete hrče i jeste li čuli stanku, hvatanje zraka ili gušenje. To je dovoljno za razgovor na pregledu.
 
 ## Kada na pregled i što se radi
 

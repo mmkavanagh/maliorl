@@ -14,6 +14,12 @@ interface Card {
   text: string;
 }
 
+interface Block {
+  title: string;
+  lead?: string;
+  cards: Card[];
+}
+
 interface Props {
   title: string;
   description: string;
@@ -26,10 +32,11 @@ interface Props {
   quietTitle?: string;
   quietLead?: string;
   quietCards?: Card[];
+  blocks?: Block[];
   markLead?: boolean;
 }
 
-const { title, description, h1, lead, tone, chip, page, cards, quietTitle, quietLead, quietCards = [], markLead = false } = Astro.props;
+const { title, description, h1, lead, tone, chip, page, cards, quietTitle, quietLead, quietCards = [], blocks = [], markLead = false } = Astro.props;
 const dot = tone === "coral" ? "dot-coral" : tone === "mint" ? "dot-mint" : "dot-lilac";
 const grid =
   tone === "coral" ? "tone-coral" : tone === "mint" ? "tone-mint" : "tone-lilac";
@@ -82,6 +89,22 @@ const grid =
               </ul>
             </div>
           )
+        }
+        {
+          blocks.map((block) => (
+            <div class="quiet-block">
+              <h2>{block.title}</h2>
+              {block.lead && <p class="lead">{block.lead}</p>}
+              <ul class="quiet-list">
+                {block.cards.map((card) => (
+                  <li>
+                    <a href={card.href}>{card.title}</a>
+                    <span> — {card.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
         }
       </div>
     </section>

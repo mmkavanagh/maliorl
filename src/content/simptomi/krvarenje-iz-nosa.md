@@ -21,6 +21,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: true
 ---
 
@@ -41,20 +42,16 @@ Ako krv ide samo iz jedne nosnice i uz nju je smrdljiv iscjedak, pročitajte [st
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>krv ne staje dok stišćete meki dio nosa, a glava je naprijed</li>
+    <li>blijedi, gubi snagu ili povraća krv</li>
+    <li>krvarenje je došlo nakon udarca u glavu</li>
   </ul>
 </aside>
 
 ## Što možete učiniti kod kuće
 
-Dijete neka sjedne. Glavu nagnite <strong>naprijed</strong>, ne natrag. Stisnite meki dio nosa 10–15 minuta bez popuštanja.<!-- PROVJERITI --> Ne zabacujte glavu.<!-- PROVJERITI -->
+Dijete neka sjedne. Glavu nagnite <strong>naprijed</strong>, ne natrag. Stisnite meki dio nosa i ne puštajte da provjerite je li stalo. Ne zabacujte glavu.
 
 ## Kada na pregled i što se radi
 
-Hitno je ako krvarenje ne prestane nakon 15–20 minuta pritiska ili je obilno.<!-- PROVJERITI --> Ako se krvarenje vraća, dogovorite pregled. Na njemu se vidi prednji dio nosa. [Pregled i endoskopija](/pregled-i-endoskopija/) pokrivaju i ponavljajuće krvarenje.
+Hitno je ako krv ne staje dok stišćete meki dio nosa, glava naprijed, ili ako je krvarenje obilno i dijete blijedi. Ako se krvarenje vraća, dogovorite pregled. Na njemu se vidi prednji dio nosa. [Pregled i endoskopija](/pregled-i-endoskopija/) pokrivaju i ponavljajuće krvarenje.

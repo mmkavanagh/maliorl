@@ -1,72 +1,45 @@
 ---
 title: "Polipi i nosne školjke | Mali ORL"
-description: "Polipi u nosu i nosne školjke razmatraju se na pregledu, uz alergiju ili sinusitis. Zahvat nije prvi korak. Cijena i brojke o uspjehu ovdje nisu navedene."
+description: "Polipi u nosu i nosne školjke nisu ista tema. Stranica ih razdvaja i vodi na smanjenje školjki te na endoskopiju sinusa samo kod odabrane djece."
 h1: "Polipi u nosu i nosne školjke"
 kljucnaRijec: "polipi u nosu"
 faza: odluka
 razlog: zahvat-polipi-i-nosne-skoljke
 obavljaSe: true
 ukratko:
-  - "Stranica pokriva polipe u nosu i nosne školjke."
-  - "Zahvat nije prvi korak kod hunjavice."
-  - "Odluka je na pregledu, uz alergiju ili sinusitis kad su oni razlog."
-  - "Cijena i brojka o uspjehu ovdje nisu navedene."
+  - "Polip i školjka nisu isti nalaz. Ova stranica vodi na svaku temu posebno."
+  - "Školjke su nabori koji mogu oteći. Polip je izraslina sluznice."
+  - "Smanjenje donjih školjki ima svoju stranicu."
+  - "Endoskopska operacija sinusa nije liječenje obične hunjavice."
 povezano:
+  - /zahvati/redukcija-nosnih-skoljki/
+  - /zahvati/endoskopska-kirurgija-sinusa/
+  - /zahvati/adenoidektomija/
   - /stanja/alergijski-rinitis/
   - /stanja/sinusitis-kod-djece/
   - /simptomi/disanje-na-usta/
   - /simptomi/dugotrajna-hunjavica/
 faq:
-  - pitanje: "Je li zahvat liječenje alergije?"
-    odgovor: "Ne iz ovog teksta. Alergija se liječi prema nalazu. Polip ili školjka posebna su odluka na pregledu."
-  - pitanje: "Vidi li se polip bez pregleda?"
-    odgovor: "Ne. Nos se gleda na pregledu, po potrebi endoskopom."
-  - pitanje: "Ima li cijene ili brojke o uspjehu?"
-    odgovor: "Nema. Oboje se kaže na konzultaciji, ne na ovoj stranici."
-  - pitanje: "Tko daje upute ako treba anestezija?"
-    odgovor: "Upute daje anesteziolog."
+  - pitanje: "Gdje da čitam o školjkama?"
+    odgovor: "Na stranici o smanjenju donjih nosnih školjki. Tamo piše kada oteklina nije samo prehlada i da način zahvata nije isti za svako dijete."
+  - pitanje: "Je li polip u djeteta razlog za operaciju sinusa?"
+    odgovor: "Ne sam po sebi i ne kao liječenje hunjavice. Polip se vidi na pregledu. Operacija sinusa razmatra se samo kod odabrane, uporne bolesti sinusa. Običan curenje nosa ide drugim putem."
+  - pitanje: "Je li treći krajnik polip?"
+    odgovor: "Nije. Treći krajnik je limfno tkivo iza nosa. Polip je druga vrsta izrasline. Na pregledu se to razlikuje endoskopom."
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: true
+izvori: []
 ---
 
-## Kada je zahvat opravdan
+Polip i nosna školjka nisu ista stvar, iako oboje mogu zatvoriti nos. Ova stranica ih razdvaja i vodi dalje.
 
-Ova stranica pokriva dva zahvata: polipe u nosu i nosne školjke. Oba obavlja Prim. Marcel Marjanović Kavanagh. Kad su opravdani, odlučuje se na pregledu. Povezana stanja: [alergijski rinitis](/stanja/alergijski-rinitis/) i [sinusitis](/stanja/sinusitis-kod-djece/). Zatvoren nos vidi se i kao [disanje na usta](/simptomi/disanje-na-usta/) ili [hunjavica koja traje](/simptomi/dugotrajna-hunjavica/).
+[Smanjenje donjih nosnih školjki](/zahvati/redukcija-nosnih-skoljki/) objašnjava nabor koji je ostao velik i drži nos zatvorenim. To nije operacija za prehladu.
 
-Dob, veličina polipa ili školjke i drugi prag za zahvat ovdje nisu navedeni.<!-- PROVJERITI -->
+Polip je izraslina sluznice. Kod djeteta se ne pretpostavlja iz priče o hunjavici. Vidi se na [pregledu nosa](/pregled-i-endoskopija/). Mali polip i velika školjka nisu isti nalaz, i ne liječe se istim zahvatom. Alergija ostaje [alergijski rinitis](/stanja/alergijski-rinitis/). Dugotrajno curenje može biti i [sinusitis](/stanja/sinusitis-kod-djece/) ili, vrlo često u ovoj dobi, [treći krajnik](/zahvati/adenoidektomija/).
 
-## Kada nije potreban
+[Endoskopska operacija sinusa](/zahvati/endoskopska-kirurgija-sinusa/) posebna je tema za odabranu djecu kod koje je bolest u samim sinusima. Nije sljedeći korak nakon šmrcanja i nije uobičajeno liječenje hunjavice.
 
-Zahvat nije prvi korak kod prehlade ni kod same alergije. Sprej i ostalo liječenje bez operacije određuje liječnik koji vidi dijete. Ako smetnje prođu, operacija nije potrebna.
-
-## Priprema
-
-Nos se pogleda na [pregledu](/pregled-i-endoskopija/), po potrebi endoskopom. Ako je predviđena anestezija, upute daje anesteziolog.<!-- PROVJERITI -->
-
-## Dan zahvata
-
-Točan tijek dana potvrđuje se na konzultaciji.<!-- PROVJERITI --> Kako se polip uklanja i kako se školjka smanjuje, uključujući instrumente i korake, ovdje nije opisano.<!-- PROVJERITI -->
-
-## Oporavak
-
-Trajanje oporavka objašnjava se na konzultaciji.<!-- PROVJERITI --> Ovdje nema tablice po danima.
-
-## Mogući rizici
-
-Svaki zahvat ima rizike. Koji su i koliko su česti, objašnjava se na konzultaciji.<!-- PROVJERITI --> Ovdje nema brojke o učestalosti.
-
-## Kada se javiti odmah
-
-<aside class="red" aria-label="Kada odmah potražiti liječnika">
-  <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
-  <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-  </ul>
-</aside>
-
-## Rezultati
-
-Cilj je lakše disanje na nos kad su polip ili školjka bili razlog zatvorenog nosa. Ishod se procjenjuje na kontroli. Ovdje nema brojke o uspjehu. Cijena nije navedena.
+Na pregledu se odlučuje treba li išta od toga, ili je dovoljno liječenje bez operacije. Povezani simptomi: [disanje na usta](/simptomi/disanje-na-usta/) i [hunjavica koja traje](/simptomi/dugotrajna-hunjavica/).

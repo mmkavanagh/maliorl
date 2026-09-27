@@ -1,45 +1,124 @@
 ---
-import { getCollection } from "astro:content";
 import HubPage from "../../components/HubPage.astro";
-import { NAZIVI } from "../../lib/published";
 
-const featured = [
-  { id: "adenoidektomija", title: "Endoskopska operacija trećeg krajnika" },
-  { id: "ventilacijske-cjevcice", title: "Ventilacijske cjevčice u ušima" },
-  { id: "frenulotomija", title: "Kratka podjezična resica" },
+const cards = [
+  {
+    href: "/zahvati/adenoidektomija/",
+    title: "Endoskopska adenoidektomija",
+    text: "Operacija trećeg krajnika kod djece. Gledanje endoskopom na pregledu nije isto što i zahvat u anesteziji.",
+  },
+  {
+    href: "/zahvati/ventilacijske-cjevcice/",
+    title: "Ventilacijske cjevčice",
+    text: "Kad tekućina iza bubnjića traje uz slabiji sluh, ili kad se upale vraćaju i tekućina je još tu.",
+  },
+  {
+    href: "/zahvati/frenulotomija/",
+    title: "Frenulotomija i frenuloplastika",
+    text: "Kratka podjezična resica. Gleda se funkcija jezika, ne izgled nabora na slici.",
+  },
 ];
-const quietOrder = ["vadenje-krajnika", "polipi-i-nosne-skoljke"];
 
-const all = await getCollection("zahvati");
+const operacije = [
+  {
+    href: "/zahvati/tonzilotomija/",
+    title: "Tonzilotomija",
+    text: "Djelomično smanjenje nepčanih krajnika kad smetaju disanju. Nije isto što i potpuno vađenje.",
+  },
+  {
+    href: "/zahvati/vadenje-krajnika/",
+    title: "Tonzilektomija",
+    text: "Potpuno vađenje nepčanih krajnika kod dokumentiranih angina ili opstruktivne apneje u snu.",
+  },
+  {
+    href: "/zahvati/redukcija-nosnih-skoljki/",
+    title: "Redukcija donjih nosnih školjki",
+    text: "Kad je nos trajno tijesan zbog školjke, a prehlada i alergija nisu cijela priča.",
+  },
+];
 
-function cardFor(id: string, title?: string) {
-  const entry = all.find((item) => item.id === id && item.data.obavljaSe);
-  if (!entry) return [];
-  const href = `/zahvati/${entry.id}/`;
-  return [
-    {
-      href,
-      title: title ?? NAZIVI[href] ?? entry.data.h1,
-      text: entry.data.ukratko[0],
-    },
-  ];
-}
+const plan = [
+  {
+    href: "/zahvati/kombinirani-zahvati/",
+    title: "Treći krajnik i nepčani krajnici u istoj anesteziji",
+    text: "Objašnjenje kada se dva zahvata mogu planirati zajedno. Svaki mora imati svoj razlog.",
+  },
+];
 
-const cards = featured.flatMap((item) => cardFor(item.id, item.title));
-const quietCards = quietOrder.flatMap((id) => cardFor(id));
+const ordinacija = [
+  {
+    href: "/zahvati/strano-tijelo-nos-uho/",
+    title: "Uklanjanje stranog tijela iz nosa ili uha",
+    text: "Objašnjenje zahvata. Pinceta kod kuće nije pomoć. Baterija i magneti su hitni.",
+  },
+  {
+    href: "/zahvati/kauterizacija-nosa/",
+    title: "Kauterizacija kod ponavljajućeg krvarenja iz nosa",
+    text: "Objašnjenje za žilicu koja se vraća. Jedno krvarenje koje stane nije razlog.",
+  },
+  {
+    href: "/zahvati/zahvati-u-ordinaciji/",
+    title: "Manji zahvati u ordinaciji",
+    text: "Sažetak: strano tijelo, žilica i ušni čep, odvojeno od operacija u anesteziji.",
+  },
+];
+
+const uska = [
+  {
+    href: "/zahvati/otoplastika-kod-djece/",
+    title: "Otoplastika",
+    text: "Objašnjenje korekcije oblika uške. Nije zahvat zbog sluha.",
+  },
+];
+
+const sinusi = [
+  {
+    href: "/zahvati/polipi-i-nosne-skoljke/",
+    title: "Polipi i nosne školjke",
+    text: "Pregled tema. Stara adresa ostaje i vodi na školjke i na operaciju sinusa.",
+  },
+  {
+    href: "/zahvati/endoskopska-kirurgija-sinusa/",
+    title: "Endoskopska operacija sinusa",
+    text: "Dodatna tema za odabranu djecu. Nije liječenje obične hunjavice.",
+  },
+];
 ---
 
 <HubPage
   title="Operacije i zahvati | Mali ORL"
-  description="Endoskopska operacija trećeg krajnika, ventilacijske cjevčice i podjezična resica. Pregled može završiti praćenjem, liječenjem bez zahvata ili preporukom zahvata."
+  description="Endoskopska adenoidektomija, cjevčice, resica, krajnici i manji zahvati. Popis nije poredak po učestalosti. Odluka je na pregledu."
   h1="Operacije i zahvati"
-  lead="Istaknuti su endoskopska operacija trećeg krajnika, ventilacijske cjevčice i podjezična resica. Pregled može završiti praćenjem, liječenjem bez zahvata ili preporukom zahvata. Procjena je individualna."
+  lead="Teme su složene onako kako roditelji pitaju: prvo operacije o kojima stranice već govore, zatim manji zahvati u ordinaciji i teme koje samo objašnjavaju zahvat. Ovo nije poredak po broju operacija. Pregled može završiti praćenjem, liječenjem bez zahvata ili preporukom zahvata."
   tone="lilac"
   chip="Zahvati"
   page="zahvati"
   cards={cards}
-  quietTitle="Ostali zahvati"
-  quietLead="Ove stranice već postoje. I o njima se odluka donosi na pregledu, ne kao prvi korak iz ovog popisa."
-  quietCards={quietCards}
-  markLead
+  blocks={[
+    {
+      title: "Ostale operacije",
+      lead: "I ove stranice opisuju zahvat o kojem se odluka donosi na pregledu.",
+      cards: operacije,
+    },
+    {
+      title: "Kad se zahvati planiraju zajedno",
+      lead: "Stranica objašnjava kada treći krajnik i nepčani krajnici, ili treći krajnik i cjevčice, mogu dijeliti jednu anesteziju.",
+      cards: plan,
+    },
+    {
+      title: "Manji zahvati u ordinaciji",
+      lead: "Ove stranice objašnjavaju zahvat koji se, kad je nalaz jasan, često riješi dok je dijete budno.",
+      cards: ordinacija,
+    },
+    {
+      title: "Oblik uške",
+      lead: "Objašnjenje otoplastike. Oblik nije bolest sluha.",
+      cards: uska,
+    },
+    {
+      title: "Nos: školjke, polipi i sinusi",
+      lead: "Školjke imaju svoju operacijsku stranicu. Endoskopska operacija sinusa posebna je tema za odabrane indikacije, ne za običnu hunjavicu.",
+      cards: sinusi,
+    },
+  ]}
 />

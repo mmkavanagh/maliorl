@@ -23,7 +23,8 @@ const { entry, kind } = Astro.props;
 const data = entry.data;
 const page = entry.id;
 const tone = kind === "simptom" ? "coral" : kind === "stanje" ? "mint" : "lilac";
-const chip = kind === "simptom" ? "Simptom" : kind === "stanje" ? "Stanje" : "Zahvat";
+const ponuda = kind === "zahvat" && "obavljaSe" in data && data.obavljaSe;
+const chip = kind === "simptom" ? "Simptom" : kind === "stanje" ? "Stanje" : ponuda ? "Zahvat" : "Objašnjenje";
 const dot = kind === "simptom" ? "dot-coral" : kind === "stanje" ? "dot-mint" : "dot-lilac";
 const lijecnik = doctorUrl(page);
 const sinusi = sinusUrl();
@@ -49,8 +50,10 @@ const jsonLd = articleJsonLd({
   slug: page,
   h1: data.h1,
   lastReviewed,
+  reviewed: data.strucnoPregledano,
   faq: data.faq,
 });
+const izvori = "izvori" in data && Array.isArray(data.izvori) ? data.izvori : [];
 ---
 
 <BaseLayout title={data.title} description={data.description} page={page} jsonLd={[jsonLd]}>
@@ -65,7 +68,15 @@ const jsonLd = articleJsonLd({
         </nav>
         <p class="chip"><i class={dot}></i> {chip}</p>
         <p class="reviewed">
-          Stručno pregledano: {datum} · <a href={lijecnik}>{data.pregledao}</a>
+          {
+            data.strucnoPregledano ? (
+              <>
+                Stručno pregledano: {datum} · <a href={lijecnik}>{data.pregledao}</a>
+              </>
+            ) : (
+              <>Tekst ažuriran: {datum}</>
+            )
+          }
         </p>
         <h1>{data.h1}</h1>
       </div>
@@ -99,6 +110,20 @@ const jsonLd = articleJsonLd({
                   </details>
                 ))}
               </div>
+            </>
+          )
+        }
+        {
+          izvori.length > 0 && (
+            <>
+              <h2>Provjereni izvori</h2>
+              <ul>
+                {izvori.map((izvor) => (
+                  <li>
+                    <a href={izvor.url}>{izvor.naziv}</a>
+                  </li>
+                ))}
+              </ul>
             </>
           )
         }
@@ -139,8 +164,8 @@ const jsonLd = articleJsonLd({
           <span class="confetti" style="width:14px;height:14px;background:#FF7A6B;left:18%;top:72%" />
           <span class="confetti" style="width:18px;height:18px;background:#3FBF94;right:12%;top:36%" />
           <span class="confetti" style="width:12px;height:12px;background:#fff;right:22%;top:74%" />
-          <h2>Konzultacija za zahvat</h2>
-          <p>Na konzultaciji se objašnjava je li zahvat potreban, što očekivati i koji su rizici.</p>
+          <h2>Pregled i procjena</h2>
+          <p>Na pregledu se gleda treba li zahvat baš ovom djetetu, što očekivati i koji su rizici.</p>
           <div class="article-actions">
             <BookingCta page={page} position="kraj" razlog={data.razlog} label={cta.zahvat} />
             <BookingCta page={page} position="inline" razlog="drugo-misljenje" label={cta.drugoMisljenje} soft />

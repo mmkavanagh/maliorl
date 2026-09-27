@@ -91,6 +91,7 @@ export function articleJsonLd(opts: {
   slug: string;
   h1: string;
   lastReviewed: string;
+  reviewed: boolean;
   faq: { pitanje: string; odgovor: string }[];
 }) {
   const prefix = opts.kind === "simptom" ? "simptomi" : opts.kind === "stanje" ? "stanja" : "zahvati";
@@ -104,20 +105,24 @@ export function articleJsonLd(opts: {
           name: opts.h1,
         };
 
-  const graph: Record<string, unknown>[] = [
-    {
-      "@type": "MedicalWebPage",
-      "@id": `${url}#webpage`,
-      url,
-      name: opts.h1,
-      headline: opts.h1,
-      inLanguage: "hr",
-      lastReviewed: opts.lastReviewed,
-      author: physician,
-      reviewedBy: physician,
-      about,
-    },
-  ];
+  const webpage: Record<string, unknown> = {
+    "@type": "MedicalWebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: opts.h1,
+    headline: opts.h1,
+    inLanguage: "hr",
+    about,
+  };
+  if (opts.reviewed) {
+    webpage.lastReviewed = opts.lastReviewed;
+    webpage.author = physician;
+    webpage.reviewedBy = physician;
+  } else {
+    webpage.dateModified = opts.lastReviewed;
+  }
+
+  const graph: Record<string, unknown>[] = [webpage];
 
   if (opts.kind === "zahvat") {
     graph.push({

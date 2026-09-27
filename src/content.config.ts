@@ -30,6 +30,8 @@ function zajednicko(faza: "simptom" | "stanje" | "odluka") {
     objavljeno: z.coerce.date(),
     azurirano: z.coerce.date(),
     pregledao: z.literal(LIJECNIK),
+    /** False when the text was rewritten without a new physician confirmation. */
+    strucnoPregledano: z.boolean().default(true),
     sinusi: z.boolean().default(false),
   };
 }
@@ -44,11 +46,17 @@ const stanja = defineCollection({
   schema: z.object(zajednicko("stanje")),
 });
 
+const izvor = z.object({
+  naziv: z.string().min(1),
+  url: z.string().url(),
+});
+
 const zahvati = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/zahvati" }),
   schema: z.object({
     ...zajednicko("odluka"),
     obavljaSe: z.boolean(),
+    izvori: z.array(izvor).default([]),
   }),
 });
 

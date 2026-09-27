@@ -22,6 +22,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -31,7 +32,7 @@ Laringomalacija znači da je grkljan dojenčeta mekši i na udahu se uvlači, pa
 
 ## Koliko je često i u kojoj dobi
 
-Brojka o učestalosti ovdje nije navedena. Tekst ne navodi mjesec života u kojem šum počinje.
+U studijama novorođenčadi dijagnoza se kreće otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez. Tekst ne navodi mjesec života u kojem šum počinje.
 
 ## Simptomi
 
@@ -42,13 +43,9 @@ Brojka o učestalosti ovdje nije navedena. Tekst ne navodi mjesec života u koje
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>dojenče ima stanku u disanju ili plave usnice</li>
+    <li>šum postane jači i ne može jesti jer se bori za zrak</li>
+    <li>mlitavo je i teško ga je probuditi</li>
   </ul>
 </aside>
 

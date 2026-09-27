@@ -25,6 +25,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: true
 ---
 
@@ -34,7 +35,7 @@ Alergijski rinitis je upala sluznice nosa na alergen. Dijete [diše na usta](/si
 
 ## Koliko je često i u kojoj dobi
 
-Brojka o učestalosti ovdje nije navedena.
+U studijama novorođenčadi dijagnoza se kreće otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez.
 
 ## Simptomi
 
@@ -45,13 +46,9 @@ Začepljen nos, kihanje, svrbež, [hunjavica koja se vraća](/simptomi/dugotrajn
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>uz hunjavicu teško diše ili ima stanke u snu</li>
+    <li>oteknu usnice, jezik ili cijelo lice</li>
+    <li>iz jedne nosnice curi smrdljiv iscjedak</li>
   </ul>
 </aside>
 

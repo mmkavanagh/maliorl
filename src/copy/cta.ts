@@ -5,7 +5,7 @@ export const cta = {
   pregledDijete: 'Dogovorite dječji ORL pregled',
   zahvati: 'Pogledajte zahvate',
   endoskopija: 'Dogovorite pregled s endoskopijom',
-  zahvat: 'Dogovorite konzultaciju za zahvat',
+  zahvat: 'Dogovorite pregled i procjenu potrebe za zahvatom',
   drugoMisljenje: 'Zatražite drugo mišljenje',
   provjera: 'Provjerite simptome',
   endoskopijaVise: 'Više o pregledu i endoskopiji',

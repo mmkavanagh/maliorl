@@ -22,6 +22,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -42,13 +43,9 @@ Gledajte jede li dijete, plavi li usne i uvlači li prsni koš. To su znakovi da
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>dojenče ima stanku u disanju ili plave usnice</li>
+    <li>ne može jesti jer se bori za zrak</li>
+    <li>mlitavo je i teško ga je probuditi</li>
   </ul>
 </aside>
 

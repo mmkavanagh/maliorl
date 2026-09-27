@@ -26,6 +26,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -35,7 +36,7 @@ Krajnici su limfno tkivo s obje strane grla. Kad su povećani, mogu suziti prost
 
 ## Koliko je često i u kojoj dobi
 
-Brojka o učestalosti ovdje nije navedena. U procjenu ulaze hrkanje, stanke u snu i koliko puta je dijete imalo dokumentiranu anginu.
+U studijama novorođenčadi dijagnoza se kreće otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez. U procjenu ulaze hrkanje, stanke u snu i koliko puta je dijete imalo dokumentiranu anginu.
 
 ## Simptomi
 
@@ -46,13 +47,9 @@ Dijete može [hrkati](/simptomi/dijete-hrce/), imati [stanke u disanju](/simptom
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>ne može progutati slinu ili ne otvara usta</li>
+    <li>uz velike krajnike u snu ima stanku ili plave usnice</li>
+    <li>krvari iz usta</li>
   </ul>
 </aside>
 
@@ -62,7 +59,7 @@ Krajnici se vide pregledom grla. Ako se sumnja i na treći krajnik, nos se gleda
 
 ## Liječenje bez operacije
 
-Jedna upala nije razlog za zahvat. Liječi je liječnik koji vidi dijete. Ovdje nema sheme antibiotika.
+Jedna upala nije razlog za zahvat. Liječi je liječnik koji vidi dijete i odlučuje treba li uopće antibiotik.
 
 ## Kada se razmatra zahvat
 

@@ -7,7 +7,7 @@ import { faqHubJsonLd } from "../lib/schema";
 
 const title = "Česta pitanja roditelja | Mali ORL";
 const description =
-  "Česta pitanja roditelja skupljaju odgovore već napisane uz simptome, stanja, zahvate i pregled. Novi medicinski odgovori na ovoj stranici nisu dodani.";
+  "Pitanja uz simptome, stanja, zahvate i pregled, složena tako da svaki odgovor vodi na stranicu s koje dolazi.";
 const h1 = "Česta pitanja roditelja";
 
 type Item = { pitanje: string; odgovor: string };
@@ -54,10 +54,18 @@ const conditionOrder = [
 ];
 const procedureOrder = [
   "adenoidektomija",
-  "vadenje-krajnika",
   "ventilacijske-cjevcice",
   "frenulotomija",
+  "tonzilotomija",
+  "vadenje-krajnika",
+  "kombinirani-zahvati",
+  "redukcija-nosnih-skoljki",
   "polipi-i-nosne-skoljke",
+  "endoskopska-kirurgija-sinusa",
+  "strano-tijelo-nos-uho",
+  "kauterizacija-nosa",
+  "zahvati-u-ordinaciji",
+  "otoplastika-kod-djece",
 ];
 
 function grouped(
@@ -86,7 +94,7 @@ const flat = groups.flatMap((group) => group.faq);
   title={title}
   description={description}
   h1={h1}
-  lead="Ovdje su pitanja koja su već odgovorena na stranicama. Novi medicinski odgovor nije dodan. Svaki naslov vodi na stranicu s koje pitanje dolazi."
+  lead="Ovdje su pitanja već odgovorena uz simptome, stanja, zahvate i pregled. Svaki naslov vodi na stranicu s koje pitanje dolazi."
   page="cesta-pitanja"
   jsonLd={faqHubJsonLd({ h1, faq: flat })}
 >

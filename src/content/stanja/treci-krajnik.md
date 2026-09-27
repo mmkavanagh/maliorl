@@ -29,6 +29,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: true
 ---
 
@@ -49,12 +50,9 @@ Dijete može [disati na usta](/simptomi/disanje-na-usta/), hrkati i [govoriti �
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
+    <li>u snu ima stanku u disanju ili plave usnice</li>
+    <li>diše tako teško da uvlači prsni koš</li>
+    <li>ne pije ili se teško budi</li>
   </ul>
 </aside>
 
@@ -64,7 +62,7 @@ Dijagnoza se postavlja endoskopijom nosa, bez rendgena i bez zračenja.<!-- PROV
 
 ## Liječenje bez operacije
 
-Prvo se pokušava sprej kortikosteroid za nos, nekoliko tjedana.<!-- PROVJERITI --> Sprej propiše liječnik. Nije savjet da ga roditelj sam započne.
+Kad je glavni problem začepljen nos, liječnik ponekad propiše sprej. To nije uvjet prije svake operacije, osobito ako su razlog san ili uši. Sprej se ne započinje sam.
 
 ## Kada se razmatra zahvat
 

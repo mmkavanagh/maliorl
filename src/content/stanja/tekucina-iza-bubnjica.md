@@ -26,6 +26,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: true
 ---
 
@@ -35,7 +36,7 @@ Sekretorni otitis znači da iza bubnjića stoji tekućina. Uho ne mora boljeti. 
 
 ## Koliko je često i u kojoj dobi
 
-Često prođe sama. Ako traje mjesecima, može utjecati na sluh i govor.<!-- PROVJERITI --> Brojka o učestalosti ovdje nije navedena.
+Često prođe sama. Ako traje mjesecima, može utjecati na sluh i govor.<!-- PROVJERITI --> U studijama novorođenčadi dijagnoza se kreće otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez.
 
 ## Simptomi
 
@@ -46,12 +47,8 @@ Dijete može pojačavati televizor, [slabije reagirati na ime](/simptomi/slabiji
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
+    <li>uz tekućinu naglo prestane čuti na jedno uho</li>
+    <li>pojavi se jaka bol, temperatura i otok iza uha</li>
   </ul>
 </aside>
 
@@ -61,7 +58,7 @@ Na pregledu se gleda bubnjić i provjerava sluh. Ako se traži uzrok u nosu, tre
 
 ## Liječenje bez operacije
 
-Prvi korak je praćenje, jer tekućina često prođe sama. Liječnik kaže kad je kontrola. Ovdje nema popisa lijekova koje biste sami započeli.
+Prvi korak je praćenje, jer tekućina često prođe sama. Liječnik kaže kad je kontrola. Lijek se ne započinje sam, bez pregleda.
 
 ## Kada se razmatra zahvat
 

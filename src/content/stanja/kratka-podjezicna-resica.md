@@ -19,10 +19,11 @@ faq:
   - pitanje: "Tko to vidi?"
     odgovor: "Pregled usta i jezika. Kod dojenja važna je i priča o hvatu i boli majke."
   - pitanje: "Je li to zahvat u općoj anesteziji?"
-    odgovor: "To ovdje nije navedeno. Način, ako zahvat uopće treba, objašnjava se na konzultaciji."
+    odgovor: "Kod dojenčeta rez je često kratak. Kod starijeg djeteta češće treba anestezija. Što vrijedi za vaše dijete, kaže se na pregledu."
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -32,7 +33,7 @@ Podjezična resica je nabor sluznice ispod jezika. Kad je kratka, jezik se slabi
 
 ## Koliko je često i u kojoj dobi
 
-Brojka o učestalosti ovdje nije navedena.
+U kliničkom izvješću Američke akademije pedijatrije iz 2024. tri studije novorođenčadi navode dijagnozu otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez.
 
 ## Simptomi
 
@@ -43,13 +44,9 @@ Kod dojenčeta: otežan hvat, bol majke, slabo napredovanje koje treba pokazati 
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>beba odbija svaki podoj i ne napreduje, a vi to vidite na vagi</li>
+    <li>iz usta krvari tako da se ne smiruje</li>
+    <li>ne može disati ili gutati slinu</li>
   </ul>
 </aside>
 

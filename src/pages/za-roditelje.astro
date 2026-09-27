@@ -7,59 +7,87 @@ import { cta } from "../copy/cta";
 const page = "za-roditelje";
 const profil = doctorUrl(page);
 
-const zahvati = [
-  { href: "/zahvati/adenoidektomija/", naziv: "Endoskopska operacija trećeg krajnika" },
-  { href: "/zahvati/ventilacijske-cjevcice/", naziv: "Ventilacijske cjevčice u ušima" },
-  { href: "/zahvati/frenulotomija/", naziv: "Podjezična resica (frenulotomija)" },
+const oporavak = [
+  { href: "/zahvati/adenoidektomija/#oporavak", naziv: "Endoskopska operacija trećeg krajnika" },
+  { href: "/zahvati/ventilacijske-cjevcice/#oporavak", naziv: "Ventilacijske cjevčice" },
+  { href: "/zahvati/frenulotomija/#oporavak", naziv: "Podjezična resica" },
+  { href: "/zahvati/tonzilotomija/#oporavak", naziv: "Tonzilotomija" },
+  { href: "/zahvati/vadenje-krajnika/#oporavak", naziv: "Tonzilektomija" },
+  { href: "/zahvati/kombinirani-zahvati/", naziv: "Zahvati u istoj anesteziji" },
+  { href: "/zahvati/redukcija-nosnih-skoljki/#oporavak", naziv: "Nosne školjke" },
 ];
 ---
 
 <PlainLayout
   title="Za roditelje | Mali ORL"
-  description="Čemu služi dječji ORL pregled, kako se dolazi do odluke i gdje su upute za pripremu. Termin se dogovara na stranici liječnika."
+  description="Kako pripremiti dijete za zahvat, što pitati anesteziologa, što ponijeti i gdje su upute za oporavak uz svaku operaciju."
   h1="Za roditelje"
-  lead="Pregled služi da se čuje što vas brine i da se dijete pogleda. Procjena je individualna. Ovdje su praktične upute, bez novog medicinskog protokola."
+  lead="Pregled služi da se čuje što vas brine i da se dijete pogleda. Ako se dogovori zahvat, ovdje su praktične stvari za taj dan. Upute za jelo, piće i lijekove daje anesteziolog za vaše dijete."
   page={page}
   tone="sky"
 >
   <h2>Čemu služi posjet</h2>
   <p>
-    Pregled je prilagođen dobi djeteta, a roditelj je uz dijete. Kako pregled i endoskopija izgledaju, piše na stranici <a href="/pregled-i-endoskopija/">pregled i endoskopija</a>. Ako vas brine određeni simptom, krenite od <a href="/simptomi/">simptoma</a>.
+    Pregled je prilagođen dobi, a roditelj je uz dijete. Kako pregled i endoskopija izgledaju, piše na stranici <a href="/pregled-i-endoskopija/">pregled i endoskopija</a>. Ako vas brine određeni simptom, krenite od <a href="/simptomi/">simptoma</a>.
   </p>
 
   <h2>Procjena je individualna</h2>
   <p>
-    Posjet može završiti praćenjem, liječenjem bez zahvata ili preporukom zahvata. Nije svaki dolazak odluka o operaciji.<!-- PROVJERITI --> Zahvati koji već imaju stranicu skupljeni su na <a href="/zahvati/">operacijama i zahvatima</a>.
+    Posjet može završiti praćenjem, liječenjem bez zahvata ili preporukom zahvata. Nije svaki dolazak odluka o operaciji. Zahvati su na stranici <a href="/zahvati/">operacije i zahvati</a>.
   </p>
 
-  <h2 id="anestezija">Anestezija i priprema</h2>
-  <!-- PROVJERITI: nema zasebne stranice o anesteziji -->
+  <h2 id="priprema">Kako pripremiti dijete</h2>
   <p>
-    Zasebne stranice o anesteziji nema. Na stranicama zahvata piše da prije zahvata razgovarate s anesteziologom i da on daje upute za pripremu.
-    Ovdje nema upute o hrani, piću ni lijekovima.
+    Recite istinu u kratkim rečenicama, onoliko koliko dijete pita. Dovoljno je: liječnik će pogledati nos ili uho, ti si uz mene, ako bude zahvat, anesteziolog će pomoći da spavaš i nećeš osjećati rez. Ne obećavajte da ništa neće biti neugodno. Kratak neugodan osjećaj na pregledu moguć je. Strah od laži veći je od straha od rečenice koju dijete razumije.
+  </p>
+  <p>
+    Mlađe dijete smiruje poznat glas i predmet, ne dugo objašnjenje tjedan dana unaprijed. Starijem djetetu pomogne da zna tko će biti uz njega kad se budi.
+  </p>
+
+  <h2 id="anestezija">Pitanja za anesteziologa</h2>
+  <p>
+    Anesteziolog vodi san i buđenje. Na razgovoru vrijedi pitati, za baš to dijete:
   </p>
   <ul>
-    {zahvati.map((zahvat) => (
-      <li><a href={zahvat.href}>{zahvat.naziv}</a></li>
+    <li>od kada ne smije jesti i piti, i vrijedi li to i za vodu</li>
+    <li>što s lijekom koji inače uzima to jutro</li>
+    <li>što ako je prehlađeno, ima temperaturu ili kašalj</li>
+    <li>tko smije biti uz dijete dok zaspe i kad se budi</li>
+    <li>kako izgleda buđenje i kada tim odlučuje o odlasku kući</li>
+  </ul>
+  <p>
+    Odgovori ovise o dobi, zahvatu i ustanovi. Anesteziolog ih daje za vaše dijete.
+  </p>
+
+  <h2 id="ponijeti">Što ponijeti</h2>
+  <ul>
+    <li>popis lijekova i nalaze koje već imate</li>
+    <li>omiljenu igračku ili dekicu za buđenje</li>
+    <li>odjeću koja se lako skida i rezervnu, ako nešto prolije</li>
+    <li>bočicu ili čašu za nakon buđenja, kad tim kaže da smije piti</li>
+  </ul>
+
+  <h2 id="dan-zahvata">Kako izgleda dan zahvata</h2>
+  <p>
+    Dođete u dogovoreno vrijeme. Tim provjeri ime, zahvat i da je dijete spremno onako kako je anesteziolog rekao. Dijete zaspe uz vas ili uz dogovoreni trenutak rastanka. Zahvat traje kraće nego cijeli boravak: čekanje, buđenje i odluka o otpustu uzmu više vremena nego rez.
+  </p>
+  <p>
+    Nakon buđenja dijete može biti pospano, plačljivo ili gladno. To je često i prolazi. Kući se ide kad tim vidi da diše mirno, da može piti onoliko koliko za taj zahvat treba i da ste čuli što pratiti. Neka djeca ostanu dulje. To nije znak da je nešto pošlo po zlu. To je odluka prema dobi i disanju.
+  </p>
+
+  <h2 id="oporavak">Gdje su upute za oporavak</h2>
+  <p>
+    Svaki zahvat ima svoj oporavak. Čitajte odlomak uz operaciju koja je dogovorena, ne opći raspored za sve:
+  </p>
+  <ul>
+    {oporavak.map((stavka) => (
+      <li><a href={stavka.href}>{stavka.naziv}</a></li>
     ))}
   </ul>
 
-  <h2 id="dan-zahvata">Dan zahvata</h2>
-  <!-- PROVJERITI: nema zasebne stranice o danu zahvata -->
-  <p>
-    Zasebne stranice o danu zahvata nema. Na stranicama zahvata piše da dan vode anesteziolog i kirurški tim i da se točan tijek dana, od dolaska do otpusta, potvrđuje na konzultaciji.<!-- PROVJERITI -->
-  </p>
-
-  <h2 id="oporavak">Oporavak</h2>
-  <!-- PROVJERITI: nema zasebne stranice o oporavku -->
-  <p>
-    Zasebne stranice o oporavku nema. Trajanje oporavka objašnjava se na konzultaciji. Ovdje nema tablice po danima ni brojke o tome koliko dana dijete ostaje kući.
-  </p>
-
   <h2 id="kontrola">Kontrola</h2>
-  <!-- PROVJERITI: nema zasebne stranice o kontroli -->
   <p>
-    Zasebne stranice o kontroli nema. Ako je kontrola potrebna, dogovara se na pregledu ili nakon zahvata.<!-- PROVJERITI --> Na stranici <a href="/pregled-i-endoskopija/">pregleda i endoskopije</a> kontrola nakon zahvata navedena je kao jedan od razloga kad endoskopija može biti korisna.
+    Ako kontrola treba, termin se kaže na pregledu ili pri otpustu. Nakon cjevčica uši se prate dok cjevčica ne ispadne. Nakon zahvata u nosu ili grlu kontrola gleda je li disanje lakše i je li rana mirna. Na stranici <a href="/pregled-i-endoskopija/">pregleda i endoskopije</a> kontrola nakon zahvata navedena je kao razlog kad endoskopija može biti korisna.
   </p>
 
   <h2>Kako dogovoriti pregled</h2>
@@ -67,6 +95,6 @@ const zahvati = [
     Na ovoj stranici nema obrasca. Termin se dogovara na stranici liječnika. Više o njemu: <a href={profil}>Prim. Marcel Marjanović Kavanagh, univ.mag.med.</a>
   </p>
   <p>
-    <BookingCta page={page} position="inline" razlog="opce" label={cta.pregledDijete} arrow />
+    <BookingCta page={page} position="inline" razlog="opce" label={cta.zahvat} arrow />
   </p>
 </PlainLayout>

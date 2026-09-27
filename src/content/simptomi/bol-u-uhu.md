@@ -24,6 +24,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -44,19 +45,15 @@ Primijetite boli li dodir uške, curi li sekret i ostaje li dijete slabije čuti
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>iza uha natekne ili pocrveni, a uška odskače</li>
+    <li>uz bol u uhu postane mlitavo i ima visoku temperaturu</li>
+    <li>na to uho naglo slabije čuje</li>
   </ul>
 </aside>
 
 ## Što možete učiniti kod kuće
 
-Bol možete olakšati onim što je liječnik već propisao za bol. Ovdje nema doze niti savjeta da sami započnete antibiotik.
+Bol možete olakšati onim što je liječnik već propisao za bol. Antibiotik ne započinjite sami.
 
 ## Kada na pregled i što se radi
 

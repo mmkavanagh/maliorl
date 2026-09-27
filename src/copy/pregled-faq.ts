@@ -2,11 +2,11 @@
 export const pregledFaq = [
   {
     pitanje: "Boli li endoskopija?",
-    odgovor: "Neugodno može biti nekoliko sekundi, ali ne boli.",
+    odgovor: "Kratko može biti neugodno, nekoliko sekundi. Nije rez i dijete za pregled ne spava.",
   },
   {
     pitanje: "Može li se napraviti bez sprej-anestetika?",
-    odgovor: "Endoskop se uvodi kroz nosnicu nakon sprej-anestetika i sredstva za odčepljenje nosa.",
+    odgovor: "Može. Sprej se stavlja kad treba suziti sluznicu ili smanjiti osjet. Kratko može biti neugodno i bez njega i s njim.",
   },
   {
     pitanje: "Koliko traje cijeli pregled?",

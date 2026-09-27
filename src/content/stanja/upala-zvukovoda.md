@@ -23,6 +23,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -32,7 +33,7 @@ Upala zvukovoda je upala kože kanala uha, pred bubnjićem. Roditelj vidi [bol](
 
 ## Koliko je često i u kojoj dobi
 
-Brojka o učestalosti ovdje nije navedena.
+U studijama novorođenčadi dijagnoza se kreće otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez.
 
 ## Simptomi
 
@@ -43,13 +44,9 @@ Bol kad se uška pomakne, sekret, osjećaj začepljenosti. Slabiji sluh može bi
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>uška jako boli na dodir, a otok se širi na lice</li>
+    <li>uz bol u kanalu ima temperaturu i izgleda bolesno</li>
+    <li>naglo slabije čuje na to uho</li>
   </ul>
 </aside>
 
@@ -59,7 +56,7 @@ Dijagnoza je pogledom u kanal. Bubnjić se gleda kad sekret to dopusti, da se ne
 
 ## Liječenje bez operacije
 
-Kapi i čišćenje u ordinaciji. Koje kapi, određuje liječnik nakon što vidi uho. Ovdje nema imena lijeka.
+Uho se očisti i liječi kapima koje liječnik odabere kad vidi kanal. Ime kapi ovisi o nalazu.
 
 ## Kada se razmatra zahvat
 

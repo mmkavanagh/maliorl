@@ -1,69 +1,58 @@
 ---
 title: "Korekcija klempavih ušiju | Mali ORL"
-description: "Korekcija klempavih ušiju kod djece razgovara se kad uška naraste, obično oko pete do šeste godine. Oblik nije bolest sluha. Cijena ovdje nije navedena."
-h1: "Korekcija klempavih ušiju kod djece"
+description: "Otoplastika kod djece tiče se oblika uške, ne sluha. Stranica objašnjava kada se o zahvatu uopće razgovara i što roditelj može pitati na pregledu."
+h1: "Otoplastika kod djece"
 kljucnaRijec: "operacija klempavih ušiju"
 faza: odluka
 razlog: zahvat-otoplastika-kod-djece
 obavljaSe: false
 ukratko:
   - "Klempave uši su oblik, ne bolest sluha."
-  - "O zahvatu se obično razgovara kad uška naraste."
-  - "Cijena na ovoj stranici nije navedena."
-  - "Upute za dan zahvata daje anesteziolog."
+  - "O zahvatu se razgovara kad uška dovoljno naraste. Točan trenutak je individualan."
+  - "Razlog je oblik koji smeta djetetu, ne tuđi komentar u dojenačkoj dobi."
+  - "Rezultat je oblik o kojem ste razgovarali, ne milimetar koji vrijedi za sve."
 povezano:
   - /simptomi/klempave-usi/
 faq:
-  - pitanje: "Je li to zahvat zbog sluha?"
-    odgovor: "Ne. Sam odmak uške ne znači slabiji sluh. Ako sumnjate na sluh, to je zaseban pregled."
-  - pitanje: "Kada se razgovara o zahvatu?"
-    odgovor: "Obično kad uška naraste gotovo do odrasle veličine. Točan trenutak potvrđuje liječnik."
-  - pitanje: "Ima li cijene na stranici?"
-    odgovor: "Nema. O zahvatu se razgovara na konzultaciji."
-  - pitanje: "Tko daje upute za dan zahvata?"
-    odgovor: "Upute daje anesteziolog."
+  - pitanje: "Popravlja li otoplastika sluh?"
+    odgovor: "Ne. Odmak uške ne znači slabiji sluh. Ako sumnjate na sluh, to je zaseban pregled uha."
+  - pitanje: "Treba li zahvat zato što su uške odmaknute u bebe?"
+    odgovor: "Ne. U dojenačkoj dobi hrskavica se još mijenja. Razgovor o obliku ima smisla kasnije, kad uška naraste, i kad oblik zaista smeta."
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
+izvori: []
 ---
 
-<!-- PROVJERITI --><!-- obavlja li liječnik ovaj zahvat -->
+Otoplastika mijenja oblik uške, najčešće odmak od glave. Nije zahvat zbog sluha i nije liječenje upale. Što roditelj vidi: [klempave uši](/simptomi/klempave-usi/). Ova stranica objašnjava zahvat. Na pregledu se vidi je li uopće tema za to dijete.
 
-## Kada je zahvat opravdan
+## Kad se o obliku razgovara
 
-Obično se o zahvatu razgovara od oko 5. do 6. godine, kad uška naraste gotovo do odrasle veličine.<!-- PROVJERITI --> Više o tome što roditelj vidi: [klempave uši](/simptomi/klempave-usi/). Razlog je oblik, ne upala i ne slabiji sluh.
+Uška raste brzo u prvim godinama, pa se o rezanju ne razgovara zato što dojenče ima odmaknute uši. Razgovor ima smisla kad je uška već bliže odraslom obliku i kad odmak smeta djetetu, ne samo komentaru okoline. Točnu godinu ne treba fiksirati prije pregleda. Ako vas oblik brine ranije, dovoljan je razgovor, bez datuma operacije.
 
-## Kada nije potreban
+## Kad zahvat nije potreban
 
-Zahvat nije potreban zato što uške stoje odmaknuto u dojenačkoj dobi, ni zato što netko primijeti oblik. Ako Vas oblik brine ranije, dovoljan je razgovor na pregledu. Cijena ovdje nije navedena.
+Odmak koji dijete ne primjećuje i koji ne smeta funkciji nije bolest. Upala uške, bol i crvenilo nisu klempavost. To ide na pregled uha, ne na razgovor o obliku.
 
-## Priprema
+## Kako zahvat izgleda, ukratko
 
-Prije zahvata razgovarate s anesteziologom. On daje upute za pripremu.<!-- PROVJERITI -->
+Dijete spava. Rez je obično iza uške, gdje se pregib manje vidi. Hrskavica se oblikuje tako da uška stoji bliže glavi, onoliko koliko ste dogovorili, ne po jednom kalupu. Zavoj drži oblik prvih dana. Anesteziolog daje upute za jelo, piće i lijekove. Ide li dijete kući isti dan, kaže se nakon buđenja.
 
-## Dan zahvata
+<h2 id="oporavak">Oporavak i granice</h2>
 
-Dan zahvata vode anesteziolog i kirurški tim. Točan tijek dana, od dolaska do otpusta, potvrđuje se na konzultaciji.<!-- PROVJERITI -->
+Uška je natečena i osjetljiva. Traka ili zavoj nose se onoliko koliko tim kaže za taj zahvat. Sport s udarcem u glavu čeka dulje od šetnje. Kontrola gleda rana i oblik.
 
-## Oporavak
+Cilj je oblik o kojem ste razgovarali. Mala nesimetrija može ostati, jer uške nisu bile iste ni prije. Krvarenje ispod kože, infekcija rane i povratak odmaka mogući su. Sluh se ovim zahvatom ne mijenja.
 
-Trajanje oporavka objašnjava se na konzultaciji.<!-- PROVJERITI --> Ovdje nema tablice po danima.
-
-## Mogući rizici
-
-Svaki zahvat ima rizike. Koji su i koliko su česti, objašnjava se na konzultaciji.<!-- PROVJERITI --> Ovdje nema brojke o učestalosti.
-
-## Kada se javiti odmah
+<h2 id="pomoc">Kad potražiti pomoć odmah</h2>
 
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
-  <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
+  <h3><span>!</span>Javite se odmah ako nakon otoplastike:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>jako krvari ili boli rana na uški, više nego što je objašnjeno pri otpustu<!-- PROVJERITI --></li>
+    <li>zavoj prokrvari jače nego što je opisano, ili uška naglo natekne i jako boli</li>
+    <li>dijete dobije temperaturu i rana pocrveni, uz bol koja raste</li>
+    <li>diše teže ili izgleda mnogo bolesnije nakon anestezije</li>
   </ul>
 </aside>
-
-## Rezultati
-
-Cilj je oblik uške o kojem ste razgovarali na konzultaciji. Ishod se procjenjuje na kontroli. Ovdje nema brojke o uspjehu.

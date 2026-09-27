@@ -24,6 +24,7 @@ faq:
 objavljeno: 2026-09-27
 azurirano: 2026-09-27
 pregledao: "Prim. Marcel Marjanović Kavanagh, univ.mag.med."
+strucnoPregledano: false
 sinusi: false
 ---
 
@@ -33,7 +34,7 @@ Akutna upala srednjeg uha je upala prostora iza bubnjića. Roditelj je vidi kao 
 
 ## Koliko je često i u kojoj dobi
 
-Brojka o učestalosti ovdje nije navedena.
+U studijama novorođenčadi dijagnoza se kreće otprilike od 1,7 do 10,7 posto, a broj dijagnoza posljednjih godina raste. Sama brojka ne znači da svakoj bebi treba rez.
 
 ## Simptomi
 
@@ -44,13 +45,9 @@ Bol, temperatura i ponekad [iscjedak](/simptomi/iscjedak-iz-uha/). Nakon upale m
 <aside class="red" aria-label="Kada odmah potražiti liječnika">
   <h3><span>!</span>Odmah potražite liječnika ako dijete:</h3>
   <ul>
-    <li>teško diše, uvlači prsni koš ili mu usnice poplave</li>
-    <li>ne može progutati slinu ili ne može otvoriti usta</li>
-    <li>ima visoku temperaturu i oteklinu ili crvenilo iza uha</li>
-    <li>krvari iz nosa i krvarenje ne prestaje nakon 15–20 minuta pritiska<!-- PROVJERITI --></li>
-    <li>ima dugmastu bateriju u nosu ili uhu (ili sumnjate na to)</li>
-    <li>naglo prestane čuti na jedno uho</li>
-    
+    <li>iza uha natekne ili uška odskače</li>
+    <li>uz bol postane mlitavo i ima visoku temperaturu</li>
+    <li>naglo slabije čuje na bolesno uho</li>
   </ul>
 </aside>
 
@@ -60,7 +57,7 @@ Dijagnoza je pregledom bubnjića. Sluh se provjerava kad upala prođe, a sluh i 
 
 ## Liječenje bez operacije
 
-Put je pedijatar ili ORL liječnik, lijek protiv boli i antibiotik samo po indikaciji. Doze ovdje nema.
+Put je pedijatar ili ORL liječnik. Bol se olakšava, a antibiotik dolazi samo kad je indiciran za to dijete.
 
 ## Kada se razmatra zahvat
 
