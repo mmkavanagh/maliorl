@@ -1,20 +1,18 @@
 ---
-import { bookingUrl } from "../config";
 import { cta } from "../copy/cta";
+import BookingCta from "./BookingCta.astro";
 import HeroArt from "./HeroArt.astro";
 import Wave from "./Wave.astro";
-
-const href = bookingUrl({ page: "home", position: "hero", razlog: "opce" });
 ---
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <span class="chip"><i>✓</i>Dječji ORL · Zagreb</span>
-      <h1>Da Vaše dijete <span class="hl">diše na nos</span>, mirno spava i dobro čuje</h1>
+      <h1>Nos je za <span class="tone-coral">disanje</span>, uši za <span class="tone-sky">slušanje</span>, a usta za <span class="tone-mint">smijeh</span>.</h1>
       <p class="lead">Roditeljima objašnjavamo što je normalno, što nije i kada je vrijeme za pregled kod otorinolaringologa. Jasno, mirno i bez straha.</p>
       <div class="hero-actions">
-        <a class="btn" href={href}>{cta.termin} →</a>
+        <BookingCta page="home" position="hero" razlog="opce" label={cta.termin} arrow />
         <a class="btn soft" href="#simptomi">{cta.simptomiSkok}</a>
       </div>
       <div class="byline">

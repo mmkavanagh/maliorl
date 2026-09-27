@@ -1,6 +1,20 @@
+---
+import { doctorUrl, sinusUrl } from "../config";
+
+interface Props {
+  page?: string;
+}
+
+const { page = "home" } = Astro.props;
+---
+
 <footer>
   <div class="wrap">
     <span>© 2026 Mali ORL · Tekstovi su informativni i ne zamjenjuju pregled.</span>
+    <span class="foot-links">
+      <a href={sinusUrl()}>Centar za sinuse</a>
+      <a href={doctorUrl(page)}>osobni web liječnika</a>
+    </span>
     <span>Impresum · Privatnost</span>
   </div>
 </footer>

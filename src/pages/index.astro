@@ -17,8 +17,8 @@ const title = "Dječji ORL Zagreb – uho, grlo i nos kod djece | Mali ORL";
 const description = "Hrče li dijete, diše na usta ili ima česte upale uha? Vodič za roditelje i pregled kod Prim. Marjanovića Kavanagha u Zagrebu.";
 ---
 
-<BaseLayout title={title} description={description}>
-  <Header />
+<BaseLayout title={title} description={description} page="home">
+  <Header page="home" razlog="opce" />
   <main>
     <Hero />
     <Summary />
@@ -36,6 +36,6 @@ const description = "Hrče li dijete, diše na usta ili ima česte upale uha? Vo
     <Faq />
     <CtaBand />
   </main>
-  <Footer />
-  <StickyCta />
+  <Footer page="home" />
+  <StickyCta page="home" razlog="opce" />
 </BaseLayout>

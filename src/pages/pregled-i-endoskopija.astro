@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BookingCta from "../components/BookingCta.astro";
+import CtaBand from "../components/CtaBand.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import StickyCta from "../components/StickyCta.astro";
+import Summary from "../components/Summary.astro";
+import Wave from "../components/Wave.astro";
+import { doctorUrl, sinusUrl } from "../config";
+import { cta } from "../copy/cta";
+import { endoscopyJsonLd } from "../lib/schema";
+
+const page = "pregled-i-endoskopija";
+const razlog = "opce";
+const faza = "odluka";
+const title = "ORL pregled djeteta i endoskopija nosa | Mali ORL";
+const description =
+  "Endoskopija nosa kod djece pokazuje treći krajnik bez rendgena i zračenja. ORL pregled djeteta traje nekoliko minuta, a roditelj je uz dijete.";
+const lijecnik = doctorUrl(page);
+const sinusi = sinusUrl();
+
+const ukratko = [
+  "Endoskopija je najpouzdaniji način da se vidi treći krajnik.",
+  "Bez zračenja.",
+  "Traje nekoliko minuta.",
+  "Roditelj je uz dijete.",
+];
+
+const faq = [
+  {
+    pitanje: "Boli li endoskopija?",
+    odgovor: "Neugodno može biti nekoliko sekundi, ali ne boli.",
+  },
+  {
+    pitanje: "Može li se napraviti bez sprej-anestetika?",
+    odgovor: "Endoskop se uvodi kroz nosnicu nakon sprej-anestetika i sredstva za odčepljenje nosa.",
+  },
+  {
+    pitanje: "Treba li dijete biti natašte?",
+    odgovor: "U opisu pripreme natašte nije navedeno. Ponesite prijašnje nalaze, audiogram i popis lijekova.",
+    provjera: true,
+  },
+  {
+    pitanje: "Koliko traje cijeli pregled?",
+    odgovor: "Endoskopija traje nekoliko minuta. Cijeli pregled uključuje i uši, sluh, grlo i pisani plan za roditelje.",
+  },
+  {
+    pitanje: "Treba li uputnica?",
+    odgovor: "Ne. Za privatni pregled uputnica nije potrebna. Ponesite nalaze i popis lijekova koje dijete koristi.",
+  },
+  {
+    pitanje: "Mogu li dobiti snimku?",
+    odgovor: "Snimka se odmah pokaže roditelju.",
+  },
+];
+---
+
+<BaseLayout title={title} description={description} page={page} jsonLd={[endoscopyJsonLd(faq)]}>
+  <Header page={page} razlog={razlog} />
+  <main data-faza={faza} data-razlog={razlog}>
+    <section class="hero sky">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Put">
+          <a href="/">Početna</a>
+          <span aria-hidden="true">/</span>
+          <span>Pregled i endoskopija</span>
+        </nav>
+        <h1>Pregled djeteta i endoskopija nosa: bez zračenja i bez straha</h1>
+        <p class="lead">Endoskopija je najpouzdaniji način da se vidi treći krajnik. Bez zračenja, traje nekoliko minuta, a roditelj je uz dijete.</p>
+        <p>
+          Više o liječniku: <a class="site-link" href={lijecnik}>Prim. Marcel Marjanović Kavanagh, univ.mag.med.</a>
+        </p>
+      </div>
+      <Wave viewBox="0 0 1440 70" d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v30H0z" />
+    </section>
+
+    <Summary items={ukratko} />
+
+    <section class="block">
+      <div class="wrap prose">
+        <h2>Zašto preporučujemo endoskopiju</h2>
+        <p>
+          Izravno se vidi treći krajnik, koliko zatvara nos i ušće Eustahijeve cijevi, stanje sluznice, polipi i strano tijelo. Rendgen epifarinksa daje samo sjenu, uz zračenje, i ne pokazuje odnos prema ušima.
+        </p>
+        <p>O sinusima i alergiji više piše srodna stranica <a class="site-link" href={sinusi}>Centar za sinuse</a>.</p>
+
+        <h2>Kada je endoskopija korisna</h2>
+        <ul>
+          <li>hrkanje i disanje na usta</li>
+          <li>sumnja na apneju</li>
+          <li>ponavljajuće upale uha ili tekućina iza bubnjića</li>
+          <li>govor "kroz nos"</li>
+          <li>hunjavica koja traje tjednima</li>
+          <li>jednostrani iscjedak</li>
+          <li>ponavljajuće krvarenje iz nosa</li>
+          <li>promuklost ili šumno disanje (pregled grkljana)</li>
+          <li>prije odluke o operaciji trećeg krajnika</li>
+          <li>kontrola nakon zahvata</li>
+        </ul>
+
+        <h2>Kako izgleda</h2>
+        <p>
+          Tanki, savitljivi endoskop (promjer nekoliko milimetara<!-- PROVJERITI -->) uvodi se kroz nosnicu nakon sprej-anestetika i sredstva za odčepljenje nosa. Neugodno može biti nekoliko sekundi, ali ne boli. Snimka se odmah pokaže roditelju.
+        </p>
+        <p>
+          <BookingCta page={page} position="inline" razlog={razlog} label={cta.termin} />
+        </p>
+
+        <h2>Od koje dobi</h2>
+        <p>Ovisno o suradnji djeteta; kod manje djece roditelj drži dijete u krilu.<!-- PROVJERITI --></p>
+
+        <h2>Kako pripremiti dijete</h2>
+        <p>
+          Kratko i istinito objašnjenje ("kamerica koja gleda u nos"), bez obećanja da "neće ništa osjetiti", omiljena igračka, pohvala nakon. Ponesite prijašnje nalaze, audiogram i popis lijekova.
+        </p>
+
+        <h2>Što još uključuje pregled</h2>
+        <p>Otoskopija ili mikroskopija uha, timpanometrija, test sluha prilagođen dobi, pregled grla i pisani plan za roditelje.</p>
+
+        <h2>Nakon pregleda</h2>
+        <p>Tri su moguća ishoda:</p>
+        <ol>
+          <li>nije potrebno liječenje</li>
+          <li>liječenje lijekovima i kontrola</li>
+          <li>prijedlog zahvata, uz objašnjenje koristi i rizika</li>
+        </ol>
+        <p><a class="site-link" href="/zahvati/">Više o zahvatima</a></p>
+
+        <h2>Česta pitanja</h2>
+        <div class="faq-list">
+          {
+            faq.map((item) => (
+              <details>
+                <summary set:html={`${item.pitanje}${item.provjera ? "<!-- PROVJERITI -->" : ""}`} />
+                <p>{item.odgovor}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <CtaBand
+      page={page}
+      razlog={razlog}
+      label={cta.endoskopija}
+      arrow={false}
+      heading="Bez zračenja i bez straha"
+      text="Endoskopija traje nekoliko minuta, a roditelj je uz dijete."
+    />
+  </main>
+  <Footer page={page} />
+  <StickyCta page={page} razlog={razlog} />
+</BaseLayout>

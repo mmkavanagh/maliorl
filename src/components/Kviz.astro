@@ -1,0 +1,200 @@
+---
+import { cta } from "../copy/cta";
+---
+
+<div class="quiz-app" data-kviz>
+  <div data-screen="uvod">
+    <aside class="red" aria-label="Hitno">
+      <h3><span>!</span>Odmah, prije pitanja</h3>
+      <p>
+        Ako dijete sada teško diše, slini i ne može gutati ili ste posumnjali na bateriju u nosu ili uhu, odmah zovite hitnu pomoć (194) ili idite na hitni prijam.
+      </p>
+    </aside>
+    <p class="quiz-start">
+      <button type="button" class="btn" data-start>Započnite provjeru</button>
+    </p>
+  </div>
+
+  <p class="quiz-count" data-count hidden></p>
+  <div class="progress" data-progress hidden>
+    <span data-bar></span>
+  </div>
+
+  <div class="q-card" data-q="1" hidden>
+    <p class="q-text">Hrče li dijete tri ili više noći tjedno (i kad nije prehlađeno)?</p>
+  </div>
+  <div class="q-card" data-q="2" hidden>
+    <p class="q-text">Jeste li primijetili da dijete u snu zastane s disanjem, hvata zrak ili se guši?</p>
+  </div>
+  <div class="q-card" data-q="3" hidden>
+    <p class="q-text">Diše li dijete danju pretežno na usta?</p>
+  </div>
+  <div class="q-card" data-q="4" hidden>
+    <p class="q-text">Je li dijete danju umorno, razdražljivo ili se teže koncentrira?</p>
+  </div>
+  <div class="q-card" data-q="5" hidden>
+    <p class="q-text">Je li dijete imalo 3 ili više upala uha u zadnjih 6 mjeseci?<!-- PROVJERITI --></p>
+  </div>
+  <div class="q-card" data-q="6" hidden>
+    <p class="q-text">Čini li Vam se da slabije čuje (pojačava TV, ne reagira na ime)?</p>
+  </div>
+  <div class="q-card" data-q="7" hidden>
+    <p class="q-text">Kasni li govor ili je govor nerazgovijetan, "kroz nos"?</p>
+  </div>
+  <div class="q-card" data-q="8" hidden>
+    <p class="q-text">Je li dijete u zadnjih godinu dana imalo 5 ili više angina?<!-- PROVJERITI --></p>
+  </div>
+  <div class="q-card" data-q="9" hidden>
+    <p class="q-text">Ima li dijete iscjedak samo iz jedne nosnice, neugodnog mirisa?</p>
+  </div>
+
+  <div class="q-card" data-result hidden></div>
+  <p class="disclaimer">Ova provjera ne postavlja dijagnozu i ne zamjenjuje pregled.</p>
+</div>
+
+<script>
+  import { bookingUrl, sinusUrl } from "../config";
+  import { cta } from "../copy/cta";
+  import { ocijeni, type Odgovor } from "../lib/kviz";
+  import { track } from "../scripts/analytics";
+
+  const root = document.querySelector("[data-kviz]");
+  if (root instanceof HTMLElement) {
+    const uvod = root.querySelector('[data-screen="uvod"]');
+    const count = root.querySelector("[data-count]");
+    const progress = root.querySelector("[data-progress]");
+    const bar = root.querySelector("[data-bar]");
+    const cards = [...root.querySelectorAll<HTMLElement>("[data-q]")];
+    const result = root.querySelector("[data-result]");
+    const start = root.querySelector("[data-start]");
+    const odgovori: Odgovor[] = [];
+    let korak = 0;
+    let pocelo = false;
+
+    const choices = document.createElement("div");
+    choices.className = "choices";
+    for (const [value, label] of [
+      ["da", "Da"],
+      ["ne", "Ne"],
+      ["nez", "Ne znam"],
+    ] as const) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "btn soft";
+      button.dataset.odgovor = value;
+      button.textContent = label;
+      choices.append(button);
+    }
+
+    function pokaziPitanje(index: number) {
+      cards.forEach((card, i) => {
+        card.hidden = i !== index;
+        if (i === index && !card.querySelector(".choices")) card.append(choices);
+      });
+      if (count instanceof HTMLElement) {
+        count.hidden = false;
+        count.textContent = `Pitanje ${index + 1} od 9`;
+      }
+      if (progress instanceof HTMLElement) progress.hidden = false;
+      if (bar instanceof HTMLElement) bar.style.transform = `scaleX(${(index + 1) / 9})`;
+    }
+
+    function simptom(href: string, label: string) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = href;
+      a.textContent = label;
+      li.append(a);
+      return li;
+    }
+
+    function pokaziIshod() {
+      if (!(result instanceof HTMLElement)) return;
+      cards.forEach((card) => {
+        card.hidden = true;
+      });
+      if (count instanceof HTMLElement) count.hidden = true;
+      if (progress instanceof HTMLElement) progress.hidden = true;
+      const rez = ocijeni(odgovori);
+      track("kviz_ishod", { ishod: rez.ishod });
+      const position = rez.ishod === "A" ? "kviz-a" : rez.ishod === "B" ? "kviz-b" : "kviz-c";
+      const naslov = rez.ishod === "A" ? "Pregled preporučen uskoro" : rez.ishod === "B" ? "Pregled može pomoći" : "Pratite";
+      const tekst =
+        rez.ishod === "A"
+          ? "Preporučujemo pregled s endoskopijom nosa i procjenom sluha u sljedećih nekoliko tjedana."
+          : rez.ishod === "B"
+            ? "Simptomi upućuju na to da bi ORL pregled mogao pomoći."
+            : "Trenutno nema jasnog razloga za pregled. Pratite simptome; ako se pojave…";
+      const label = rez.ishod === "A" ? cta.endoskopija : cta.termin;
+      result.replaceChildren();
+      const h = document.createElement("h2");
+      h.textContent = naslov;
+      const p = document.createElement("p");
+      p.textContent = tekst;
+      result.append(h, p);
+      if (rez.ishod === "C") {
+        const ul = document.createElement("ul");
+        ul.className = "quiz-links";
+        ul.append(
+          simptom("/simptomi/dijete-hrce/", "Dijete hrče"),
+          simptom("/simptomi/disanje-na-usta/", "Diše na usta"),
+          simptom("/simptomi/bol-u-uhu/", "Bol u uhu i česte upale"),
+          simptom("/simptomi/slabiji-sluh/", "Slabije čuje ili kasni govor"),
+          simptom("/simptomi/ceste-angine/", "Česte angine"),
+          simptom("/simptomi/krvarenje-iz-nosa/", "Krvarenje iz nosa"),
+          simptom("/simptomi/stanke-u-disanju/", "Stanke u disanju u snu"),
+          simptom("/simptomi/strano-tijelo/", "Nešto u nosu ili uhu"),
+          simptom("/simptomi/", "Svi simptomi"),
+        );
+        result.append(ul);
+      }
+      const a = document.createElement("a");
+      a.className = rez.ishod === "C" ? "btn soft" : "btn";
+      a.href = bookingUrl({ page: "provjera-simptoma", position, razlog: rez.razlog });
+      a.dataset.track = "cta";
+      a.dataset.page = "provjera-simptoma";
+      a.dataset.position = position;
+      a.dataset.razlog = rez.razlog;
+      a.textContent = label;
+      result.append(a);
+      if (rez.nos) {
+        const nose = document.createElement("p");
+        const link = document.createElement("a");
+        link.className = "site-link";
+        link.href = sinusUrl();
+        link.textContent = "Centar za sinuse";
+        nose.append(link, " je srodna stranica o sinusima i alergiji.");
+        result.append(nose);
+      }
+      if (rez.ishod === "A") {
+        const more = document.createElement("p");
+        const link = document.createElement("a");
+        link.className = "site-link";
+        link.href = "/pregled-i-endoskopija/";
+        link.textContent = cta.endoskopijaVise;
+        more.append(link);
+        result.append(more);
+      }
+      result.hidden = false;
+    }
+
+    start?.addEventListener("click", () => {
+      if (pocelo) return;
+      pocelo = true;
+      track("kviz_start");
+      if (uvod instanceof HTMLElement) uvod.hidden = true;
+      pokaziPitanje(0);
+    });
+
+    choices.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLButtonElement)) return;
+      const value = target.dataset.odgovor;
+      if (value !== "da" && value !== "ne" && value !== "nez") return;
+      odgovori[korak] = value;
+      korak += 1;
+      if (korak < 9) pokaziPitanje(korak);
+      else pokaziIshod();
+    });
+  }
+</script>

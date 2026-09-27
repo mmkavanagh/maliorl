@@ -1,3 +1,18 @@
+---
+interface Props {
+  items?: string[];
+}
+
+const defaultItems = [
+  "Redovito hrkanje kod djeteta (više noći tjedno) nije bezazleno i razlog je za pregled.",
+  "Najčešći uzrok začepljenog nosa i disanja na usta u vrtićkoj dobi je povećan treći krajnik.",
+  "Tekućina iza bubnjića često prolazi sama, ali ako traje mjesecima može utjecati na sluh i govor.",
+  "Većina problema rješava se bez operacije. Kada je zahvat potreban, dijete u pravilu ide kući isti dan.",
+];
+
+const { items = defaultItems } = Astro.props;
+---
+
 <div class="wrap">
   <aside class="summary">
     <div class="badge">
@@ -8,10 +23,7 @@
     <div>
       <h2>Ukratko</h2>
       <ul>
-        <li>Redovito hrkanje kod djeteta (više noći tjedno) nije bezazleno i razlog je za pregled.</li>
-        <li>Najčešći uzrok začepljenog nosa i disanja na usta u vrtićkoj dobi je povećan treći krajnik.</li>
-        <li>Tekućina iza bubnjića često prolazi sama, ali ako traje mjesecima može utjecati na sluh i govor.</li>
-        <li>Većina problema rješava se bez operacije. Kada je zahvat potreban, dijete u pravilu ide kući isti dan.</li>
+        {items.map((item) => <li>{item}</li>)}
       </ul>
     </div>
   </aside>

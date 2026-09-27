@@ -1,8 +1,13 @@
 ---
-import { bookingUrl } from "../config";
+import BookingCta from "./BookingCta.astro";
 import { cta } from "../copy/cta";
 
-const href = bookingUrl({ page: "home", position: "sticky", razlog: "opce" });
+interface Props {
+  page?: string;
+  razlog?: string;
+}
+
+const { page = "home", razlog = "opce" } = Astro.props;
 ---
 
-<a class="btn sticky" href={href}>{cta.termin} →</a>
+<BookingCta class="sticky" page={page} position="sticky" razlog={razlog} label={cta.termin} arrow />

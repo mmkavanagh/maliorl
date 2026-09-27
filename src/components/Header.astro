@@ -1,8 +1,13 @@
 ---
-import { bookingUrl } from "../config";
+import BookingCta from "./BookingCta.astro";
 import { cta } from "../copy/cta";
 
-const href = bookingUrl({ page: "home", position: "header", razlog: "opce" });
+interface Props {
+  page?: string;
+  razlog?: string;
+}
+
+const { page = "home", razlog = "opce" } = Astro.props;
 ---
 
 <header class="site">
@@ -12,11 +17,11 @@ const href = bookingUrl({ page: "home", position: "header", razlog: "opce" });
       <span>mali <b>O</b><b>R</b><b>L</b></span>
     </a>
     <nav class="main" aria-label="Glavna navigacija">
-      <a href="#simptomi">Simptomi</a>
-      <a href="#treci-krajnik">Treći krajnik</a>
-      <a href="#pregled">Pregled</a>
-      <a href="#pitanja">Pitanja</a>
+      <a href="/#simptomi">Simptomi</a>
+      <a href="/#treci-krajnik">Treći krajnik</a>
+      <a href="/#pregled">Pregled</a>
+      <a href="/#pitanja">Pitanja</a>
     </nav>
-    <a class="btn" href={href}>{cta.termin}</a>
+    <BookingCta page={page} position="header" razlog={razlog} label={cta.termin} />
   </div>
 </header>

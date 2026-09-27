@@ -1,0 +1,28 @@
+---
+import { bookingUrl } from "../config";
+
+interface Props {
+  page: string;
+  position: "header" | "hero" | "inline" | "kraj" | "sticky" | "kviz-a" | "kviz-b" | "kviz-c";
+  razlog: string;
+  label: string;
+  arrow?: boolean;
+  soft?: boolean;
+  class?: string;
+}
+
+const { page, position, razlog, label, arrow = false, soft = false, class: className = "" } = Astro.props;
+const href = bookingUrl({ page, position, razlog });
+const classes = ["btn", soft ? "soft" : "", className].filter(Boolean).join(" ");
+---
+
+<a
+  class={classes}
+  href={href}
+  data-track="cta"
+  data-page={page}
+  data-position={position}
+  data-razlog={razlog}
+>
+  {label}{arrow ? " →" : ""}
+</a>

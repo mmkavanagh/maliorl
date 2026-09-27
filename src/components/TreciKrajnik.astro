@@ -1,5 +1,8 @@
 ---
+import { sinusUrl } from "../config";
 import RedFlags from "./RedFlags.astro";
+
+const sinusi = sinusUrl();
 ---
 
 <section class="adeno" id="treci-krajnik">
@@ -9,6 +12,7 @@ import RedFlags from "./RedFlags.astro";
       <p>Treći krajnik (adenoidi) je limfno tkivo u stražnjem dijelu nosa, iza nepca. Dio je obrane organizma i najveći je u predškolskoj dobi, a s godinama se prirodno smanjuje.</p>
       <p>Kada je povećan, zatvara prolaz zraku kroz nos. Dijete tada diše na usta, hrče, govori "kroz nos" i često je umorno jer ne spava kvalitetno. Povećan treći krajnik može zatvoriti i ušnu (Eustahijevu) cijev, pa se iza bubnjića skuplja tekućina i ponavljaju se upale uha.</p>
       <p>Dijagnoza se postavlja pregledom nosa tankim endoskopom, bez rendgena i bez zračenja. Liječenje počinje lijekovima u nosu, a operacija (adenoidektomija) se preporučuje kada smetnje traju ili utječu na san, sluh i govor.</p>
+      <p>O sinusima i alergiji više piše srodna stranica <a class="site-link" href={sinusi}>Centar za sinuse</a>.</p>
       <div class="links">
         <a class="pill" href="/stanja/treci-krajnik/">Sve o trećem krajniku →</a>
         <a class="pill" href="/zahvati/adenoidektomija/">Operacija trećeg krajnika →</a>

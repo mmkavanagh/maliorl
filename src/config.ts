@@ -5,6 +5,15 @@ export const CONTACT_URL = 'https://drmarjanovickavanagh.com/kontakt';
 
 export const DOCTOR_URL = 'https://drmarjanovickavanagh.com/';
 
+export const SINUS_URL = 'https://centarzasinuse.com/';
+
+/**
+ * Cookie-free analytics (Plausible or Umami). Both stay empty until a real
+ * domain is configured. Empty values load no third-party script.
+ */
+export const ANALYTICS_DOMAIN = '';
+export const ANALYTICS_SRC = '';
+
 export function bookingUrl(opts: { page: string; position: string; razlog?: string }) {
   const url = new URL(CONTACT_URL);
   url.searchParams.set('utm_source', 'maliorl');
@@ -21,5 +30,13 @@ export function doctorUrl(page: string) {
   url.searchParams.set('utm_source', 'maliorl');
   url.searchParams.set('utm_medium', 'referral');
   url.searchParams.set('utm_campaign', page);
+  return url.toString();
+}
+
+/** Sister site about sinuses and allergy. Not a booking link. */
+export function sinusUrl() {
+  const url = new URL(SINUS_URL);
+  url.searchParams.set('utm_source', 'maliorl');
+  url.searchParams.set('utm_medium', 'referral');
   return url.toString();
 }

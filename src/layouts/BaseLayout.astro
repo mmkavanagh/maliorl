@@ -1,12 +1,18 @@
 ---
 import "../styles/global.css";
+import { ANALYTICS_DOMAIN, ANALYTICS_SRC, SITE } from "../config";
+import { globalJsonLd } from "../lib/schema";
 
 interface Props {
   title: string;
   description: string;
+  page: string;
+  jsonLd?: unknown[];
 }
 
-const { title, description } = Astro.props;
+const { title, description, page, jsonLd = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE).href;
+const blocks = [globalJsonLd(), ...jsonLd];
 ---
 
 <html lang="hr">
@@ -15,8 +21,43 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {
+      blocks.map((block) => (
+        <script type="application/ld+json" set:html={JSON.stringify(block)} />
+      ))
+    }
+    {ANALYTICS_DOMAIN && ANALYTICS_SRC && <script async src={ANALYTICS_SRC} data-domain={ANALYTICS_DOMAIN} />}
   </head>
-  <body>
+  <body data-page={page}>
     <slot />
+    <script>
+      import { track } from "../scripts/analytics";
+
+      document.addEventListener("click", (event) => {
+        const target = event.target;
+        const el = target instanceof Element ? target.closest("[data-track='cta']") : null;
+        if (!(el instanceof HTMLElement)) return;
+        track("cta_klik", {
+          page: el.dataset.page,
+          position: el.dataset.position,
+          razlog: el.dataset.razlog,
+        });
+      });
+
+      document.addEventListener(
+        "toggle",
+        (event) => {
+          const el = event.target;
+          if (!(el instanceof HTMLDetailsElement) || !el.open) return;
+          const pitanje = el.querySelector("summary")?.textContent?.trim() ?? "";
+          track("faq_otvoren", {
+            page: document.body.dataset.page,
+            pitanje,
+          });
+        },
+        true,
+      );
+    </script>
   </body>
 </html>

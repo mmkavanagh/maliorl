@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Kviz from "../components/Kviz.astro";
+import StickyCta from "../components/StickyCta.astro";
+
+const page = "provjera-simptoma";
+const title = "Treba li djetetu ORL pregled? | Mali ORL";
+const description =
+  "Odgovorite na 9 kratkih pitanja i dobit ćete preporuku. Traje 60 sekundi, ništa se ne sprema, a provjera ne postavlja dijagnozu.";
+---
+
+<BaseLayout title={title} description={description} page={page}>
+  <Header page={page} razlog="opce" />
+  <main>
+    <section class="block quiz-page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Put">
+          <a href="/">Početna</a>
+          <span aria-hidden="true">/</span>
+          <span>Provjera simptoma</span>
+        </nav>
+        <h1>Treba li Vašem djetetu ORL pregled? Provjera u 60 sekundi</h1>
+        <p class="lead">Odgovorite na 9 kratkih pitanja i dobit ćete preporuku. Traje 60 sekundi i ništa se ne sprema.</p>
+        <Kviz />
+      </div>
+    </section>
+  </main>
+  <Footer page={page} />
+  <StickyCta page={page} razlog="opce" />
+</BaseLayout>

@@ -1,8 +1,9 @@
 ---
-import { doctorUrl } from "../config";
+import { doctorUrl, sinusUrl } from "../config";
 import { cta } from "../copy/cta";
 
 const href = doctorUrl("home");
+const sinusi = sinusUrl();
 ---
 
 <section class="block" style="padding-top:0">
@@ -19,8 +20,9 @@ const href = doctorUrl("home");
       </div>
       <div>
         <h2>O liječniku</h2>
-        <p><strong>Prim. Marcel Marjanović Kavanagh, univ.mag.med.</strong>, specijalist je otorinolaringologije i subspecijalist plastične i rekonstruktivne kirurgije glave i vrata. Radi na Klinici za otorinolaringologiju i kirurgiju glave i vrata KBC-a Zagreb i predaje na Medicinskom fakultetu Sveučilišta u Zagrebu.</p>
-        <p style="margin-bottom:0">Posebnu pažnju posvećuje tome da roditelji razumiju dijagnozu i sve mogućnosti liječenja prije bilo kakve odluke.</p>
+        <p><a class="site-link" href={href}><strong>Prim. Marcel Marjanović Kavanagh, univ.mag.med.</strong></a>, specijalist je otorinolaringologije i subspecijalist plastične i rekonstruktivne kirurgije glave i vrata. Radi na Klinici za otorinolaringologiju i kirurgiju glave i vrata KBC-a Zagreb i predaje na Medicinskom fakultetu Sveučilišta u Zagrebu.</p>
+        <p>Posebnu pažnju posvećuje tome da roditelji razumiju dijagnozu i sve mogućnosti liječenja prije bilo kakve odluke.</p>
+        <p><a class="site-link" href={sinusi}>Centar za sinuse</a> je srodna stranica o sinusima i alergiji.</p>
         <div class="tags"><span>Nos i sinusi</span><span>Treći krajnik i krajnici</span><span>Uši i sluh</span></div>
         <a class="btn soft" href={href}>{cta.lijecnik} →</a>
       </div>
