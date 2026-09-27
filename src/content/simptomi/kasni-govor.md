@@ -13,6 +13,7 @@ ukratko:
 povezano:
   - /stanja/tekucina-iza-bubnjica/
   - /stanja/kratka-podjezicna-resica/
+  - /zahvati/frenulotomija/
 faq:
   - pitanje: "Je li kasni govor uvijek do uha?"
     odgovor: "Nije. Zato se sluh provjerava, a ne pretpostavlja. Ako je sluh uredan, traži se drugi razlog."

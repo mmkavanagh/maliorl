@@ -10,10 +10,11 @@ import Wave from "../components/Wave.astro";
 import { doctorUrl, sinusUrl } from "../config";
 import { cta } from "../copy/cta";
 import { pregledFaq } from "../copy/pregled-faq";
+import { bookingRazlog } from "../lib/booking";
 import { endoscopyJsonLd } from "../lib/schema";
 
 const page = "pregled-i-endoskopija";
-const razlog = "opce";
+const razlog = bookingRazlog(page);
 const faza = "odluka";
 const title = "ORL pregled djeteta i endoskopija nosa | Mali ORL";
 const description =
@@ -32,14 +33,14 @@ const faq = pregledFaq;
 ---
 
 <BaseLayout title={title} description={description} page={page} jsonLd={[endoscopyJsonLd(faq)]}>
-  <Header page={page} razlog={razlog} />
+  <Header page={page} />
   <main data-faza={faza} data-razlog={razlog}>
     <section class="hero sky">
       <div class="wrap">
         <nav class="crumbs" aria-label="Put">
           <a href="/">Početna</a>
           <span aria-hidden="true">/</span>
-          <span>Pregled i endoskopija</span>
+          <span aria-current="page">Pregled i endoskopija</span>
         </nav>
         <h1>Pregled djeteta i endoskopija nosa: bez zračenja i bez straha</h1>
         <p class="lead">Endoskopija je najpouzdaniji način da se vidi treći krajnik. Bez zračenja, traje nekoliko minuta, a roditelj je uz dijete.</p>
@@ -79,7 +80,7 @@ const faq = pregledFaq;
           Tanki, savitljivi endoskop uvodi se kroz nosnicu nakon spreja koji sužava sluznicu i, kad treba, nakon sredstva koje smanji osjet. Kratko može biti neugodno. Nije rez i dijete za taj pregled ne spava. Snimka se odmah pokaže roditelju.
         </p>
         <p>
-          <BookingCta page={page} position="inline" razlog={razlog} label={cta.termin} />
+          <BookingCta page={page} position="inline" label={cta.termin} />
         </p>
 
         <h2>Od koje dobi</h2>
@@ -118,7 +119,6 @@ const faq = pregledFaq;
 
     <CtaBand
       page={page}
-      razlog={razlog}
       label={cta.endoskopija}
       arrow={false}
       heading="Bez zračenja i bez straha"
@@ -126,5 +126,5 @@ const faq = pregledFaq;
     />
   </main>
   <Footer page={page} />
-  <StickyCta page={page} razlog={razlog} />
+  <StickyCta page={page} />
 </BaseLayout>

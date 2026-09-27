@@ -43,14 +43,14 @@ const grid =
 ---
 
 <BaseLayout title={title} description={description} page={page} jsonLd={[hubJsonLd({ slug: page, h1 })]}>
-  <Header page={page} razlog="opce" />
+  <Header page={page} />
   <main>
     <section class:list={["hero", tone, "article"]}>
       <div class="wrap">
         <nav class="crumbs" aria-label="Put">
           <a href="/">Početna</a>
           <span aria-hidden="true">/</span>
-          <span>{h1}</span>
+          <span aria-current="page">{h1}</span>
         </nav>
         <p class="chip"><i class={dot}></i> {chip}</p>
         <h1>{h1}</h1>
@@ -108,8 +108,8 @@ const grid =
         }
       </div>
     </section>
-    <CtaBand page={page} razlog="opce" label={cta.termin} />
+    <CtaBand page={page} label={cta.termin} />
   </main>
   <Footer page={page} />
-  <StickyCta page={page} razlog="opce" />
+  <StickyCta page={page} />
 </BaseLayout>

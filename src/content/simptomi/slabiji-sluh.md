@@ -14,6 +14,7 @@ povezano:
   - /stanja/tekucina-iza-bubnjica/
   - /stanja/usni-cep/
   - /stanja/eustahijeva-cijev/
+  - /zahvati/ventilacijske-cjevcice/
 faq:
   - pitanje: "Kako primijetiti slabiji sluh?"
     odgovor: "Dijete pojačava televizor, ne reagira na ime ili gleda u usta dok razgovarate."
@@ -34,7 +35,7 @@ Dijete koje povremeno ne čuje iz druge sobe nije odmah „nagluho”. Ako to tr
 
 ## Mogući uzroci
 
-Povezana stanja su [tekućina iza bubnjića](/stanja/tekucina-iza-bubnjica/), [ušni čep](/stanja/usni-cep/) i [začepljeno uho](/stanja/eustahijeva-cijev/). Tekućina koja traje uz slabiji sluh razlog je razgovora o cjevčicama.<!-- PROVJERITI -->
+Povezana stanja su [tekućina iza bubnjića](/stanja/tekucina-iza-bubnjica/), [ušni čep](/stanja/usni-cep/) i [začepljeno uho](/stanja/eustahijeva-cijev/). Tekućina koja traje uz slabiji sluh razlog je razgovora o [cjevčicama](/zahvati/ventilacijske-cjevcice/).<!-- PROVJERITI -->
 
 ## Na što još obratiti pažnju
 

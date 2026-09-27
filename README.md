@@ -18,12 +18,16 @@ npm run build
 
 Upload the contents of `dist/` to `public_html`. `public/.htaccess` is copied into `dist/` and sets HTTPS, no `www`, a trailing slash, gzip/brotli, a long cache for static files, and `ErrorDocument 404 /404.html`.
 
-The contact form on drmarjanovickavanagh.com should read `razlog` from the query string and prefill the reason for the visit. That change is not in this repository.
+Booking buttons use `bookingUrl()` in `src/config.ts`. Every link keeps `utm_source=maliorl`, `utm_medium=referral`, `utm_campaign` = the page id, and `utm_content` = the button position. `razlog` is one of `djecji-orl-pregled`, `treci-krajnik`, `ventilacijske-cjevcice`, `frenulum`, or `ostali-zahvati`, chosen in `src/lib/booking.ts`.
 
-`CONTACT_URL`, `DOCTOR_URL`, and `SINUS_URL` live in `src/config.ts`. Booking buttons use `bookingUrl()`. Links to Centar za sinuse use `sinusUrl()` (`utm_source=maliorl`, `utm_medium=referral`). Centar za sinuse is the related site about sinuses and allergy. It is not described here as a children's clinic.
+The live contact form on drmarjanovickavanagh.com reads `razlog`, but only for `sinusi`, `rinoplastika`, `septum`, `alergije`, and `apneja`. The five children's reasons are sent and are not preselected until that site adds them. This site has no lead form.
+
+`CONTACT_URL`, `DOCTOR_URL`, and `SINUS_URL` live in `src/config.ts`. Links to Centar za sinuse use `sinusUrl()` (`utm_source=maliorl`, `utm_medium=referral`). Centar za sinuse is the related site about sinuses and allergy. It is not described here as a children's clinic.
 
 ## Analytics
 
-`ANALYTICS_DOMAIN` and `ANALYTICS_SRC` in `src/config.ts` stay empty until a Plausible or Umami domain is set. While they are empty, events do nothing and no third-party script is loaded. There is no cookie banner and no GA4.
+Measurement is inactive. `GA4_MEASUREMENT_ID` and `GTM_CONTAINER_ID` in `src/config.ts` are empty, and `ANALYTICS_CONSENT` is false. No third-party script loads, and `track()` returns immediately. Do not invent an ID. Do not set `ANALYTICS_CONSENT` until a real ID and a matching consent choice exist.
 
-When a domain is set, the events are `cta_klik` (props `page`, `position`, `razlog`), `kviz_start`, `kviz_ishod` (`ishod` A, B, or C), and `faq_otvoren`. Break down `cta_klik` by `page` or `razlog` to see which pages lead to the most booking clicks.
+If a GTM container is set later, code pushes to `dataLayer` only. It does not also call gtag. `generate_lead` is refused in `track()` because this site never confirms that a form was received. `cta_click` is the booking click. `contact_phone_click` and `contact_whatsapp_click` have listeners, but there is no phone or WhatsApp link on this site.
+
+`kviz_start` and `kviz_ishod` (`ishod` A, B, or C) do not include the answers. The symptom check is not stored. `faq_otvoren` sends the question text from the page, not a message the parent wrote.

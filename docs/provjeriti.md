@@ -13,6 +13,12 @@ Tekst je prepravljen 27. rujna 2026. Datum izmjene nije datum liječničke potvr
 - [ ] Na stranici o resici piše da se kod novorođenčeta frenulotomija često radi bez uspavljivanja, prema izvješću AAP 2024. To nije opis protokola ove ordinacije. Potvrditi kako se kod vas radi dojenče, a kako starije dijete.
 - [ ] Istezanje rane nakon frenulotomije nije dano kao opća uputa. AAP 2024 to ne preporučuje. Ako vi ipak dajete individualnu uputu, na stranici je ne smije biti.
 
+## Naručivanje i mjerenje
+
+- [ ] Pet razloga dolaska koje Mali ORL šalje u `razlog`: Dječji ORL pregled (`djecji-orl-pregled`), Treći krajnik (`treci-krajnik`), Ventilacijske cjevčice (`ventilacijske-cjevcice`), Frenulum (`frenulum`), Ostali zahvati (`ostali-zahvati`). Obrazac na drmarjanovickavanagh.com ih 27. rujna 2026. ne prepoznaje. Potvrditi nazive prije nego što se dodaju u padajući izbornik.
+- [ ] GA4 ili GTM identifikator za maliorl.com, i tekst privole. Dok toga nema, `ANALYTICS_CONSENT` ostaje false i mjerenje se ne šalje. Identifikator s osobnog weba se ne kopira ovdje.
+- [ ] Pravni nositelj, adresa, OIB i sud za politiku privatnosti. Nisu upisani.
+
 ## Organizacijske činjenice koje u repou nisu poznate
 
 - [ ] Koja se tehnika uvijek koristi (mikrodebrider, škare, laser, način smanjenja školjki, kauterizacija kemijski ili toplinski).

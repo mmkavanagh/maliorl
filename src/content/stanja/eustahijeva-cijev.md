@@ -14,6 +14,7 @@ povezano:
   - /simptomi/slabiji-sluh/
   - /stanja/treci-krajnik/
   - /stanja/alergijski-rinitis/
+  - /zahvati/adenoidektomija/
 faq:
   - pitanje: "Je li začepljeno uho isto što i tekućina?"
     odgovor: "Ne mora biti. Punoća može doći od lošeg provjetravanja. Tekućina se vidi na pregledu bubnjića."

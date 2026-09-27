@@ -4,13 +4,13 @@ import { cta } from "../copy/cta";
 
 interface Props {
   page?: string;
-  razlog?: string;
 }
 
-const { page = "home", razlog = "opce" } = Astro.props;
+const { page = "home" } = Astro.props;
 
 const links = [
   { href: "/simptomi/", label: "Simptomi" },
+  { href: "/stanja/", label: "Stanja" },
   { href: "/zahvati/", label: "Operacije i zahvati" },
   { href: "/pregled-i-endoskopija/", label: "Pregled i endoskopija" },
   { href: "/za-roditelje/", label: "Za roditelje" },
@@ -31,15 +31,15 @@ const path = Astro.url.pathname;
       <nav class="main" id="glavna-navigacija" aria-label="Glavna navigacija">
         {
           links.map((link) => (
-            <a href={link.href} aria-current={path === link.href || path.startsWith(link.href) ? "page" : undefined}>
+            <a href={link.href} aria-current={path === link.href ? "page" : undefined}>
               {link.label}
             </a>
           ))
         }
-        <BookingCta class="nav-book" page={page} position="header" razlog={razlog} label={cta.pregled} />
+        <BookingCta class="nav-book" page={page} position="header" label={cta.pregled} />
       </nav>
     </details>
-    <BookingCta page={page} position="header" razlog={razlog} label={cta.pregled} />
+    <BookingCta page={page} position="header" label={cta.pregled} />
   </div>
   <script is:inline>
     (function () {

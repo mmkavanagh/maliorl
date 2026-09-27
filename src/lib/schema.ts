@@ -26,7 +26,7 @@ export function globalJsonLd() {
         honorificSuffix: "univ.mag.med.",
         description:
           "specijalist otorinolaringologije, subspecijalist plastične i rekonstruktivne kirurgije glave i vrata",
-        medicalSpecialty: ["https://schema.org/Otolaryngologic", "https://schema.org/Pediatric"],
+        medicalSpecialty: ["https://schema.org/Otolaryngologic"],
         url: DOCTOR_URL,
       },
     ],
@@ -147,6 +147,13 @@ export function articleJsonLd(opts: {
     });
   }
 
+  const sekcija =
+    opts.kind === "simptom"
+      ? { name: "Simptomi", path: "/simptomi/" }
+      : opts.kind === "stanje"
+        ? { name: "Stanja", path: "/stanja/" }
+        : { name: "Zahvati", path: "/zahvati/" };
+
   graph.push({
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -159,6 +166,12 @@ export function articleJsonLd(opts: {
       {
         "@type": "ListItem",
         position: 2,
+        name: sekcija.name,
+        item: `${SITE}${sekcija.path}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
         name: opts.h1,
         item: url,
       },
@@ -192,8 +205,9 @@ export function faqHubJsonLd(opts: {
   return page;
 }
 
-export function hubJsonLd(opts: { slug: string; h1: string }) {
+export function hubJsonLd(opts: { slug: string; h1: string; crumb?: string }) {
   const url = `${SITE}/${opts.slug}/`;
+  const crumb = opts.crumb ?? opts.h1;
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -217,7 +231,7 @@ export function hubJsonLd(opts: { slug: string; h1: string }) {
           {
             "@type": "ListItem",
             position: 2,
-            name: opts.h1,
+            name: crumb,
             item: url,
           },
         ],

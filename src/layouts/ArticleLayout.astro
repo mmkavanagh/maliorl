@@ -45,6 +45,13 @@ const poveznice = [...hrefs].flatMap((href) => {
   return naziv ? [{ href, naziv }] : [];
 });
 
+const sekcija =
+  kind === "simptom"
+    ? { href: "/simptomi/", naziv: "Simptomi" }
+    : kind === "stanje"
+      ? { href: "/stanja/", naziv: "Stanja" }
+      : { href: "/zahvati/", naziv: "Zahvati" };
+
 const jsonLd = articleJsonLd({
   kind,
   slug: page,
@@ -57,14 +64,16 @@ const izvori = "izvori" in data && Array.isArray(data.izvori) ? data.izvori : []
 ---
 
 <BaseLayout title={data.title} description={data.description} page={page} jsonLd={[jsonLd]}>
-  <Header page={page} razlog={data.razlog} />
+  <Header page={page} />
   <main data-faza={data.faza} data-razlog={data.razlog}>
     <section class:list={["hero", tone, "article"]}>
       <div class="wrap">
         <nav class="crumbs" aria-label="Put">
           <a href="/">Početna</a>
           <span aria-hidden="true">/</span>
-          <span>{data.h1}</span>
+          <a href={sekcija.href}>{sekcija.naziv}</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{data.h1}</span>
         </nav>
         <p class="chip"><i class={dot}></i> {chip}</p>
         <p class="reviewed">
@@ -167,24 +176,23 @@ const izvori = "izvori" in data && Array.isArray(data.izvori) ? data.izvori : []
           <h2>Pregled i procjena</h2>
           <p>Na pregledu se gleda treba li zahvat baš ovom djetetu, što očekivati i koji su rizici.</p>
           <div class="article-actions">
-            <BookingCta page={page} position="kraj" razlog={data.razlog} label={cta.zahvat} />
-            <BookingCta page={page} position="inline" razlog="drugo-misljenje" label={cta.drugoMisljenje} soft />
+            <BookingCta page={page} position="kraj" label={cta.zahvat} />
+            <BookingCta page={page} position="inline" label={cta.drugoMisljenje} soft />
           </div>
         </section>
       ) : kind === "stanje" ? (
         <CtaBand
           page={page}
-          razlog={data.razlog}
           label={cta.endoskopija}
           arrow={false}
           heading="Pregled s endoskopijom"
           text="Na pregledu se gleda nos endoskopom, bez rendgena, i procjenjuje se sluh kad je to potrebno."
         />
       ) : (
-        <CtaBand page={page} razlog={data.razlog} label={cta.termin} heading="Dogovorite termin" text="Ako simptom traje, pregled nosa i sluha pomaže razlučiti sljedeći korak." />
+        <CtaBand page={page} label={cta.termin} heading="Dogovorite termin" text="Ako simptom traje, pregled nosa i sluha pomaže razlučiti sljedeći korak." />
       )
     }
   </main>
   <Footer page={page} />
-  <StickyCta page={page} razlog={data.razlog} />
+  <StickyCta page={page} />
 </BaseLayout>

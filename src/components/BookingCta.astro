@@ -1,18 +1,19 @@
 ---
 import { bookingUrl } from "../config";
+import { bookingRazlog } from "../lib/booking";
 
 interface Props {
   page: string;
   position: "header" | "hero" | "inline" | "kraj" | "sticky" | "kviz-a" | "kviz-b" | "kviz-c";
-  razlog: string;
   label: string;
   arrow?: boolean;
   soft?: boolean;
   class?: string;
 }
 
-const { page, position, razlog, label, arrow = false, soft = false, class: className = "" } = Astro.props;
-const href = bookingUrl({ page, position, razlog });
+const { page, position, label, arrow = false, soft = false, class: className = "" } = Astro.props;
+const razlog = bookingRazlog(page);
+const href = bookingUrl({ page, position });
 const classes = ["btn", soft ? "soft" : "", className].filter(Boolean).join(" ");
 ---
 

@@ -4,10 +4,9 @@ import { cta } from "../copy/cta";
 
 interface Props {
   page?: string;
-  razlog?: string;
 }
 
-const { page = "home", razlog = "opce" } = Astro.props;
+const { page = "home" } = Astro.props;
 ---
 
-<BookingCta class="sticky" page={page} position="sticky" razlog={razlog} label={cta.pregled} arrow />
+<BookingCta class="sticky" page={page} position="sticky" label={cta.pregled} arrow />

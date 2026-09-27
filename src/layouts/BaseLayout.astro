@@ -1,6 +1,13 @@
 ---
 import "../styles/global.css";
-import { ANALYTICS_DOMAIN, ANALYTICS_SRC, SITE } from "../config";
+import {
+  ANALYTICS_CONSENT,
+  ANALYTICS_DOMAIN,
+  ANALYTICS_SRC,
+  GA4_MEASUREMENT_ID,
+  GTM_CONTAINER_ID,
+  SITE,
+} from "../config";
 import { globalJsonLd } from "../lib/schema";
 
 interface Props {
@@ -37,7 +44,39 @@ const blocks = [globalJsonLd(), ...jsonLd];
         <script type="application/ld+json" set:html={JSON.stringify(block)} />
       ))
     }
-    {ANALYTICS_DOMAIN && ANALYTICS_SRC && <script async src={ANALYTICS_SRC} data-domain={ANALYTICS_DOMAIN} />}
+    {
+      ANALYTICS_CONSENT && GTM_CONTAINER_ID && (
+        <script is:inline define:vars={{ GTM_CONTAINER_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtm.js?id=" + GTM_CONTAINER_ID;
+          document.head.appendChild(s);
+        </script>
+      )
+    }
+    {
+      ANALYTICS_CONSENT && !GTM_CONTAINER_ID && GA4_MEASUREMENT_ID && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}></script>
+          <script is:inline define:vars={{ GA4_MEASUREMENT_ID }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              window.dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+            gtag("js", new Date());
+            gtag("config", GA4_MEASUREMENT_ID);
+          </script>
+        </>
+      )
+    }
+    {
+      ANALYTICS_CONSENT && !GTM_CONTAINER_ID && !GA4_MEASUREMENT_ID && ANALYTICS_DOMAIN && ANALYTICS_SRC && (
+        <script async src={ANALYTICS_SRC} data-domain={ANALYTICS_DOMAIN}></script>
+      )
+    }
   </head>
   <body data-page={page}>
     <slot />
@@ -46,13 +85,27 @@ const blocks = [globalJsonLd(), ...jsonLd];
 
       document.addEventListener("click", (event) => {
         const target = event.target;
-        const el = target instanceof Element ? target.closest("[data-track='cta']") : null;
-        if (!(el instanceof HTMLElement)) return;
-        track("cta_klik", {
-          page: el.dataset.page,
-          position: el.dataset.position,
-          razlog: el.dataset.razlog,
-        });
+        if (!(target instanceof Element)) return;
+        const cta = target.closest("[data-track='cta']");
+        if (cta instanceof HTMLElement) {
+          track("cta_click", {
+            page: cta.dataset.page,
+            position: cta.dataset.position,
+            razlog: cta.dataset.razlog,
+          });
+          return;
+        }
+        const phone = target.closest("a[href^='tel:'], [data-track='phone']");
+        if (phone instanceof HTMLElement) {
+          track("contact_phone_click", { page: document.body.dataset.page });
+          return;
+        }
+        const whatsapp = target.closest(
+          "a[href*='wa.me'], a[href*='api.whatsapp.com'], a[href*='whatsapp.com'], [data-track='whatsapp']",
+        );
+        if (whatsapp instanceof HTMLElement) {
+          track("contact_whatsapp_click", { page: document.body.dataset.page });
+        }
       });
 
       document.addEventListener(

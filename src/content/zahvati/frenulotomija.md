@@ -1,5 +1,5 @@
 ---
-title: "Kratka podjezična resica | Mali ORL"
+title: "Frenulotomija kod djece | Mali ORL"
 description: "Kratka podjezična resica: frenulotomija i frenuloplastika. Stranica razdvaja dojenje od govora i kaže da izgled resice sam nije razlog za rez."
 h1: "Kratka podjezična resica: frenulotomija i frenuloplastika"
 kljucnaRijec: "frenulotomija"

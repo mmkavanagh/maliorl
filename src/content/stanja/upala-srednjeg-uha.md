@@ -14,6 +14,7 @@ povezano:
   - /simptomi/bol-u-uhu/
   - /simptomi/iscjedak-iz-uha/
   - /stanja/ponavljajuce-upale-uha/
+  - /zahvati/ventilacijske-cjevcice/
 faq:
   - pitanje: "Treba li svaka upala antibiotik?"
     odgovor: "Ne. Odluka o antibiotiku ovisi o nalazu. Ovaj tekst ne daje dozu."

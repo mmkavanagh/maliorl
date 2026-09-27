@@ -54,6 +54,7 @@ import { cta } from "../copy/cta";
 
 <script>
   import { bookingUrl, sinusUrl } from "../config";
+  import { bookingRazlog } from "../lib/booking";
   import { cta } from "../copy/cta";
   import { ocijeni, type Odgovor } from "../lib/kviz";
   import { track } from "../scripts/analytics";
@@ -144,11 +145,12 @@ import { cta } from "../copy/cta";
       }
       const a = document.createElement("a");
       a.className = rez.ishod === "C" ? "btn soft" : "btn";
-      a.href = bookingUrl({ page: "provjera-simptoma", position, razlog: rez.razlog });
+      const razlog = bookingRazlog("provjera-simptoma");
+      a.href = bookingUrl({ page: "provjera-simptoma", position });
       a.dataset.track = "cta";
       a.dataset.page = "provjera-simptoma";
       a.dataset.position = position;
-      a.dataset.razlog = rez.razlog;
+      a.dataset.razlog = razlog;
       a.textContent = label;
       result.append(a);
       if (rez.nos) {

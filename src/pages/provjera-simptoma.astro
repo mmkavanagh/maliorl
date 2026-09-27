@@ -4,29 +4,31 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Kviz from "../components/Kviz.astro";
 import StickyCta from "../components/StickyCta.astro";
+import { hubJsonLd } from "../lib/schema";
 
 const page = "provjera-simptoma";
 const title = "Treba li djetetu ORL pregled? | Mali ORL";
+const h1 = "Treba li Vašem djetetu ORL pregled? Provjera u 60 sekundi";
 const description =
   "Odgovorite na 9 kratkih pitanja i dobit ćete preporuku. Traje 60 sekundi, ništa se ne sprema, a provjera ne postavlja dijagnozu.";
 ---
 
-<BaseLayout title={title} description={description} page={page}>
-  <Header page={page} razlog="opce" />
+<BaseLayout title={title} description={description} page={page} jsonLd={[hubJsonLd({ slug: page, h1, crumb: "Provjera simptoma" })]}>
+  <Header page={page} />
   <main>
     <section class="block quiz-page">
       <div class="wrap">
         <nav class="crumbs" aria-label="Put">
           <a href="/">Početna</a>
           <span aria-hidden="true">/</span>
-          <span>Provjera simptoma</span>
+          <span aria-current="page">Provjera simptoma</span>
         </nav>
-        <h1>Treba li Vašem djetetu ORL pregled? Provjera u 60 sekundi</h1>
+        <h1>{h1}</h1>
         <p class="lead">Odgovorite na 9 kratkih pitanja i dobit ćete preporuku. Traje 60 sekundi i ništa se ne sprema.</p>
         <Kviz />
       </div>
     </section>
   </main>
   <Footer page={page} />
-  <StickyCta page={page} razlog="opce" />
+  <StickyCta page={page} />
 </BaseLayout>
