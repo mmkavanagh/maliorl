@@ -1,0 +1,28 @@
+---
+import { bookingUrl } from "../config";
+import { cta } from "../copy/cta";
+import HeroArt from "./HeroArt.astro";
+import Wave from "./Wave.astro";
+
+const href = bookingUrl({ page: "home", position: "hero", razlog: "opce" });
+---
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip"><i>✓</i>Dječji ORL · Zagreb</span>
+      <h1>Da Vaše dijete <span class="hl">diše na nos</span>, mirno spava i dobro čuje</h1>
+      <p class="lead">Roditeljima objašnjavamo što je normalno, što nije i kada je vrijeme za pregled kod otorinolaringologa. Jasno, mirno i bez straha.</p>
+      <div class="hero-actions">
+        <a class="btn" href={href}>{cta.termin} →</a>
+        <a class="btn soft" href="#simptomi">{cta.simptomiSkok}</a>
+      </div>
+      <div class="byline">
+        <span class="av">MMK</span>
+        <span>Stručno pregledao: Prim. Marcel Marjanović Kavanagh, univ.mag.med., specijalist otorinolaringologije</span>
+      </div>
+    </div>
+    <HeroArt />
+  </div>
+  <Wave viewBox="0 0 1440 70" d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v30H0z" />
+</section>

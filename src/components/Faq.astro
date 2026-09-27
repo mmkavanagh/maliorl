@@ -1,39 +1,30 @@
----
-interface Item {
-  q: string;
-  a: string;
-}
-
-interface Props {
-  items?: Item[];
-}
-
-const { items = [] } = Astro.props;
----
-
-{
-  items.length > 0 && (
-    <section class="flex flex-col gap-3">
-      {items.map((item) => (
-        <details class="rounded-2xl border border-gold bg-cream px-5 py-4">
-          <summary class="cursor-pointer font-medium text-navy">{item.q}</summary>
-          <p class="mt-3 text-navy">{item.a}</p>
-        </details>
-      ))}
-    </section>
-  )
-}
-
-<style>
-  summary {
-    list-style: none;
-  }
-
-  summary::-webkit-details-marker {
-    display: none;
-  }
-
-  summary::marker {
-    content: "";
-  }
-</style>
+<section class="block" id="pitanja" style="padding-top:0">
+  <div class="wrap faq">
+    <div>
+      <h2>Česta pitanja roditelja</h2>
+      <p class="lead">Ono što nas roditelji najčešće pitaju prije prvog pregleda.</p>
+    </div>
+    <div>
+      <details>
+        <summary>Od koje dobi dijete može na ORL pregled?</summary>
+        <p>Od dojenačke dobi. Pregled i instrumenti prilagođavaju se dobi djeteta.</p>
+      </details>
+      <details>
+        <summary>Je li normalno da dijete hrče?</summary>
+        <p>Povremeno hrkanje tijekom prehlade je uobičajeno. Ako dijete hrče tri ili više noći tjedno, ima stanke u disanju ili je danju umorno i razdražljivo, potreban je pregled.</p>
+      </details>
+      <details>
+        <summary>Hoće li se treći krajnik sam smanjiti?</summary>
+        <p>S godinama se prirodno smanjuje. Ako u međuvremenu uzrokuje stanke u disanju, tekućinu u uhu ili slabiji sluh, čekanje se ne preporučuje jer to može utjecati na san, razvoj govora i koncentraciju.</p>
+      </details>
+      <details>
+        <summary>Treba li mi uputnica za privatni pregled?</summary>
+        <p>Ne. Za privatni pregled uputnica nije potrebna. Ponesite nalaze i popis lijekova koje dijete koristi.</p>
+      </details>
+      <details>
+        <summary>Koliko traje oporavak nakon operacije trećeg krajnika?</summary>
+        <p>Dijete obično ide kući isti dan, a većina djece se vrati uobičajenim aktivnostima nakon nekoliko dana. Točne upute dobivate nakon zahvata.</p>
+      </details>
+    </div>
+  </div>
+</section>

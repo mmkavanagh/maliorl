@@ -1,0 +1,8 @@
+---
+import { bookingUrl } from "../config";
+import { cta } from "../copy/cta";
+
+const href = bookingUrl({ page: "home", position: "sticky", razlog: "opce" });
+---
+
+<a class="btn sticky" href={href}>{cta.termin} →</a>

@@ -1,12 +1,10 @@
 # Mali ORL
 
-Static pediatric ENT site in Croatian. Phase 1 is the scaffold: Astro, an empty MDX content collection, Tailwind CSS, self-hosted fonts, and the shared header and footer. Topic pages are not included yet.
-
-The build is fully static HTML in `dist/`. There is no server adapter.
+Static site for maliorl.com, a Croatian guide for parents about children's ear, nose and throat care. Phase 1 is the homepage. Booking happens on drmarjanovickavanagh.com. This site has no form, phone number, or email address.
 
 ## Local development
 
-Node.js 22.12 or newer (Astro 7). Package manager: npm.
+Node.js 22. Package manager: npm.
 
 ```bash
 npm install
@@ -14,16 +12,10 @@ npm run dev
 npm run build
 ```
 
-`npm run dev` starts the dev server. `npm run build` writes the static site to `dist/`.
+`npm run dev` starts the dev server. `npm run build` writes static HTML to `dist/`.
 
-## Hostinger Node.js
+## Hostinger
 
-Deploy source only, from Git or an archive. Do not upload `dist/` or `node_modules`. Hostinger runs the build.
+Upload the contents of `dist/` to `public_html`. `public/.htaccess` is copied into `dist/` and sets HTTPS, no `www`, a trailing slash, gzip/brotli, a long cache for static files, and `ErrorDocument 404 /404.html`. The 404 page itself is not part of this phase.
 
-- App type: `astro`
-- Node version: 22
-- Package manager: npm
-- Root directory: `.`
-- Build script: `build`
-- Output directory: `dist`
-- Entry file: none
+The contact form on drmarjanovickavanagh.com should read `razlog` from the query string and prefill the reason for the visit. That change is not in this repository.

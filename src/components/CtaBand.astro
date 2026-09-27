@@ -1,0 +1,18 @@
+---
+import { bookingUrl } from "../config";
+import { cta } from "../copy/cta";
+import Wave from "./Wave.astro";
+
+const href = bookingUrl({ page: "home", position: "kraj", razlog: "opce" });
+---
+
+<section class="cta">
+  <Wave viewBox="0 0 1440 60" d="M0 30c120-26 240-26 360 0s240 26 360 0 240-26 360 0 240 26 360 0v30H0z" />
+  <span class="confetti" style="width:22px;height:22px;background:#FFC94A;left:8%;top:40%"></span>
+  <span class="confetti" style="width:14px;height:14px;background:#FF7A6B;left:18%;top:72%"></span>
+  <span class="confetti" style="width:18px;height:18px;background:#3FBF94;right:12%;top:36%"></span>
+  <span class="confetti" style="width:12px;height:12px;background:#fff;right:22%;top:74%"></span>
+  <h2>Niste sigurni treba li Vašem djetetu pregled?</h2>
+  <p>Opišite simptome pri naručivanju i dobit ćete termin kod Prim. Marjanovića Kavanagha.</p>
+  <a class="btn" href={href}>{cta.termin} →</a>
+</section>

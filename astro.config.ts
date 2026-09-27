@@ -1,25 +1,12 @@
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import tailwindcss from '@tailwindcss/vite';
-import { SITE_URL } from './src/config';
+import { SITE } from './src/config';
 
 export default defineConfig({
-  site: SITE_URL,
+  site: SITE,
   output: 'static',
   trailingSlash: 'always',
-  integrations: [
-    mdx(),
-    sitemap({
-      filter: (page) => !page.includes('/404'),
-    }),
-  ],
-  image: {
-    dangerouslyProcessSVG: true,
-  },
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  integrations: [sitemap()],
   devToolbar: {
     enabled: false,
   },

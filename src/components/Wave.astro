@@ -1,0 +1,12 @@
+---
+interface Props {
+  viewBox: string;
+  d: string;
+}
+
+const { viewBox, d } = Astro.props;
+---
+
+<svg class="wave" viewBox={viewBox} preserveAspectRatio="none">
+  <path d={d} fill="#FFFBF3"></path>
+</svg>

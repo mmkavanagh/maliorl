@@ -1,17 +1,25 @@
-/** Single source of truth for site identity. Routes use trailing slashes; this URL does not. */
-export const SITE_URL = 'https://orlzadjecu.com';
+export const SITE = 'https://maliorl.com';
 
-export const SITE_NAME = 'Mali ORL';
+// <!-- PROVJERITI --> da putanja /kontakt postoji
+export const CONTACT_URL = 'https://drmarjanovickavanagh.com/kontakt';
 
-export const SITE_TAGLINE = 'Uho, nos i grlo — tegobe kod djece';
+export const DOCTOR_URL = 'https://drmarjanovickavanagh.com/';
 
-export const LOCALE = 'hr_HR';
+export function bookingUrl(opts: { page: string; position: string; razlog?: string }) {
+  const url = new URL(CONTACT_URL);
+  url.searchParams.set('utm_source', 'maliorl');
+  url.searchParams.set('utm_medium', 'referral');
+  url.searchParams.set('utm_campaign', opts.page);
+  url.searchParams.set('utm_content', opts.position);
+  if (opts.razlog) url.searchParams.set('razlog', opts.razlog);
+  return url.toString();
+}
 
-export const LANG = 'hr';
-
-export const AUTHOR_NAME =
-  'Prim. Marcel Marjanović Kavanagh, univ.mag.med., specijalist otorinolaringologije, subspecijalist plastične i rekonstruktivne kirurgije glave i vrata';
-
-export const BOOKING_SITE = 'https://drmarjanovickavanagh.com';
-
-export const SISTER_SITE = 'https://centarzasinuse.com';
+/** Profile link on the doctor site, with the same campaign tags as the homepage template. */
+export function doctorUrl(page: string) {
+  const url = new URL(DOCTOR_URL);
+  url.searchParams.set('utm_source', 'maliorl');
+  url.searchParams.set('utm_medium', 'referral');
+  url.searchParams.set('utm_campaign', page);
+  return url.toString();
+}
