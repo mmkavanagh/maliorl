@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+
+const wanted = [
+  {
+    id: "adenoidektomija",
+    title: "Endoskopska operacija trećeg krajnika",
+    klasa: "",
+  },
+  {
+    id: "ventilacijske-cjevcice",
+    title: "Ventilacijske cjevčice u ušima",
+    klasa: "c2",
+  },
+  {
+    id: "frenulotomija",
+    title: "Kratka podjezična resica",
+    klasa: "c3",
+  },
+] as const;
+
+const all = await getCollection("zahvati");
+const cards = wanted.map((item) => {
+  const entry = all.find((candidate) => candidate.id === item.id && candidate.data.obavljaSe);
+  if (!entry) throw new Error(`Nedostaje objavljeni zahvat: ${item.id}`);
+  return {
+    href: `/zahvati/${entry.id}/`,
+    title: item.title,
+    text: entry.data.ukratko[0],
+    klasa: item.klasa,
+  };
+});
+---
+
+<section class="block" id="zahvati-istaknuto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Operacije i zahvati</h2>
+        <p class="lead" style="margin:0">Tri zahvata imaju svoju stranicu. Na njoj piše kada zahvat ima smisla. Pregled sam po sebi nije odluka o operaciji.</p>
+      </div>
+    </div>
+    <div class="cards tri">
+      {
+        cards.map((card) => (
+          <a class:list={["card", card.klasa]} href={card.href}>
+            <span class="go">→</span>
+            <strong>{card.title}</strong>
+            <small>{card.text}</small>
+          </a>
+        ))
+      }
+    </div>
+    <p class="links"><a class="pill" href="/zahvati/">Svi istaknuti i ostali zahvati →</a></p>
+  </div>
+</section>

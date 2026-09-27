@@ -1,0 +1,72 @@
+---
+import BookingCta from "../components/BookingCta.astro";
+import PlainLayout from "../layouts/PlainLayout.astro";
+import { doctorUrl } from "../config";
+import { cta } from "../copy/cta";
+
+const page = "za-roditelje";
+const profil = doctorUrl(page);
+
+const zahvati = [
+  { href: "/zahvati/adenoidektomija/", naziv: "Endoskopska operacija trećeg krajnika" },
+  { href: "/zahvati/ventilacijske-cjevcice/", naziv: "Ventilacijske cjevčice u ušima" },
+  { href: "/zahvati/frenulotomija/", naziv: "Podjezična resica (frenulotomija)" },
+];
+---
+
+<PlainLayout
+  title="Za roditelje | Mali ORL"
+  description="Čemu služi dječji ORL pregled, kako se dolazi do odluke i gdje su upute za pripremu. Termin se dogovara na stranici liječnika."
+  h1="Za roditelje"
+  lead="Pregled služi da se čuje što vas brine i da se dijete pogleda. Procjena je individualna. Ovdje su praktične upute, bez novog medicinskog protokola."
+  page={page}
+  tone="sky"
+>
+  <h2>Čemu služi posjet</h2>
+  <p>
+    Pregled je prilagođen dobi djeteta, a roditelj je uz dijete. Kako pregled i endoskopija izgledaju, piše na stranici <a href="/pregled-i-endoskopija/">pregled i endoskopija</a>. Ako vas brine određeni simptom, krenite od <a href="/simptomi/">simptoma</a>.
+  </p>
+
+  <h2>Procjena je individualna</h2>
+  <p>
+    Posjet može završiti praćenjem, liječenjem bez zahvata ili preporukom zahvata. Nije svaki dolazak odluka o operaciji.<!-- PROVJERITI --> Zahvati koji već imaju stranicu skupljeni su na <a href="/zahvati/">operacijama i zahvatima</a>.
+  </p>
+
+  <h2 id="anestezija">Anestezija i priprema</h2>
+  <!-- PROVJERITI: nema zasebne stranice o anesteziji -->
+  <p>
+    Zasebne stranice o anesteziji nema. Na stranicama zahvata piše da prije zahvata razgovarate s anesteziologom i da on daje upute za pripremu.
+    Ovdje nema upute o hrani, piću ni lijekovima.
+  </p>
+  <ul>
+    {zahvati.map((zahvat) => (
+      <li><a href={zahvat.href}>{zahvat.naziv}</a></li>
+    ))}
+  </ul>
+
+  <h2 id="dan-zahvata">Dan zahvata</h2>
+  <!-- PROVJERITI: nema zasebne stranice o danu zahvata -->
+  <p>
+    Zasebne stranice o danu zahvata nema. Na stranicama zahvata piše da dan vode anesteziolog i kirurški tim i da se točan tijek dana, od dolaska do otpusta, potvrđuje na konzultaciji.<!-- PROVJERITI -->
+  </p>
+
+  <h2 id="oporavak">Oporavak</h2>
+  <!-- PROVJERITI: nema zasebne stranice o oporavku -->
+  <p>
+    Zasebne stranice o oporavku nema. Trajanje oporavka objašnjava se na konzultaciji. Ovdje nema tablice po danima ni brojke o tome koliko dana dijete ostaje kući.
+  </p>
+
+  <h2 id="kontrola">Kontrola</h2>
+  <!-- PROVJERITI: nema zasebne stranice o kontroli -->
+  <p>
+    Zasebne stranice o kontroli nema. Ako je kontrola potrebna, dogovara se na pregledu ili nakon zahvata.<!-- PROVJERITI --> Na stranici <a href="/pregled-i-endoskopija/">pregleda i endoskopije</a> kontrola nakon zahvata navedena je kao jedan od razloga kad endoskopija može biti korisna.
+  </p>
+
+  <h2>Kako dogovoriti pregled</h2>
+  <p>
+    Na ovoj stranici nema obrasca. Termin se dogovara na stranici liječnika. Više o njemu: <a href={profil}>Prim. Marcel Marjanović Kavanagh, univ.mag.med.</a>
+  </p>
+  <p>
+    <BookingCta page={page} position="inline" razlog="opce" label={cta.pregledDijete} arrow />
+  </p>
+</PlainLayout>

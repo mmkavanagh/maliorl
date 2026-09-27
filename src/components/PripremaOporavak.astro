@@ -1,0 +1,56 @@
+---
+const stavke = [
+  {
+    href: "/za-roditelje/#anestezija",
+    naslov: "Anestezija i priprema",
+    tekst: "Zasebne stranice nema. Na stranicama zahvata piše da upute daje anesteziolog.",
+  },
+  {
+    href: "/za-roditelje/#dan-zahvata",
+    naslov: "Dan zahvata",
+    tekst: "Zasebne stranice nema. Točan tijek dana potvrđuje se na konzultaciji.",
+  },
+  {
+    href: "/za-roditelje/#oporavak",
+    naslov: "Oporavak",
+    tekst: "Zasebne stranice nema. Što je poznato piše uz pojedini zahvat, bez tablice po danima.",
+  },
+  {
+    href: "/za-roditelje/#kontrola",
+    naslov: "Kontrola",
+    tekst: "Zasebne stranice nema. Kontrola se spominje kao dio dogovora, ne kao zaseban protokol.",
+  },
+];
+
+const zahvati = [
+  { href: "/zahvati/adenoidektomija/", naziv: "Endoskopska operacija trećeg krajnika" },
+  { href: "/zahvati/ventilacijske-cjevcice/", naziv: "Ventilacijske cjevčice" },
+  { href: "/zahvati/frenulotomija/", naziv: "Podjezična resica" },
+];
+---
+
+<section class="block" id="priprema">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Priprema i oporavak</h2>
+        <p class="lead" style="margin:0">Nema zasebnih stranica o anesteziji, danu zahvata, oporavku ni kontroli. Poveznice vode na stranicu za roditelje i na postojeće stranice zahvata.<!-- PROVJERITI --></p>
+      </div>
+    </div>
+    <ul class="prep">
+      {
+        stavke.map((stavka) => (
+          <li>
+            <a href={stavka.href}>{stavka.naslov}</a>
+            <p>{stavka.tekst}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="links">
+      {zahvati.map((zahvat) => (
+        <a class="pill" href={zahvat.href}>{zahvat.naziv}</a>
+      ))}
+    </p>
+  </div>
+</section>

@@ -8,6 +8,16 @@ interface Props {
 }
 
 const { page = "home", razlog = "opce" } = Astro.props;
+
+const links = [
+  { href: "/simptomi/", label: "Simptomi" },
+  { href: "/zahvati/", label: "Operacije i zahvati" },
+  { href: "/pregled-i-endoskopija/", label: "Pregled i endoskopija" },
+  { href: "/za-roditelje/", label: "Za roditelje" },
+  { href: "/o-lijecniku/", label: "O liječniku" },
+];
+
+const path = Astro.url.pathname;
 ---
 
 <header class="site">
@@ -16,12 +26,32 @@ const { page = "home", razlog = "opce" } = Astro.props;
       <span class="dot"><i></i></span>
       <span>mali <b>O</b><b>R</b><b>L</b></span>
     </a>
-    <nav class="main" aria-label="Glavna navigacija">
-      <a href="/#simptomi">Simptomi</a>
-      <a href="/#treci-krajnik">Treći krajnik</a>
-      <a href="/#pregled">Pregled</a>
-      <a href="/cesta-pitanja/">Pitanja</a>
-    </nav>
-    <BookingCta page={page} position="header" razlog={razlog} label={cta.termin} />
+    <details class="nav-drawer" id="nav-drawer" open>
+      <summary class="nav-toggle">Izbornik</summary>
+      <nav class="main" id="glavna-navigacija" aria-label="Glavna navigacija">
+        {
+          links.map((link) => (
+            <a href={link.href} aria-current={path === link.href || path.startsWith(link.href) ? "page" : undefined}>
+              {link.label}
+            </a>
+          ))
+        }
+        <BookingCta class="nav-book" page={page} position="header" razlog={razlog} label={cta.pregled} />
+      </nav>
+    </details>
+    <BookingCta page={page} position="header" razlog={razlog} label={cta.pregled} />
   </div>
+  <script is:inline>
+    (function () {
+      var drawer = document.getElementById("nav-drawer");
+      if (!drawer || !window.matchMedia) return;
+      var wide = window.matchMedia("(min-width: 921px)");
+      var sync = function () {
+        if (wide.matches) drawer.setAttribute("open", "");
+        else drawer.removeAttribute("open");
+      };
+      sync();
+      if (wide.addEventListener) wide.addEventListener("change", sync);
+    })();
+  </script>
 </header>

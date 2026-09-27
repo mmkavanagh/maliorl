@@ -27,6 +27,7 @@ const chip = kind === "simptom" ? "Simptom" : kind === "stanje" ? "Stanje" : "Za
 const dot = kind === "simptom" ? "dot-coral" : kind === "stanje" ? "dot-mint" : "dot-lilac";
 const lijecnik = doctorUrl(page);
 const sinusi = sinusUrl();
+const sinusTeme = new Set(["sinusitis-kod-djece", "alergijski-rinitis"]);
 const datum = new Intl.DateTimeFormat("hr-HR", {
   day: "numeric",
   month: "long",
@@ -76,7 +77,7 @@ const jsonLd = articleJsonLd({
       <div class="wrap prose">
         <slot />
         {
-          data.sinusi && (
+          sinusTeme.has(entry.id) && (
             <p>
               O sinusima i alergiji više piše srodna stranica <a class="site-link" href={sinusi}>Centar za sinuse</a>.
             </p>
