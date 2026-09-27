@@ -48,7 +48,6 @@ export const OBJAVLJENO = new Set([
   "/cesta-pitanja/",
   "/o-lijecniku/",
   "/politika-privatnosti/",
-  "/impresum/",
 ]);
 
 export const NAZIVI: Record<string, string> = {
@@ -100,5 +99,4 @@ export const NAZIVI: Record<string, string> = {
   "/cesta-pitanja/": "Česta pitanja",
   "/o-lijecniku/": "O liječniku",
   "/politika-privatnosti/": "Privatnost",
-  "/impresum/": "Impresum",
 };
