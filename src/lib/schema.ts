@@ -165,3 +165,37 @@ export function articleJsonLd(opts: {
     "@graph": graph,
   };
 }
+
+export function hubJsonLd(opts: { slug: string; h1: string }) {
+  const url = `${SITE}/${opts.slug}/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: opts.h1,
+        headline: opts.h1,
+        inLanguage: "hr",
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Početna",
+            item: `${SITE}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: opts.h1,
+            item: url,
+          },
+        ],
+      },
+    ],
+  };
+}

@@ -1,6 +1,6 @@
 # Mali ORL
 
-Static site for maliorl.com, a Croatian guide for parents about children's ear, nose and throat care. Published pages are the homepage, the endoscopy page, the symptom check, and eight articles (two symptoms, four conditions, two procedures). A new article is a Markdown file in `src/content/simptomi`, `src/content/stanja`, or `src/content/zahvati`. Do not link a page that is not in `src/lib/published.ts`. Booking happens on drmarjanovickavanagh.com. This site has no form, phone number, or email address.
+Static site for maliorl.com, a Croatian guide for parents about children's ear, nose and throat care. Published pages are the homepage, the endoscopy page, the symptom check, the symptom, condition and procedure hubs, and the articles in `src/content`. A new article is a Markdown file in `src/content/simptomi`, `src/content/stanja`, or `src/content/zahvati`. Do not link a page that is not in `src/lib/published.ts`. Booking happens on drmarjanovickavanagh.com. This site has no form, phone number, or email address.
 
 ## Local development
 

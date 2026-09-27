@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import HubPage from "../../components/HubPage.astro";
+import { NAZIVI } from "../../lib/published";
+
+const order = [
+  "dijete-hrce",
+  "disanje-na-usta",
+  "stanke-u-disanju",
+  "umor-i-los-san",
+  "bol-u-uhu",
+  "iscjedak-iz-uha",
+  "slabiji-sluh",
+  "kasni-govor",
+  "ceste-angine",
+  "govor-kroz-nos",
+  "krvarenje-iz-nosa",
+  "iscjedak-iz-jedne-nosnice",
+  "strano-tijelo",
+  "kvrgice-na-vratu",
+  "dugotrajna-hunjavica",
+  "promuklost",
+  "sumno-disanje-dojence",
+  "klempave-usi",
+];
+
+const all = await getCollection("simptomi");
+const cards = order.flatMap((id) => {
+  const entry = all.find((item) => item.id === id);
+  if (!entry) return [];
+  const href = `/simptomi/${entry.id}/`;
+  return [{ href, title: NAZIVI[href] ?? entry.data.h1, text: entry.data.ukratko[0] }];
+});
+---
+
+<HubPage
+  title="Simptomi kod djece | Mali ORL"
+  description="Simptomi kod djece, od hrkanja i bola u uhu do hunjavice i krvarenja iz nosa. Odaberite što primjećujete i pročitajte kada treba na ORL pregled."
+  h1="Simptomi uha, grla i nosa kod djece"
+  lead="Odaberite što primjećujete. Svaka kartica vodi na kratak tekst: je li to uobičajeno, što može biti iza toga i kada treba na pregled."
+  tone="coral"
+  chip="Simptomi"
+  page="simptomi"
+  cards={cards}
+/>

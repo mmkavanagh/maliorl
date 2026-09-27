@@ -13,6 +13,8 @@ ukratko:
 povezano:
   - /simptomi/dijete-hrce/
   - /simptomi/disanje-na-usta/
+  - /simptomi/govor-kroz-nos/
+  - /simptomi/slabiji-sluh/
   - /stanja/apneja-u-snu/
   - /stanja/tekucina-iza-bubnjica/
   - /stanja/ponavljajuce-upale-uha/
@@ -40,7 +42,7 @@ Najveći je između 3. i 6. godine, a smanjuje se u školskoj dobi.<!-- PROVJERI
 
 ## Simptomi
 
-Dijete može disati na usta, hrkati i govoriti „kroz nos”. San može biti nemiran. Zatvoreno ušće prema uhu može ići uz [tekućinu iza bubnjića](/stanja/tekucina-iza-bubnjica/) i [upale uha koje se vraćaju](/stanja/ponavljajuce-upale-uha/). Više o tome što roditelj čuje noću: [dijete hrče](/simptomi/dijete-hrce/).
+Dijete može [disati na usta](/simptomi/disanje-na-usta/), hrkati i [govoriti „kroz nos”](/simptomi/govor-kroz-nos/). San može biti nemiran. Zatvoreno ušće prema uhu može ići uz [tekućinu iza bubnjića](/stanja/tekucina-iza-bubnjica/) i [upale uha koje se vraćaju](/stanja/ponavljajuce-upale-uha/). Više o tome što roditelj čuje noću: [dijete hrče](/simptomi/dijete-hrce/).
 
 ## Crveni znakovi
 

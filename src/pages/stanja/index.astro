@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import HubPage from "../../components/HubPage.astro";
+import { NAZIVI } from "../../lib/published";
+
+const order = [
+  "treci-krajnik",
+  "krajnici-kod-djece",
+  "apneja-u-snu",
+  "upala-srednjeg-uha",
+  "ponavljajuce-upale-uha",
+  "tekucina-iza-bubnjica",
+  "eustahijeva-cijev",
+  "upala-zvukovoda",
+  "usni-cep",
+  "angina-i-tonzilitis",
+  "pfapa-sindrom",
+  "alergijski-rinitis",
+  "sinusitis-kod-djece",
+  "kratka-podjezicna-resica",
+  "cvorici-na-glasnicama",
+  "laringomalacija",
+  "preaurikularna-fistula",
+];
+
+const all = await getCollection("stanja");
+const cards = order.flatMap((id) => {
+  const entry = all.find((item) => item.id === id);
+  if (!entry) return [];
+  const href = `/stanja/${entry.id}/`;
+  return [{ href, title: NAZIVI[href] ?? entry.data.h1, text: entry.data.ukratko[0] }];
+});
+---
+
+<HubPage
+  title="Stanja uha, grla i nosa | Mali ORL"
+  description="Stanja uha, grla i nosa kod djece, od trećeg krajnika i upale uha do alergije i sinusa. Kratak uvod u dijagnozu i kada ima smisla doći na pregled."
+  h1="Stanja uha, grla i nosa kod djece"
+  lead="Ovdje su stanja koja roditelj čuje na pregledu. Tekst ide od onoga što stanje jest do liječenja bez operacije i trenutka kad se zahvat uopće spominje."
+  tone="mint"
+  chip="Stanja"
+  page="stanja"
+  cards={cards}
+/>

@@ -11,6 +11,8 @@ ukratko:
   - "Ako traje uz slabiji sluh, može utjecati na govor."
   - "Tada se razgovara o ventilacijskim cjevčicama."
 povezano:
+  - /simptomi/slabiji-sluh/
+  - /simptomi/kasni-govor/
   - /zahvati/ventilacijske-cjevcice/
   - /stanja/treci-krajnik/
   - /stanja/ponavljajuce-upale-uha/
@@ -37,7 +39,7 @@ Sekretorni otitis znači da iza bubnjića stoji tekućina. Uho ne mora boljeti. 
 
 ## Simptomi
 
-Dijete može pojačavati televizor, slabije reagirati na ime ili kasniti s govorom. Tekućina često ostane i nakon [upale uha](/stanja/ponavljajuce-upale-uha/). Povećan [treći krajnik](/stanja/treci-krajnik/) može zatvoriti ušće Eustahijeve cijevi, pa se tekućina lakše zadržava.<!-- PROVJERITI -->
+Dijete može pojačavati televizor, [slabije reagirati na ime](/simptomi/slabiji-sluh/) ili [kasniti s govorom](/simptomi/kasni-govor/). Tekućina često ostane i nakon [upale uha](/stanja/ponavljajuce-upale-uha/). Povećan [treći krajnik](/stanja/treci-krajnik/) može zatvoriti ušće Eustahijeve cijevi, pa se tekućina lakše zadržava.<!-- PROVJERITI -->
 
 ## Crveni znakovi
 

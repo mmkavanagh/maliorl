@@ -12,6 +12,8 @@ ukratko:
   - "Alergija i sinusi su drugi mogući razlozi začepljenog nosa."
 povezano:
   - /stanja/treci-krajnik/
+  - /stanja/alergijski-rinitis/
+  - /stanja/sinusitis-kod-djece/
 faq:
   - pitanje: "Zašto dijete diše na usta?"
     odgovor: "Zato što je nos zatvoren. Čest uzrok je povećan treći krajnik. Mogući su i alergija te sinusitis."
@@ -31,10 +33,12 @@ Kratko disanje na usta tijekom prehlade može proći s prehladom. Ako je nos zat
 
 ## Mogući uzroci
 
-Čest uzrok je povećan [treći krajnik](/stanja/treci-krajnik/). Drugi uzroci su alergijski rinitis i sinusitis.
+Čest uzrok je povećan [treći krajnik](/stanja/treci-krajnik/). Drugi uzroci su [alergijski rinitis](/stanja/alergijski-rinitis/) i [sinusitis](/stanja/sinusitis-kod-djece/).
 
 <div class="links">
   <a class="pill" href="/stanja/treci-krajnik/">Treći krajnik</a>
+  <a class="pill" href="/stanja/alergijski-rinitis/">Alergijski rinitis</a>
+  <a class="pill" href="/stanja/sinusitis-kod-djece/">Sinusitis</a>
 </div>
 
 ## Na što još obratiti pažnju

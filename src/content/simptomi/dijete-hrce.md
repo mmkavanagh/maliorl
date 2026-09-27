@@ -12,7 +12,9 @@ ukratko:
   - "Zapišite koliko noći hrče i ima li stanki u disanju."
 povezano:
   - /stanja/treci-krajnik/
+  - /stanja/krajnici-kod-djece/
   - /stanja/apneja-u-snu/
+  - /stanja/alergijski-rinitis/
 faq:
   - pitanje: "Je li hrkanje tijekom prehlade uobičajeno?"
     odgovor: "Povremeno hrkanje tijekom prehlade je uobičajeno."
@@ -32,13 +34,15 @@ Povremeno hrkanje tijekom prehlade je uobičajeno. Hrkanje koje se vraća više 
 
 ## Mogući uzroci
 
-Iza hrkanja stoje povećan [treći krajnik](/stanja/treci-krajnik/), povećani krajnici ili alergijski rinitis. Krajnici su drugi dio priče o disanju u snu. Alergija je razlog začepljenog nosa, odvojeno od zahvata na trećem krajniku.
+Iza hrkanja stoje povećan [treći krajnik](/stanja/treci-krajnik/), povećani [krajnici](/stanja/krajnici-kod-djece/) ili [alergijski rinitis](/stanja/alergijski-rinitis/). Krajnici su drugi dio priče o disanju u snu. Alergija je razlog začepljenog nosa, odvojeno od zahvata na trećem krajniku.
 
 Ako uz hrkanje ima stanki u disanju, pročitajte [apneju u snu](/stanja/apneja-u-snu/).
 
 <div class="links">
   <a class="pill" href="/stanja/treci-krajnik/">Treći krajnik</a>
+  <a class="pill" href="/stanja/krajnici-kod-djece/">Krajnici</a>
   <a class="pill" href="/stanja/apneja-u-snu/">Apneja u snu</a>
+  <a class="pill" href="/stanja/alergijski-rinitis/">Alergijski rinitis</a>
 </div>
 
 ## Na što još obratiti pažnju

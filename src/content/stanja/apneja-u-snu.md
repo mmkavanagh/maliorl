@@ -12,7 +12,10 @@ ukratko:
   - "Pregled procjenjuje disanje. Odluku o zahvatu donosi liječnik."
 povezano:
   - /simptomi/dijete-hrce/
+  - /simptomi/stanke-u-disanju/
+  - /simptomi/umor-i-los-san/
   - /stanja/treci-krajnik/
+  - /stanja/krajnici-kod-djece/
   - /zahvati/adenoidektomija/
 faq:
   - pitanje: "Je li hrkanje isto što i apneja?"
@@ -33,11 +36,11 @@ Apneja u snu kod djece znači da dijete u snu stane s disanjem, hvata zrak ili s
 
 ## Koliko je često i u kojoj dobi
 
-Najčešći uzrok su povećani treći krajnik i krajnici.<!-- PROVJERITI --> Treći krajnik je najveći između 3. i 6. godine.<!-- PROVJERITI --> Brojka o tome koliko je apneja česta kod djece ovdje nije navedena.
+Najčešći uzrok su povećani [treći krajnik](/stanja/treci-krajnik/) i [krajnici](/stanja/krajnici-kod-djece/).<!-- PROVJERITI --> Treći krajnik je najveći između 3. i 6. godine.<!-- PROVJERITI --> Brojka o tome koliko je apneja česta kod djece ovdje nije navedena.
 
 ## Simptomi
 
-Znakovi o kojima se pita: hrkanje 3 ili više noći tjedno, stanke u disanju, hvatanje zraka, noćno znojenje, mokrenje u krevet te dnevni umor ili hiperaktivnost.<!-- PROVJERITI --> Kako hrkanje izgleda roditelju: [dijete hrče](/simptomi/dijete-hrce/).
+Znakovi o kojima se pita: hrkanje 3 ili više noći tjedno, [stanke u disanju](/simptomi/stanke-u-disanju/), hvatanje zraka, noćno znojenje, mokrenje u krevet te [dnevni umor ili hiperaktivnost](/simptomi/umor-i-los-san/).<!-- PROVJERITI --> Kako hrkanje izgleda roditelju: [dijete hrče](/simptomi/dijete-hrce/).
 
 ## Crveni znakovi
 

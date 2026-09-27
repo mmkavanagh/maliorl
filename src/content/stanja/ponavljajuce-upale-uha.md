@@ -11,6 +11,7 @@ ukratko:
   - "Pregled uključuje uho i sluh."
   - "Cjevčice se razmatraju kad se upale vraćaju, a tekućina je još tu."
 povezano:
+  - /simptomi/bol-u-uhu/
   - /stanja/tekucina-iza-bubnjica/
   - /zahvati/ventilacijske-cjevcice/
   - /stanja/treci-krajnik/
@@ -37,7 +38,7 @@ Brojka o učestalosti ovdje nije navedena. Razgovor o cjevčicama oslanja se na 
 
 ## Simptomi
 
-Dijete se žali na bol u uhu, može imati temperaturu, a nakon upale slabije čuti. Ako se to ponavlja, zapišite datume. Povećan [treći krajnik](/stanja/treci-krajnik/) može zatvoriti ušće prema uhu.<!-- PROVJERITI -->
+Dijete se žali na [bol u uhu](/simptomi/bol-u-uhu/), može imati temperaturu, a nakon upale slabije čuti. Ako se to ponavlja, zapišite datume. Povećan [treći krajnik](/stanja/treci-krajnik/) može zatvoriti ušće prema uhu.<!-- PROVJERITI -->
 
 ## Crveni znakovi
 

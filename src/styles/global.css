@@ -522,6 +522,10 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 .cta .btn.soft { background: #fff; color: var(--ink); box-shadow: 0 4px 0 #e2d9c6; }
 .cta .btn.soft:hover { box-shadow: 0 2px 0 #e2d9c6; }
 .prose .kviz { margin-top: 28px; }
+.cards.tone-coral .card { --c: var(--coral); --cl: var(--coral-l); }
+.cards.tone-mint .card { --c: var(--mint); --cl: var(--mint-l); }
+.cards.tone-lilac .card { --c: var(--lilac); --cl: var(--lilac-l); }
+.hub-lead { max-width: 680px; margin-top: 0; }
 
 @media (max-width: 920px) {
   .summary.article-summary { margin-top: 22px; }
