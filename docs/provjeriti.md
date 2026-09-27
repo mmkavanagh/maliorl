@@ -16,7 +16,7 @@ Tekst je prepravljen 27. rujna 2026. Datum izmjene nije datum liječničke potvr
 ## Naručivanje i mjerenje
 
 - [ ] Pet razloga dolaska koje Mali ORL šalje u `razlog`: Dječji ORL pregled (`djecji-orl-pregled`), Treći krajnik (`treci-krajnik`), Ventilacijske cjevčice (`ventilacijske-cjevcice`), Frenulum (`frenulum`), Ostali zahvati (`ostali-zahvati`). Obrazac na drmarjanovickavanagh.com ih 27. rujna 2026. ne prepoznaje. Potvrditi nazive prije nego što se dodaju u padajući izbornik.
-- [ ] GA4 ili GTM identifikator za maliorl.com, i tekst privole. Dok toga nema, `ANALYTICS_CONSENT` ostaje false i mjerenje se ne šalje. Identifikator s osobnog weba se ne kopira ovdje.
+- [x] GTM spremnik `GTM-5BH2ZN54` je u `src/config.ts` i učitava se iz `BaseLayout`. Oznake unutar spremnika (GA4 i ostalo) podešavaju se u Googleu, ne u ovom repou. Zaseban GA4 identifikator nije upisan. Politika privatnosti nije označena kao pravno pregledana.
 - [ ] Pravni nositelj, adresa, OIB i sud za politiku privatnosti. Nisu upisani.
 
 ## Organizacijske činjenice koje u repou nisu poznate

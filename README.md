@@ -26,8 +26,10 @@ The live contact form on drmarjanovickavanagh.com reads `razlog`, but only for `
 
 ## Analytics
 
-Measurement is inactive. `GA4_MEASUREMENT_ID` and `GTM_CONTAINER_ID` in `src/config.ts` are empty, and `ANALYTICS_CONSENT` is false. No third-party script loads, and `track()` returns immediately. Do not invent an ID. Do not set `ANALYTICS_CONSENT` until a real ID and a matching consent choice exist.
+`GTM_CONTAINER_ID` in `src/config.ts` is `GTM-5BH2ZN54`, the container supplied for this site. `ANALYTICS_CONSENT` is true, so `BaseLayout` loads that container once: the `gtm.js` snippet in the head and the noscript iframe at the start of the body. `GA4_MEASUREMENT_ID` stays empty. This repo does not load `gtag.js`, Plausible, or Umami.
 
-If a GTM container is set later, code pushes to `dataLayer` only. It does not also call gtag. `generate_lead` is refused in `track()` because this site never confirms that a form was received. `cta_click` is the booking click. `contact_phone_click` and `contact_whatsapp_click` have listeners, but there is no phone or WhatsApp link on this site.
+Tags inside the container, including any GA4 tag, are configured in Google Tag Manager, not in this repo. Loading the container does not prove a GA4 hit.
+
+Events go to `dataLayer` only. `generate_lead` is refused in `track()` because this site never confirms that a form was received. A click to drmarjanovickavanagh.com is `cta_click` (`page`, `position`, and the `razlog` slug), not a lead. `contact_phone_click` and `contact_whatsapp_click` have listeners, but there is no phone or WhatsApp link on this site.
 
 `kviz_start` and `kviz_ishod` (`ishod` A, B, or C) do not include the answers. The symptom check is not stored. `faq_otvoren` sends the question text from the page, not a message the parent wrote.

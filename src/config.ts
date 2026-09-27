@@ -10,16 +10,16 @@ export const DOCTOR_URL = 'https://drmarjanovickavanagh.com/';
 export const SINUS_URL = 'https://centarzasinuse.com/';
 
 /**
- * Optional analytics. All of these stay empty or false until a real ID and
- * a matching consent choice exist. Do not invent a measurement ID.
- * Measurement is inactive while ANALYTICS_CONSENT is false.
+ * GTM is the only sender. The container ID was supplied for this site.
+ * Leave GA4_MEASUREMENT_ID empty so this repo does not also load gtag.js.
+ * Tags inside the container are configured in Google Tag Manager, not here.
  *
- * If GTM_CONTAINER_ID is set, GTM is the only sender. Do not also set a GA4
- * tag in code, or the same event is sent twice.
+ * ANALYTICS_CONSENT gates the snippet in BaseLayout. It is on so the
+ * supplied container loads. There is no cookie banner on this site.
  */
 export const GA4_MEASUREMENT_ID = '';
-export const GTM_CONTAINER_ID = '';
-export const ANALYTICS_CONSENT = false;
+export const GTM_CONTAINER_ID = 'GTM-5BH2ZN54';
+export const ANALYTICS_CONSENT = true;
 
 /** Cookie-free analytics (Plausible or Umami). Used only when GA4 and GTM are empty. */
 export const ANALYTICS_DOMAIN = '';

@@ -2,13 +2,14 @@
 import PlainLayout from "../layouts/PlainLayout.astro";
 import BookingCta from "../components/BookingCta.astro";
 import { cta } from "../copy/cta";
+import { GTM_CONTAINER_ID } from "../config";
 
 const page = "politika-privatnosti";
 ---
 
 <PlainLayout
   title="Politika privatnosti | Mali ORL"
-  description="Politika privatnosti: nema analitike treće strane, obrasca, telefona ni e-pošte. Termin je samo na stranici liječnika. Tekst ne zamjenjuje pregled."
+  description={`Politika privatnosti: stranica učitava Google Tag Manager (${GTM_CONTAINER_ID}). Nema obrasca, telefona ni e-pošte. Klik na termin nije poslan upit.`}
   h1="Politika privatnosti"
   lead="Ove stranice su informativne i ne zamjenjuju pregled."
   page={page}
@@ -17,13 +18,11 @@ const page = "politika-privatnosti";
   <p>
     Termin se dogovara samo na stranici liječnika.
     <BookingCta page={page} position="inline" label={cta.termin} />
-    Klik na taj gumb otvara kontakt. To još nije poslan upit.
+    Klik na taj gumb otvara kontakt. To nije poslan upit.
   </p>
   <p>
-    Analitika treće strane nije učitana. Nema upisanog identifikatora za GA4 ni GTM i nema uključene privole, pa se mjerenje ne šalje. Zato nema natpisa o analitičkom kolačiću. Hoće li sam hosting ostaviti tehnički zapis, ovdje nije potvrđeno.<!-- PROVJERITI -->
+    Ova stranica učitava Google Tag Manager, spremnik {GTM_CONTAINER_ID}. Oznake unutar spremnika podešavaju se u Googleu. U kodu stranice nema zasebnog GA4 identifikatora. Hoće li sam hosting ostaviti tehnički zapis, ovdje nije potvrđeno.<!-- PROVJERITI -->
   </p>
   <p>Provjera simptoma ne sprema odgovore.</p>
-  <p>
-    Pravni nositelj, adresa, OIB i sud nisu upisani dok ih liječnik ne potvrdi.<!-- PROVJERITI -->
-  </p>
+  <p>Pravni nositelj, adresa, OIB i sud nisu navedeni.<!-- PROVJERITI --></p>
 </PlainLayout>
